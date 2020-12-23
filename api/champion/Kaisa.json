@@ -1,0 +1,161 @@
+{
+  "patch": "V8.5",
+  "changes": "10.22.1",
+  "id": "Kaisa",
+  "name": "Kai'Sa",
+  "title": "Daughter of the Void",
+  "image": {
+    "full": "Kaisa.png",
+    "sprite": "champion1.png",
+    "group": "champion",
+    "x": 384,
+    "y": 48,
+    "w": 48,
+    "h": 48
+  },
+  "resource": "Mana",
+  "herotype": "Marksman",
+  "alttype": "",
+  "rangetype": "Ranged",
+  "be_cost": 6300,
+  "rp_cost": 975,
+  "adaptivetype": "magic",
+  "info": {
+    "attack": 8,
+    "defense": 5,
+    "magic": 3,
+    "difficulty": 6
+  },
+  "stats": {
+    "hp": 600,
+    "hpperlevel": 88,
+    "mp": 344.88,
+    "mpperlevel": 38,
+    "movespeed": 335,
+    "armor": 28,
+    "armorperlevel": 3,
+    "spellblock": 30,
+    "spellblockperlevel": 0.5,
+    "attackrange": 525,
+    "hpregen": 3.5,
+    "hpregenperlevel": 0.55,
+    "mpregen": 8.2,
+    "mpregenperlevel": 0.45,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 59,
+    "attackdamageperlevel": 2,
+    "attackspeedperlevel": 1.8,
+    "attackspeed": 0.644
+  },
+  "skills": {
+    "i1": {
+      "riotId": "",
+      "name": "Second Skin",
+      "maxrank": 0,
+      "targeting": "Passive",
+      "image": {
+        "full": "Kaisa_Passive.png",
+        "sprite": "passive1.png",
+        "group": "passive",
+        "x": 384,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Innate:}} '''Kai'Sa's''' basic attacks deal {{as|{{pp|4 to 10 for 7|1;3;6;9;11;14;17}}|magic damage}} {{as|(+ {{pp|changedisplay=true|1 to 5 for 5|1;4 to 16}} per Plasma stack)|buzzword}} {{as|(+ {{pp|key=%|type=Plasma stacks|changedisplay=true|10 to 20 for 5|0 to 4}} AP)}} {{as|'''bonus''' magic damage}}.",
+        "{{sbc|Innate - Caustic Wounds:}} '''Kai'Sa's''' [[basic attack]]s and {{ai|Void Seeker|Kai'Sa}}, as well as her and nearby allies' {{tip|immobilize|immobilizing}} effects, mark enemies with {{as|Plasma|buzzword}} for 4 seconds, [[stack]]ing up to 4 times, with the duration refreshing on subsequent applications. '''Kai'Sa's''' attacks or {{ai|Void Seeker|Kai'Sa}} against enemies with {{as|4 Plasma|buzzword}} rupture them, consuming them to deal {{sti|health|{{as|15% {{as|(+ {{fd|2.5}}% per 100 AP)}} of the target's '''missing''' health}}}} {{as|'''bonus''' magic damage}}, capped at 400 against {{tip|monster|monsters}}.",
+        "{{sbc|Innate - Living Weapon:}} Upon gaining a set amount of permanent [[Champion statistic|stats]] from [[item]]s and {{tt|stat growth|Includes all stats gained when leveling (including base AD gained), but does not include stats at level 1.}}, '''Kai'Sa''' can evolve the related [[champion ability|basic ability]] after being in [[Channel#Casting Times|cast time]] for 2 seconds. The upgrade is lost if the stat requirement is no longer met."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Innate:</span> <b>Kai'Sa's</b> basic attacks deal <span class=\"magic-damage\"><span class=\"title-tooltip\" title=\"\">1;3;6;9;11;14;17 ‒ undefined</span></span> <span class=\"buzzword\">(+ <span class=\"title-tooltip\" title=\"\">1;4 to 16 ‒ undefined</span> per Plasma stack)</span> <span class=\"ap\">(+ <span class=\"title-tooltip\" title=\"\">0 to 4 ‒ undefined</span> AP)</span> <span class=\"magic-damage\"><b>bonus</b> magic damage</span>.<br /><span class=\"sbc\">Innate - Caustic Wounds:</span> <b>Kai'Sa's</b> <a class=\"effect link\" title=\"basic attack\">basic attack</a>s and <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Kai'Sa\">Void Seeker<template #content>Void Seeker</template></HtmlTooltip>, as well as her and nearby allies' <HtmlTooltip class=\"blue link\">immobilizing<template #content><div><h4>immobilize<hr></h4><p>Description for keyword immobilize</p></div></template></HtmlTooltip> effects, mark enemies with <span class=\"buzzword\">Plasma</span> for 4 seconds, <a class=\"effect link\" title=\"stack\">stack</a>ing up to 4 times, with the duration refreshing on subsequent applications. <b>Kai'Sa's</b> attacks or <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Kai'Sa\">Void Seeker<template #content>Void Seeker</template></HtmlTooltip> against enemies with <span class=\"buzzword\">4 Plasma</span> rupture them, consuming them to deal <span><span class=\"health\">15% <span class=\"ap\">(+ <span style=\"font-variant-numeric: tabular-nums;\">2.5</span>% per 100 AP)</span> of the target's <b>missing</b> health</span></span> <span class=\"magic-damage\"><b>bonus</b> magic damage</span>, capped at 400 against <HtmlTooltip class=\"blue link\">monsters<template #content><div><h4>monster<hr></h4><p>Description for keyword monster</p></div></template></HtmlTooltip>.<br /><span class=\"sbc\">Innate - Living Weapon:</span> Upon gaining a set amount of permanent <a class=\"effect link\" title=\"stats\">Champion statistic</a> from <a class=\"effect link\" title=\"item\">item</a>s and <span class=\"title-tooltip\" title=\"Includes all stats gained when leveling (including base AD gained), but does not include stats at level 1.\">stat growth</span>, <b>Kai'Sa</b> can evolve the related <a class=\"effect link\" title=\"basic ability\">champion ability</a> after being in <a class=\"effect link\" title=\"cast time\">Channel#Casting Times</a> for 2 seconds. The upgrade is lost if the stat requirement is no longer met.",
+      "leveling": [],
+      "notes": "* '''Kai'Sa''' receives the evolution even if she dies while in cast time.\n* '''Kai'Sa''' can evolve an ability even if she hasn't learned it yet.\n* '''Kai'Sa''' and allies' {{tip|immobilize|immobilizing}} effects '''cannot''' rupture the {{as|Plasma|buzzword}}.\n* {{as|Plasma|buzzword}} which exceeds the 5th stack is applied normally.\n* Stats from runes do not count toward the minimum requirement to upgrade a [[champion ability|basic ability]].\n* {{tip|Spell shield}} will block the {{as|Plasma|buzzword}} application from {{ai|Void Seeker|Kai'Sa}} only.",
+      "skillkey": "I",
+      "skillid": "i1",
+      "effects": []
+    },
+    "r1": {
+      "riotId": "KaisaR",
+      "name": "Killer Instinct",
+      "maxrank": 3,
+      "cooldown": [
+        110,
+        90,
+        70
+      ],
+      "cost": 100,
+      "costtype": "Mana",
+      "targeting": "Location",
+      "target_range": "{{ap|1500 to 3000}}",
+      "image": {
+        "full": "KaisaR.png",
+        "sprite": "spell5.png",
+        "group": "spell",
+        "x": 432,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Kai'Sa''' instantly {{tip|shields}} herself for 2 seconds and swiftly {{tip|dashes}} to a target location near a {{tip|sight|visible}} enemy champion {{tt|recently affected by {{as|Plasma|buzzword}}|4 seconds after it's stacked or ruptured}}. The shield's duration refreshes once the dash ends.",
+        "''Killer Instinct'' {{tip|Basic attack reset|resets}} '''Kai'Sa's''' basic attack timer."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Kai'Sa</b> instantly <HtmlTooltip class=\"blue link\">shields<template #content><div><h4>Shields<hr></h4><p><b>Shields</b> are temporay health.</p></div></template></HtmlTooltip> herself for 2 seconds and swiftly <HtmlTooltip class=\"blue link\">dashes<template #content><div><h4>dashes<hr></h4><p>Description for keyword dashes</p></div></template></HtmlTooltip> to a target location near a <HtmlTooltip class=\"blue link\">visible<template #content><div><h4>sight<hr></h4><p>Description for keyword sight</p></div></template></HtmlTooltip> enemy champion <span class=\"title-tooltip\" title=\"4 seconds after it's stacked or ruptured\">recently affected by <span class=\"buzzword\">Plasma</span></span>. The shield's duration refreshes once the dash ends.<br /><i>Killer Instinct</i> <HtmlTooltip class=\"blue link\">resets<template #content><div><h4>Basic attack reset<hr></h4><p>Description for keyword Basic attack reset</p></div></template></HtmlTooltip> <b>Kai'Sa's</b> basic attack timer.",
+      "leveling": [
+        "{{st|Shield Strength|{{ap|75|100|125}} {{as|(+ {{ap|100|150|200}}% AD)}} {{as|(+ 75% AP)}}}}"
+      ],
+      "notes": "* '''Kai'Sa''' will issue a movement command to the targeted location regardless of whether the target location is valid. The dash is not buffered during this movement command. '''Kai'Sa''' will not dash if the targeted location becomes valid by walking in range or a nearby enemy champion becomes affected by {{as|Plasma|buzzword}}.\n** If the targeted location is not valid, the range indicator will glow.\n* The enemy champion recently affected by {{as|Plasma|buzzword}} must be in range of '''Kai'Sa''' for the targeted location to be valid, and not the targeted location itself.\n* The basic attack reset is not considered one for {{ri|Hail of Blades}}.",
+      "skillkey": "R",
+      "skillid": "r1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Shield Strength</span>: <span><SpellSpan :list=\"[75,100,125]\"></SpellSpan> <span class=\"ad\">(+ <SpellSpan :list=\"[100,150,200]\"></SpellSpan>% AD)</span> <span class=\"ap\">(+ 75% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.75
+              },
+              {
+                "player_total_ad": [
+                  1,
+                  1.5,
+                  2
+                ]
+              }
+            ],
+            "st_slices": [
+              [
+                "Shield Strength",
+                "<SpellSpan :list=\"[75,100,125]\"></SpellSpan> <span class=\"ad\">(+ <SpellSpan :list=\"[100,150,200]\"></SpellSpan>% AD)</span> <span class=\"ap\">(+ 75% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                75,
+                100,
+                125
+              ],
+              null
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Shield Strength",
+              "damage_type": "none",
+              "ratios": {
+                "player_total_ap": 0.75,
+                "player_total_ad": [
+                  1,
+                  1.5,
+                  2
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

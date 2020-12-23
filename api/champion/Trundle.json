@@ -1,0 +1,466 @@
+{
+  "patch": "V1.0.0.106",
+  "changes": "10.21.1",
+  "id": "Trundle",
+  "name": "Trundle",
+  "title": "the Troll King",
+  "image": {
+    "full": "Trundle.png",
+    "sprite": "champion4.png",
+    "group": "champion",
+    "x": 240,
+    "y": 0,
+    "w": 48,
+    "h": 48
+  },
+  "resource": "Mana",
+  "herotype": "Fighter",
+  "alttype": "Tank",
+  "rangetype": "Melee",
+  "be_cost": 3150,
+  "rp_cost": 790,
+  "adaptivetype": "physical",
+  "info": {
+    "attack": 7,
+    "defense": 6,
+    "magic": 2,
+    "difficulty": 5
+  },
+  "stats": {
+    "hp": 616,
+    "hpperlevel": 96,
+    "mp": 281,
+    "mpperlevel": 45,
+    "movespeed": 350,
+    "armor": 37,
+    "armorperlevel": 2.7,
+    "spellblock": 32.1,
+    "spellblockperlevel": 1.25,
+    "attackrange": 175,
+    "hpregen": 6,
+    "hpregenperlevel": 0.75,
+    "mpregen": 7.5,
+    "mpregenperlevel": 0.6,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 68,
+    "attackdamageperlevel": 3,
+    "attackspeedperlevel": 2.9,
+    "attackspeed": 0.67
+  },
+  "skills": {
+    "i1": {
+      "riotId": "",
+      "name": "King's Tribute",
+      "maxrank": 0,
+      "targeting": "Passive",
+      "image": {
+        "full": "Trundle_Passive.png",
+        "sprite": "passive4.png",
+        "group": "passive",
+        "x": 240,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Innate:}} Whenever an enemy dies near '''Trundle''', he {{tip|heal|heals}} for {{as|{{sti|health|{{pp|key=%|2 to 7}} of their '''maximum''' health}}}}."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Innate:</span> Whenever an enemy dies near <b>Trundle</b>, he <HtmlTooltip class=\"blue link\">heals<template #content><div><h4>Healing<hr></h4><p><b>Healing</b> restores some of the user or the target's <span class=\"health\">current health</span> directly.<br><br>Healing can be reduced by <b>Grievous Wounds</b>.</p></div></template></HtmlTooltip> for <span class=\"health\"><span><HtmlTooltip class=\"blue link\">2% − 7% (based on level)<template #content>Values: 2, 2.294, 2.588, 2.882, 3.176, 3.471, 3.765, 4.059, 4.353, 4.647, 4.941, 5.235, 5.529, 5.824, 6.118, 6.412, 6.706, 7<br>At levels: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18</template></HtmlTooltip> of their <b>maximum</b> health</span></span>.",
+      "leveling": [],
+      "notes": "* ''King's Tribute'' does not trigger when an enemy structure is destroyed.",
+      "skillkey": "I",
+      "skillid": "i1",
+      "effects": []
+    },
+    "q1": {
+      "riotId": "TrundleTrollSmash",
+      "name": "Chomp",
+      "maxrank": 5,
+      "cooldown": [
+        4
+      ],
+      "cost": 30,
+      "costtype": "Mana",
+      "targeting": "Auto",
+      "image": {
+        "full": "TrundleTrollSmash.png",
+        "sprite": "spell12.png",
+        "group": "spell",
+        "x": 192,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Trundle's''' next [[basic attack]] within 7 seconds becomes {{tip|unstoppable basic attack|unstoppable}}, deals {{as|'''bonus''' physical damage}} and {{tip|slow|slows}} the target by 75% for {{fd|0.1}} seconds.",
+        "After biting his target, '''Trundle''' gains {{sti|{{as|'''bonus''' attack damage}}}} for 5 seconds and reduces his target's {{as|attack damage}} by half that amount for the same duration.",
+        "''Chomp'' {{tip|basic attack reset|resets}} '''Trundle's''' basic attack timer."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Trundle's</b> next <a class=\"effect link\" title=\"basic attack\">basic attack</a> within 7 seconds becomes <HtmlTooltip class=\"blue link\">unstoppable<template #content><div><h4>unstoppable basic attack<hr></h4><p>Description for keyword unstoppable basic attack</p></div></template></HtmlTooltip>, deals <span class=\"physical-damage\"><b>bonus</b> physical damage</span> and <HtmlTooltip class=\"blue link\">slows<template #content><div><h4>Slow<hr></h4><p>A unit that is <i>slowed</i> has reduced movement speed for the duration.<br><br>Duration reduced by <b>Tenacity</b>.<br>Strength is reduced by <b>Slow resist</b>.</p></div></template></HtmlTooltip> the target by 75% for <span style=\"font-variant-numeric: tabular-nums;\">0.1</span> seconds.<br />After biting his target, <b>Trundle</b> gains <span><span class=\"attack-damage\"><b>bonus</b> attack damage</span></span> for 5 seconds and reduces his target's <span class=\"attack-damage\">attack damage</span> by half that amount for the same duration.<br /><i>Chomp</i> <HtmlTooltip class=\"blue link\">resets<template #content><div><h4>basic attack reset<hr></h4><p>Description for keyword basic attack reset</p></div></template></HtmlTooltip> <b>Trundle's</b> basic attack timer.",
+      "leveling": [
+        "{{st|Bonus Physical Damage|{{ap|20 to 100}} {{as|(+ {{ap|10 to 50}}% AD)}}}}",
+        "{{st|Bonus AD|{{ap|20 to 40}}|AD Reduction|{{ap|20/2 to 40/2}}}}"
+      ],
+      "notes": "* ''Chomp'' will still incur the {{sti|{{as|attack damage}}}} increase for '''Trundle''' even if the attack is {{tip|dodged}}, {{tip|blocked}}, missed while he is {{tip|blind|blinded}}, or it is blocked by {{tip|spell shield}}.\n* {{tip|Spell shield}} will only block the attack damage reduction and {{tip|slow}}.",
+      "skillkey": "Q",
+      "skillid": "q1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Bonus Physical Damage</span>: <span><SpellSpan :list=\"[20,40,60,80,100]\"></SpellSpan> <span class=\"ad\">(+ <SpellSpan :list=\"[10,20,30,40,50]\"></SpellSpan>% AD)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ad": [
+                  0.1,
+                  0.2,
+                  0.3,
+                  0.4,
+                  0.5
+                ]
+              }
+            ],
+            "st_slices": [
+              [
+                "Bonus Physical Damage",
+                "<SpellSpan :list=\"[20,40,60,80,100]\"></SpellSpan> <span class=\"ad\">(+ <SpellSpan :list=\"[10,20,30,40,50]\"></SpellSpan>% AD)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                20,
+                40,
+                60,
+                80,
+                100
+              ],
+              null
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Bonus Physical Damage",
+              "damage_type": "physical",
+              "ratios": {
+                "base_damage": [
+                  20,
+                  40,
+                  60,
+                  80,
+                  100
+                ],
+                "player_total_ad": [
+                  0.1,
+                  0.2,
+                  0.3,
+                  0.4,
+                  0.5
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Bonus AD</span>: <span><SpellSpan :list=\"[20,25,30,35,40]\"></SpellSpan></span></li><li><span class=\"blue\">AD Reduction</span>: <span><SpellSpan :list=\"[10,12.5,15,17.5,20]\"></SpellSpan></span></li></ul>",
+          "vars": {
+            "as_ratios": [],
+            "st_slices": [
+              [
+                "Bonus AD",
+                "<SpellSpan :list=\"[20,25,30,35,40]\"></SpellSpan>",
+                "AD Reduction",
+                "<SpellSpan :list=\"[10,12.5,15,17.5,20]\"></SpellSpan>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                20,
+                25,
+                30,
+                35,
+                40
+              ],
+              [
+                10,
+                12.5,
+                15,
+                17.5,
+                20
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Bonus AD",
+              "damage_type": "unknown",
+              "ratios": {
+                "base_damage": [
+                  20,
+                  25,
+                  30,
+                  35,
+                  40
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "w1": {
+      "riotId": "trundledesecrate",
+      "name": "Frozen Domain",
+      "maxrank": 5,
+      "cooldown": [
+        15,
+        14,
+        13,
+        12,
+        11
+      ],
+      "cost": 40,
+      "costtype": "Mana",
+      "targeting": "Location",
+      "target_range": 900,
+      "image": {
+        "full": "trundledesecrate.png",
+        "sprite": "spell12.png",
+        "group": "spell",
+        "x": 240,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Trundle''' coats the target area in ice for 8 seconds. While inside, he gains {{sti|{{as|'''bonus''' attack speed}}}}, {{sti|ms|{{as|'''bonus''' movement speed}}}}, and 25% increased {{tip|healing}} from all sources."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Trundle</b> coats the target area in ice for 8 seconds. While inside, he gains <span><span class=\"attack-speed\"><b>bonus</b> attack speed</span></span>, <span><span class=\"movement-speed\"><b>bonus</b> movement speed</span></span>, and 25% increased <HtmlTooltip class=\"blue link\">healing<template #content><div><h4>healing<hr></h4><p>Description for keyword healing</p></div></template></HtmlTooltip> from all sources.",
+      "leveling": [
+        "{{st|Bonus Attack Speed|{{ap|20 to 100}}%}}\n{{st|Bonus Movement Speed|{{ap|20 to 52}}%}}"
+      ],
+      "notes": "* No additional notes.",
+      "skillkey": "W",
+      "skillid": "w1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Bonus Attack Speed</span>: <span><SpellSpan :list=\"[20,40,60,80,100]\"></SpellSpan>%</span></li></ul><br><ul class=\"st\"><li><span class=\"blue\">Bonus Movement Speed</span>: <span><SpellSpan :list=\"[20,28,36,44,52]\"></SpellSpan>%</span></li></ul>",
+          "vars": {
+            "as_ratios": [],
+            "st_slices": [
+              [
+                "Bonus Attack Speed",
+                "<SpellSpan :list=\"[20,40,60,80,100]\"></SpellSpan>%"
+              ],
+              [
+                "Bonus Movement Speed",
+                "<SpellSpan :list=\"[20,28,36,44,52]\"></SpellSpan>%"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                20,
+                40,
+                60,
+                80,
+                100
+              ],
+              [
+                20,
+                28,
+                36,
+                44,
+                52
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Bonus Attack Speed",
+              "damage_type": "none",
+              "ratios": {}
+            },
+            {
+              "index": 1,
+              "title": "Bonus Movement Speed",
+              "damage_type": "none",
+              "ratios": {}
+            }
+          ]
+        }
+      ]
+    },
+    "e1": {
+      "riotId": "TrundleCircle",
+      "name": "Pillar of Ice",
+      "maxrank": 5,
+      "cooldown": [
+        24,
+        22,
+        20,
+        18,
+        16
+      ],
+      "cost": 75,
+      "costtype": "Mana",
+      "targeting": "Location",
+      "target_range": 1000,
+      "image": {
+        "full": "TrundleCircle.png",
+        "sprite": "spell12.png",
+        "group": "spell",
+        "x": 288,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Trundle''' projects a pillar of ice at the target location for 6 seconds, {{tip|airborne|knocking back}} all units directly over it 225 units on cast, acting as impassable terrain for the duration and {{tip|slow|slowing}} enemies around it."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Trundle</b> projects a pillar of ice at the target location for 6 seconds, <HtmlTooltip class=\"blue link\">knocking back<template #content><div><h4>airborne<hr></h4><p>Description for keyword airborne</p></div></template></HtmlTooltip> all units directly over it 225 units on cast, acting as impassable terrain for the duration and <HtmlTooltip class=\"blue link\">slowing<template #content><div><h4>Slow<hr></h4><p>A unit that is <i>slowed</i> has reduced movement speed for the duration.<br><br>Duration reduced by <b>Tenacity</b>.<br>Strength is reduced by <b>Slow resist</b>.</p></div></template></HtmlTooltip> enemies around it.",
+      "leveling": [
+        "{{st|Slow|{{ap|20 to 60}}%}}"
+      ],
+      "notes": "* ''Pillar of Ice'' displaces allied units away from the area but does not render them {{tip|airborne}}.\n** Allied {{tip|channel|channels}} (e.g. {{si|Recall}}, {{si|Teleport}}) will be {{tip|interrupt|interrupted}} however.\n* ''Pillar of Ice'' cannot be placed inside impassable terrain. Attempting to do so will cause the pillar to spawn in the nearest available spot of accessible terrain.\n* ''Pillar Of Ice'' triggers effects such as drawing turret aggro, {{ri|Sudden Impact}} and applying {{ii|Elixir of Sorcery}} by dealing 0 {{tip|proc damage|proc}} {{tip|true damage}}.",
+      "skillkey": "E",
+      "skillid": "e1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Slow</span>: <span><SpellSpan :list=\"[20,30,40,50,60]\"></SpellSpan>%</span></li></ul>",
+          "vars": {
+            "as_ratios": [],
+            "st_slices": [
+              [
+                "Slow",
+                "<SpellSpan :list=\"[20,30,40,50,60]\"></SpellSpan>%"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                20,
+                30,
+                40,
+                50,
+                60
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Slow",
+              "damage_type": "none",
+              "ratios": {}
+            }
+          ]
+        }
+      ]
+    },
+    "r1": {
+      "riotId": "TrundlePain",
+      "name": "Subjugate",
+      "maxrank": 3,
+      "cooldown": [
+        120,
+        100,
+        80
+      ],
+      "cost": 100,
+      "costtype": "Mana",
+      "targeting": "Unit",
+      "target_range": 650,
+      "image": {
+        "full": "TrundlePain.png",
+        "sprite": "spell12.png",
+        "group": "spell",
+        "x": 336,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Trundle''' starts draining the life force out of the target enemy {{tip|champion}}, {{tip|heal|healing}} for a percentage of {{as|their '''current''' '''maximum''' health}}, dealing the same amount as {{as|magic damage}}, stealing 40% of their '''current''' {{sti|armor penetration|{{as|armor}}}} and {{sti|magic penetration|{{as|magic resistance}}}}, and increasing in [[size]] by 18% as well as reducing his target's [[size]] by {{fd|9.9}}%. Half of the '''total''' damage and stealing is applied instantly, and the other half, as well as the size modifiers, are applied over the next 4 seconds, even if the target has {{tip|death|died}}.",
+        "The {{as|armor}} and {{as|magic resistance}} will remain stolen for 4 seconds after the drain has ended."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Trundle</b> starts draining the life force out of the target enemy <HtmlTooltip class=\"blue link\">champion<template #content><div><h4>champion<hr></h4><p>Description for keyword champion</p></div></template></HtmlTooltip>, <HtmlTooltip class=\"blue link\">healing<template #content><div><h4>Healing<hr></h4><p><b>Healing</b> restores some of the user or the target's <span class=\"health\">current health</span> directly.<br><br>Healing can be reduced by <b>Grievous Wounds</b>.</p></div></template></HtmlTooltip> for a percentage of <span class=\"health\">their <b>current</b> <b>maximum</b> health</span>, dealing the same amount as <span class=\"magic-damage\">magic damage</span>, stealing 40% of their <b>current</b> <span><span class=\"armor\">armor</span></span> and <span><span class=\"magic-resist\">magic resistance</span></span>, and increasing in <a class=\"effect link\" title=\"size\">size</a> by 18% as well as reducing his target's <a class=\"effect link\" title=\"size\">size</a> by <span style=\"font-variant-numeric: tabular-nums;\">9.9</span>%. Half of the <b>total</b> damage and stealing is applied instantly, and the other half, as well as the size modifiers, are applied over the next 4 seconds, even if the target has <HtmlTooltip class=\"blue link\">died<template #content><div><h4>death<hr></h4><p>Description for keyword death</p></div></template></HtmlTooltip>.<br />The <span class=\"armor\">armor</span> and <span class=\"magic-resist\">magic resistance</span> will remain stolen for 4 seconds after the drain has ended.",
+      "leveling": [
+        "{{st|Total Magic Damage|{{as|{{ap|20 to 35}}% {{as|(+ 2% per 100 AP)}} of the target's '''maximum''' health|health}}|Initial Magic Damage|{{as|{{ap|20/2 to 35/2}}% {{as|(+ 1% per 100 AP)}} of the target's '''maximum''' health|health}}|Magic Damage Per Second|{{as|{{ap|20/8 to 35/8}}% {{as|(+ {{fd|0.25}}% per 100 AP)}} of the target's '''maximum''' health|health}}}}"
+      ],
+      "notes": "* The '''total''' value of armor and magic resist stolen and damage dealt is determined at the time of cast. The stolen [[champion statistic|stats]] do not update dynamically relative to the target's stats at any point during the effect, as the steal is applied to the '''current''' value of armor and magic resistance.\n* '''Trundle''' gains {{fd|11.7}} extra [[range]] on his {{tip|basic attack|basic attacks}} (relative to his and enemy center) as a consequence of his increased [[size]].\n** So do his enemies.\n** He gains {{fd|3.78}} to {{fd|6.255}} range against the target he ''subjugated'', depending on their base size, and so does the target against him.\n* '''Trundle''' will lose the buff if the target enters {{tip|resurrection}}.{{bug|2}}",
+      "skillkey": "R",
+      "skillid": "r1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Total Magic Damage</span>: <span><span class=\"health\"><SpellSpan :list=\"[20,27.5,35]\"></SpellSpan>% <span class=\"ap\">(+ 2% per 100 AP)</span> of the target's <b>maximum</b> health</span></span></li><li><span class=\"blue\">Initial Magic Damage</span>: <span><span class=\"health\"><SpellSpan :list=\"[10,13.75,17.5]\"></SpellSpan>% <span class=\"ap\">(+ 1% per 100 AP)</span> of the target's <b>maximum</b> health</span></span></li><li><span class=\"blue\">Magic Damage Per Second</span>: <span><span class=\"health\"><SpellSpan :list=\"[2.5,3.438,4.375]\"></SpellSpan>% <span class=\"ap\">(+ <span style=\"font-variant-numeric: tabular-nums;\">0.25</span>% per 100 AP)</span> of the target's <b>maximum</b> health</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 21
+              },
+              {
+                "player_total_ap": 11
+              },
+              {
+                "target_total_ap": [
+                  0.025,
+                  0.03438,
+                  0.04375
+                ]
+              },
+              {
+                "target_total_ap": []
+              },
+              {
+                "player_total_ap": 0.00251
+              },
+              {
+                "target_total_ap": []
+              }
+            ],
+            "st_slices": [
+              [
+                "Total Magic Damage",
+                "<span class=\"health\"><SpellSpan :list=\"[20,27.5,35]\"></SpellSpan>% <span class=\"ap\">(+ 2% per 100 AP)</span> of the target's '''maximum''' health</span>",
+                "Initial Magic Damage",
+                "<span class=\"health\"><SpellSpan :list=\"[10,13.75,17.5]\"></SpellSpan>% <span class=\"ap\">(+ 1% per 100 AP)</span> of the target's '''maximum''' health</span>",
+                "Magic Damage Per Second",
+                "<span class=\"health\"><SpellSpan :list=\"[2.5,3.438,4.375]\"></SpellSpan>% <span class=\"ap\">(+ <span style=\"font-variant-numeric: tabular-nums;\">0.25</span>% per 100 AP)</span> of the target's '''maximum''' health</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                20,
+                27.5,
+                35
+              ],
+              [
+                10,
+                13.75,
+                17.5
+              ],
+              null
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Total Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  20,
+                  27.5,
+                  35
+                ],
+                "player_total_ap": 0.00251,
+                "target_total_ap": []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

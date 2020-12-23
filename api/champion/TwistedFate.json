@@ -1,0 +1,269 @@
+{
+  "patch": "Alpha Week 2",
+  "changes": "10.23.1",
+  "id": "TwistedFate",
+  "name": "Twisted Fate",
+  "title": "the Card Master",
+  "image": {
+    "full": "TwistedFate.png",
+    "sprite": "champion4.png",
+    "group": "champion",
+    "x": 336,
+    "y": 0,
+    "w": 48,
+    "h": 48
+  },
+  "resource": "Mana",
+  "herotype": "Mage",
+  "alttype": "",
+  "rangetype": "Ranged",
+  "be_cost": 1350,
+  "rp_cost": 585,
+  "adaptivetype": "magic",
+  "info": {
+    "attack": 6,
+    "defense": 2,
+    "magic": 6,
+    "difficulty": 9
+  },
+  "stats": {
+    "hp": 534,
+    "hpperlevel": 94,
+    "mp": 333,
+    "mpperlevel": 39,
+    "movespeed": 330,
+    "armor": 21,
+    "armorperlevel": 3.15,
+    "spellblock": 30,
+    "spellblockperlevel": 0.5,
+    "attackrange": 525,
+    "hpregen": 5.5,
+    "hpregenperlevel": 0.6,
+    "mpregen": 8,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 52,
+    "attackdamageperlevel": 3.3,
+    "attackspeedperlevel": 3.22,
+    "attackspeed": 0.651
+  },
+  "skills": {
+    "i1": {
+      "riotId": "",
+      "name": "Loaded Dice",
+      "maxrank": 0,
+      "targeting": "Passive",
+      "image": {
+        "full": "Cardmaster_SealFate.png",
+        "sprite": "passive4.png",
+        "group": "passive",
+        "x": 336,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Innate:}} Every time '''Twisted Fate''' kills an enemy, he gains {{g|icononly=true}}{{pp|type=probability|1 to 6 for 6|key1=%|100*2/3/5 to 100*2/3/5;100/3|color=gold}}.",
+        "''Since his dice is loaded, '''Twisted Fate''' has an increased chance of gaining {{g|6}}.''"
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Innate:</span> Every time <b>Twisted Fate</b> kills an enemy, he gains <span class=\"gold\"> <img src=\"/images/Gold.png\">undefined</span><span class=\"title-tooltip\" title=\"\">100*2/3/5 to 100*2/3/5;100/3 ‒ undefined</span>.<br /><i>Since his dice is loaded, <b>Twisted Fate</b> has an increased chance of gaining <span class=\"gold\"> <img src=\"/images/Gold.png\">6</span>.</i>",
+      "leveling": [],
+      "notes": "* The expected bonus gold gained per unit killed is {{g|4}}.",
+      "skillkey": "I",
+      "skillid": "i1",
+      "effects": []
+    },
+    "q1": {
+      "riotId": "WildCards",
+      "name": "Wild Cards",
+      "maxrank": 5,
+      "cooldown": 6,
+      "cost": [
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "costtype": "Mana",
+      "targeting": "Direction",
+      "target_range": 1450,
+      "image": {
+        "full": "WildCards.png",
+        "sprite": "spell13.png",
+        "group": "spell",
+        "x": 96,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Twisted Fate''' unleashes three cards in a cone in the target direction, dealing {{as|magic damage}} to all enemies they pass through.",
+        "Enemies can only be damaged once by ''Wild Cards''."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Twisted Fate</b> unleashes three cards in a cone in the target direction, dealing <span class=\"magic-damage\">magic damage</span> to all enemies they pass through.<br />Enemies can only be damaged once by <i>Wild Cards</i>.",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|60|105|150|195|240}} {{as|(+ 65% AP)}}}}"
+      ],
+      "notes": "* ''Wild Cards'' will cast from wherever '''Twisted Fate''' is at the end of the cast time.",
+      "skillkey": "Q",
+      "skillid": "q1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[60,105,150,195,240]\"></SpellSpan> <span class=\"ap\">(+ 65% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.65
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[60,105,150,195,240]\"></SpellSpan> <span class=\"ap\">(+ 65% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                60,
+                105,
+                150,
+                195,
+                240
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  60,
+                  105,
+                  150,
+                  195,
+                  240
+                ],
+                "player_total_ap": 0.65
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "e1": {
+      "riotId": "CardmasterStack",
+      "name": "Stacked Deck",
+      "maxrank": 5,
+      "cooldown": 0,
+      "cost": 0,
+      "targeting": "Passive",
+      "image": {
+        "full": "CardmasterStack.png",
+        "sprite": "spell13.png",
+        "group": "spell",
+        "x": 192,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Passive:}} '''Twisted Fate''' gains {{sti|as|{{as|'''bonus''' attack speed}}}}.",
+        "'''Twisted Fate''' gains a [[stack]] of ''Stacked Deck'' from basic attacks [[on-hit]], stacking up to 3 times.",
+        "At 3 stacks, his next basic attack on-hit against {{tip|turrets|non-structures}} consumes the stacks to deal {{as|'''bonus''' magic damage}}."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Passive:</span> <b>Twisted Fate</b> gains <span><span class=\"attack-speed\"><b>bonus</b> attack speed</span></span>.<br /><b>Twisted Fate</b> gains a <a class=\"effect link\" title=\"stack\">stack</a> of <i>Stacked Deck</i> from basic attacks <a class=\"effect link\" title=\"on-hit\">on-hit</a>, stacking up to 3 times.<br />At 3 stacks, his next basic attack on-hit against <HtmlTooltip class=\"blue link\">non-structures<template #content><div><h4>turrets<hr></h4><p>Description for keyword turrets</p></div></template></HtmlTooltip> consumes the stacks to deal <span class=\"magic-damage\"><b>bonus</b> magic damage</span>.",
+      "leveling": [
+        "{{st|Bonus Attack Speed|{{ap|20 to 40}}%}}",
+        "{{st|Bonus Magic Damage|{{ap|65 to 165}} {{as|(+ 50% AP)}}}}"
+      ],
+      "notes": "* ''Stacked Deck'' can be {{tip|dodged}} and/or missed if '''Twisted Fate''' is {{tip|blind|blinded}} (the enhanced attack is not consumed in either case) but cannot be {{tip|blocked}} (the enhanced attack is consumed and the bonus damage is still applied).",
+      "skillkey": "E",
+      "skillid": "e1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Bonus Attack Speed</span>: <span><SpellSpan :list=\"[20,25,30,35,40]\"></SpellSpan>%</span></li></ul>",
+          "vars": {
+            "as_ratios": [],
+            "st_slices": [
+              [
+                "Bonus Attack Speed",
+                "<SpellSpan :list=\"[20,25,30,35,40]\"></SpellSpan>%"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                20,
+                25,
+                30,
+                35,
+                40
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Bonus Attack Speed",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  20,
+                  25,
+                  30,
+                  35,
+                  40
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Bonus Magic Damage</span>: <span><SpellSpan :list=\"[65,90,115,140,165]\"></SpellSpan> <span class=\"ap\">(+ 50% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.5
+              }
+            ],
+            "st_slices": [
+              [
+                "Bonus Magic Damage",
+                "<SpellSpan :list=\"[65,90,115,140,165]\"></SpellSpan> <span class=\"ap\">(+ 50% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                65,
+                90,
+                115,
+                140,
+                165
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Bonus Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  65,
+                  90,
+                  115,
+                  140,
+                  165
+                ],
+                "player_total_ap": 0.5
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

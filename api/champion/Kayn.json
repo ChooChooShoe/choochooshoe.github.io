@@ -1,0 +1,52 @@
+{
+  "patch": "V7.14",
+  "changes": "10.25.1",
+  "id": "Kayn",
+  "name": "Kayn",
+  "title": "the Shadow Reaper",
+  "image": {
+    "full": "Kayn.png",
+    "sprite": "champion1.png",
+    "group": "champion",
+    "x": 240,
+    "y": 96,
+    "w": 48,
+    "h": 48
+  },
+  "resource": "Mana",
+  "herotype": "Fighter",
+  "alttype": "Assassin",
+  "rangetype": "Melee",
+  "be_cost": 6300,
+  "rp_cost": 975,
+  "adaptivetype": "physical",
+  "info": {
+    "attack": 10,
+    "defense": 6,
+    "magic": 1,
+    "difficulty": 8
+  },
+  "stats": {
+    "hp": 585,
+    "hpperlevel": 85,
+    "mp": 410,
+    "mpperlevel": 50,
+    "movespeed": 340,
+    "armor": 35,
+    "armorperlevel": 3.3,
+    "spellblock": 32.1,
+    "spellblockperlevel": 1.25,
+    "attackrange": 175,
+    "hpregen": 8,
+    "hpregenperlevel": 0.75,
+    "mpregen": 11.5,
+    "mpregenperlevel": 0.95,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 68,
+    "attackdamageperlevel": 3.3,
+    "attackspeedperlevel": 2.7,
+    "attackspeed": 0.669
+  },
+  "skills": {}
+}

@@ -1,0 +1,320 @@
+{
+  "patch": "V7.8",
+  "changes": "10.21.1",
+  "id": "Rakan",
+  "name": "Rakan",
+  "title": "The Charmer",
+  "image": {
+    "full": "Rakan.png",
+    "sprite": "champion3.png",
+    "group": "champion",
+    "x": 96,
+    "y": 0,
+    "w": 48,
+    "h": 48
+  },
+  "resource": "Mana",
+  "herotype": "Support",
+  "alttype": "",
+  "rangetype": "Ranged",
+  "be_cost": 6300,
+  "rp_cost": 975,
+  "adaptivetype": "magic",
+  "info": {
+    "attack": 2,
+    "defense": 4,
+    "magic": 8,
+    "difficulty": 5
+  },
+  "stats": {
+    "hp": 540,
+    "hpperlevel": 85,
+    "mp": 315,
+    "mpperlevel": 50,
+    "movespeed": 335,
+    "armor": 32,
+    "armorperlevel": 3.9,
+    "spellblock": 32.1,
+    "spellblockperlevel": 1.25,
+    "attackrange": 300,
+    "hpregen": 5,
+    "hpregenperlevel": 0.5,
+    "mpregen": 8.75,
+    "mpregenperlevel": 0.5,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 62,
+    "attackdamageperlevel": 3.5,
+    "attackspeedperlevel": 3,
+    "attackspeed": 0.635
+  },
+  "skills": {
+    "q1": {
+      "riotId": "RakanQ",
+      "name": "Gleaming Quill",
+      "maxrank": 5,
+      "cooldown": [
+        12,
+        11,
+        10,
+        9,
+        8
+      ],
+      "cost": 60,
+      "costtype": "Mana",
+      "targeting": "Direction",
+      "target_range": 900,
+      "image": {
+        "full": "RakanQ.png",
+        "sprite": "spell9.png",
+        "group": "spell",
+        "x": 96,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Rakan''' slings an enchanted feather in the target direction, dealing {{as|magic damage}} to the first enemy hit.",
+        "If the target was an enemy {{tip|champion}} or {{tip|monster|epic monster}}, an area is marked around '''Rakan'''.",
+        "After 3 seconds or if an ally champion comes within the marked area, '''Rakan''' {{tip|heals}} himself and surrounding allies for {{pp|18 to 120}} {{as|(+ 70% AP)}}."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Rakan</b> slings an enchanted feather in the target direction, dealing <span class=\"magic-damage\">magic damage</span> to the first enemy hit.<br />If the target was an enemy <HtmlTooltip class=\"blue link\">champion<template #content><div><h4>champion<hr></h4><p>Description for keyword champion</p></div></template></HtmlTooltip> or <HtmlTooltip class=\"blue link\">epic monster<template #content><div><h4>monster<hr></h4><p>Description for keyword monster</p></div></template></HtmlTooltip>, an area is marked around <b>Rakan</b>.<br />After 3 seconds or if an ally champion comes within the marked area, <b>Rakan</b> <HtmlTooltip class=\"blue link\">heals<template #content><div><h4>heals<hr></h4><p>Description for keyword heals</p></div></template></HtmlTooltip> himself and surrounding allies for <HtmlTooltip class=\"blue link\">18undefined − 120undefined (based on level)<template #content>Values: 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90, 96, 102, 108, 114, 120<br>At levels: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18</template></HtmlTooltip> <span class=\"ap\">(+ 70% AP)</span>.",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|70 to 250}} {{as|(+ 60% AP)}}}}"
+      ],
+      "notes": "* The trigger radius is slightly smaller than the heal radius.\n* {{tip|Spell shield}} will not prevent the marked area from being formed.\n* The heal can activate immediately after the projectile hits the target, before the healing return animation completes.\n* ''Gleaming Quill'' will cast from wherever '''Rakan''' is at the end of the cast time.\n* The heal will trigger and affect '''Rakan''' even if he is {{tip|untargetable}}.\n** {{Pending for test}}: Allies",
+      "skillkey": "Q",
+      "skillid": "q1",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '{{tt|{{ap|12 to 8}}|Starts once the projectile vanishes}}' as '12/11/10/9/8' and riot's value '0,0,0,0,0' as '0'",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[70,115,160,205,250]\"></SpellSpan> <span class=\"ap\">(+ 60% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.6
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[70,115,160,205,250]\"></SpellSpan> <span class=\"ap\">(+ 60% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                70,
+                115,
+                160,
+                205,
+                250
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  70,
+                  115,
+                  160,
+                  205,
+                  250
+                ],
+                "player_total_ap": 0.6
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "w1": {
+      "riotId": "RakanW",
+      "name": "Grand Entrance",
+      "maxrank": 5,
+      "cooldown": [
+        18,
+        16.5,
+        15,
+        13.5,
+        12
+      ],
+      "cost": [
+        50,
+        60,
+        70,
+        80,
+        90
+      ],
+      "costtype": "Mana",
+      "targeting": "Location",
+      "target_range": 600,
+      "image": {
+        "full": "RakanW.png",
+        "sprite": "spell9.png",
+        "group": "spell",
+        "x": 144,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Rakan''' {{tip|dashes}} to the target location.",
+        "After a {{fd|0.35}}-second delay upon arrival, he leaps into the air, dealing {{as|magic damage}} and {{tip|airborne|knocking up}} surrounding enemies for 1 second.",
+        "'''''Rakan''' will be {{tip|knockdown|knocked down}} by any {{tip|immobilize|immobilizing}} crowd control during Grand Entrance.''",
+        "''Grand Entrance will cast at max range if cast beyond that.''"
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Rakan</b> <HtmlTooltip class=\"blue link\">dashes<template #content><div><h4>dashes<hr></h4><p>Description for keyword dashes</p></div></template></HtmlTooltip> to the target location.<br />After a <span style=\"font-variant-numeric: tabular-nums;\">0.35</span>-second delay upon arrival, he leaps into the air, dealing <span class=\"magic-damage\">magic damage</span> and <HtmlTooltip class=\"blue link\">knocking up<template #content><div><h4>airborne<hr></h4><p>Description for keyword airborne</p></div></template></HtmlTooltip> surrounding enemies for 1 second.<br /><b><i>Rakan</b> will be <HtmlTooltip class=\"blue link\">knocked down<template #content><div><h4>Knockdown<hr></h4><p>Only affects <b>Airborne</b> or <i>dashing</i> units. Target unit is stopped and placed on the ground. Instantaneous</p></div></template></HtmlTooltip> by any <HtmlTooltip class=\"blue link\">immobilizing<template #content><div><h4>immobilize<hr></h4><p>Description for keyword immobilize</p></div></template></HtmlTooltip> crowd control during Grand Entrance.</i><br /><i>Grand Entrance will cast at max range if cast beyond that.</i>",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|70 to 290}} {{as|(+ 70% AP)}}}}"
+      ],
+      "notes": "* No additional details.",
+      "skillkey": "W",
+      "skillid": "w1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[70,125,180,235,290]\"></SpellSpan> <span class=\"ap\">(+ 70% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.7000000000000001
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[70,125,180,235,290]\"></SpellSpan> <span class=\"ap\">(+ 70% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                70,
+                125,
+                180,
+                235,
+                290
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  70,
+                  125,
+                  180,
+                  235,
+                  290
+                ],
+                "player_total_ap": 0.7000000000000001
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "r1": {
+      "riotId": "RakanR",
+      "name": "The Quickness",
+      "maxrank": 3,
+      "cooldown": [
+        130,
+        110,
+        90
+      ],
+      "cost": 100,
+      "costtype": "Mana",
+      "targeting": "Auto",
+      "image": {
+        "full": "RakanR.png",
+        "sprite": "spell9.png",
+        "group": "spell",
+        "x": 240,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Rakan''' breaks into a captivating sprint for 4 seconds, gaining {{sti|ms|{{as|75% '''bonus''' movement speed}}}} and becoming {{tip|ghosted}} for the duration. During this time he deals {{as|magic damage}} to all enemy units he collides with, in addition to {{tip|charm|charming}} for a duration, during which they are {{tip|slow|slowed}} by 75%.<br>Colliding with an enemy {{tip|champion}} increases ''The Quickness' '' duration by {{fd|0.25}} seconds. This may only occur once per champion.",
+        "When '''Rakan''' collides with his first enemy {{tip|champion}} he gains an additional {{sti|ms|{{as|75% '''bonus''' movement speed}}}}, which starts decaying after {{fd|0.5}} seconds by 20% every {{fd|0.5}} seconds and then by 15% after decaying by 60% over {{fd|1.5}} seconds.",
+        "During the first {{fd|0.5}} seconds of ''The Quickness'', '''Rakan''' is in [[Channel#Casting_Times|cast time]].",
+        "''During The Quickness, '''Rakan''' cannot [[basic attack]] enemy champions if he did not charm them, unless the attack command was inputted before the ability was activated.''"
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Rakan</b> breaks into a captivating sprint for 4 seconds, gaining <span><span class=\"movement-speed\">75% <b>bonus</b> movement speed</span></span> and becoming <HtmlTooltip class=\"blue link\">ghosted<template #content><div><h4>ghosted<hr></h4><p>Description for keyword ghosted</p></div></template></HtmlTooltip> for the duration. During this time he deals <span class=\"magic-damage\">magic damage</span> to all enemy units he collides with, in addition to <HtmlTooltip class=\"blue link\">charming<template #content><div><h4>Charm<hr></h4><p></p></div></template></HtmlTooltip> for a duration, during which they are <HtmlTooltip class=\"blue link\">slowed<template #content><div><h4>Slow<hr></h4><p>A unit that is <i>slowed</i> has reduced movement speed for the duration.<br><br>Duration reduced by <b>Tenacity</b>.<br>Strength is reduced by <b>Slow resist</b>.</p></div></template></HtmlTooltip> by 75%.<br>Colliding with an enemy <HtmlTooltip class=\"blue link\">champion<template #content><div><h4>champion<hr></h4><p>Description for keyword champion</p></div></template></HtmlTooltip> increases <i>The Quickness' </i> duration by <span style=\"font-variant-numeric: tabular-nums;\">0.25</span> seconds. This may only occur once per champion.<br />When <b>Rakan</b> collides with his first enemy <HtmlTooltip class=\"blue link\">champion<template #content><div><h4>champion<hr></h4><p>Description for keyword champion</p></div></template></HtmlTooltip> he gains an additional <span><span class=\"movement-speed\">75% <b>bonus</b> movement speed</span></span>, which starts decaying after <span style=\"font-variant-numeric: tabular-nums;\">0.5</span> seconds by 20% every <span style=\"font-variant-numeric: tabular-nums;\">0.5</span> seconds and then by 15% after decaying by 60% over <span style=\"font-variant-numeric: tabular-nums;\">1.5</span> seconds.<br />During the first <span style=\"font-variant-numeric: tabular-nums;\">0.5</span> seconds of <i>The Quickness</i>, <b>Rakan</b> is in <a class=\"effect link\" title=\"cast time\">Channel#Casting_Times</a>.<br /><i>During The Quickness, <b>Rakan</b> cannot <a class=\"effect link\" title=\"basic attack\">basic attack</a> enemy champions if he did not charm them, unless the attack command was inputted before the ability was activated.</i>",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|100|200|300}} {{as|(+ 50% AP)}}}}\n{{st|Charm Duration|{{ap|1|1.25|1.5}}}}"
+      ],
+      "notes": "{{clr}}\n* The following table refers for interactions while '''Rakan''' is in cast time:\n{{ct|cast|attack=true|cast=[[File: Grand Entrance.png|20px|link=]] ''Grand Entrance'' is disabled but can still be buffered. [[File: Gleaming Quill.png|20px|link=]] ''Gleaming Quill'' and [[File: Battle Dance.png|20px|link=]] ''Battle Dance'' are usable.|move=true|items=true|consume=true|spells=true,false,true,true,true}}",
+      "skillkey": "R",
+      "skillid": "r1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[100,200,300]\"></SpellSpan> <span class=\"ap\">(+ 50% AP)</span></span></li></ul><br><ul class=\"st\"><li><span class=\"blue\">Charm Duration</span>: <span><SpellSpan :list=\"[1,1.25,1.5]\"></SpellSpan></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.5
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[100,200,300]\"></SpellSpan> <span class=\"ap\">(+ 50% AP)</span>"
+              ],
+              [
+                "Charm Duration",
+                "<SpellSpan :list=\"[1,1.25,1.5]\"></SpellSpan>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                100,
+                200,
+                300
+              ],
+              [
+                1,
+                1.25,
+                1.5
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  100,
+                  200,
+                  300
+                ],
+                "player_total_ap": 0.5
+              }
+            },
+            {
+              "index": 1,
+              "title": "Charm Duration",
+              "damage_type": "unknown",
+              "ratios": {
+                "base_damage": [
+                  1,
+                  1.25,
+                  1.5
+                ],
+                "player_total_ap": 0.5
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

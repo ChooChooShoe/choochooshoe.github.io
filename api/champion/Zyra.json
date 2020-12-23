@@ -1,0 +1,371 @@
+{
+  "patch": "V1.0.0.143",
+  "changes": "10.14.1",
+  "id": "Zyra",
+  "name": "Zyra",
+  "title": "Rise of the Thorns",
+  "image": {
+    "full": "Zyra.png",
+    "sprite": "champion5.png",
+    "group": "champion",
+    "x": 96,
+    "y": 0,
+    "w": 48,
+    "h": 48
+  },
+  "resource": "Mana",
+  "herotype": "Mage",
+  "alttype": "Support",
+  "rangetype": "Ranged",
+  "be_cost": 4800,
+  "rp_cost": 880,
+  "adaptivetype": "magic",
+  "info": {
+    "attack": 4,
+    "defense": 3,
+    "magic": 8,
+    "difficulty": 7
+  },
+  "stats": {
+    "hp": 504,
+    "hpperlevel": 79,
+    "mp": 418,
+    "mpperlevel": 25,
+    "movespeed": 340,
+    "armor": 29,
+    "armorperlevel": 3,
+    "spellblock": 30,
+    "spellblockperlevel": 0.5,
+    "attackrange": 575,
+    "hpregen": 5.5,
+    "hpregenperlevel": 0.5,
+    "mpregen": 13,
+    "mpregenperlevel": 0.4,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 53.376,
+    "attackdamageperlevel": 3.2,
+    "attackspeedperlevel": 2.11,
+    "attackspeed": 0.625
+  },
+  "skills": {
+    "i1": {
+      "riotId": "",
+      "name": "Garden of Thorns",
+      "maxrank": 0,
+      "targeting": "Passive",
+      "image": {
+        "full": "ZyraP.png",
+        "sprite": "passive5.png",
+        "group": "passive",
+        "x": 96,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Innate:}} '''Zyra''' periodically spawns one or two {{as|Seeds|wild}} nearby that last for 30 seconds, briefly granting {{tip|sight}} over the surrounding area.",
+        "After at least 1 second, enemy {{tip|champion|champions}} can destroy {{as|Seeds|wild}} by stepping on them.",
+        "'''Zyra''' can only have a total of 8 ''Seeds'' planted at a time, preserving placed {{as|Seeds|placed}} over {{as|those|wild}} spawned by ''Garden of Thorns''."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Innate:</span> <b>Zyra</b> periodically spawns one or two <span class=\"wild\">Seeds</span> nearby that last for 30 seconds, briefly granting <HtmlTooltip class=\"blue link\">sight<template #content><div><h4>sight<hr></h4><p>Description for keyword sight</p></div></template></HtmlTooltip> over the surrounding area.<br />After at least 1 second, enemy <HtmlTooltip class=\"blue link\">champions<template #content><div><h4>champion<hr></h4><p>Description for keyword champion</p></div></template></HtmlTooltip> can destroy <span class=\"wild\">Seeds</span> by stepping on them.<br /><b>Zyra</b> can only have a total of 8 <i>Seeds</i> planted at a time, preserving placed <span class=\"placed\">Seeds</span> over <span class=\"wild\">those</span> spawned by <i>Garden of Thorns</i>.",
+      "leveling": [],
+      "notes": "* '''Zyra''' tries to plant {{as|Seeds|buzzword}} in brush and not on top of walls.\n* '''Zyra''' tries not to plant {{as|Seeds|buzzword}} too close together and at different angles.\n* '''Zyra''' does not plant any {{as|Seeds|buzzword}} if she is concealed within a brush (unless there is an enemy ward in it, in which case it takes her a little longer to plant the {{as|Seed|buzzword}}) or when there is no room for additional ones.\n* {{Pending for test}}: '''Zyra''' tries to plant {{as|Seeds|buzzword}} close to an enemy near her.\n* {{Pending for test}}: '''Zyra''' tries to plant {{as|Seeds|buzzword}} under enemy structures only if she is in basic attack range of them.\n* {{Pending for test}}: '''Zyra''' tries to plant {{as|Seeds|buzzword}} on the other side of the wall she is facing and/or standing right next to.\n* {{Pending for test}}: '''Zyra''' tries to plant {{as|Seeds|buzzword}} in the direction she is facing and/or moving.\n* {{Pending for test}}: '''Zyra''' tries to plant {{as|Seeds|buzzword}} near jungle path entrances.\n* {{Pending for test}}: '''Zyra''' tries to plant {{as|Seeds|buzzword}} behind herself when she is walking through the river and there are no jungle path entrances near her.\n* {{Pending for test}}: '''Zyra''' tries to plant {{as|Seeds|buzzword}} between herself and the enemy champion she has vision of (or is heading towards her) in a 45º angle to the left or to the right depending on where on lane she is standing.\n* {{Pending for test}}: '''Zyra''' tries to plant {{as|Seeds|buzzword}} against the inner walls of epic monster pits ({{ui|Dragon}}, {{ui|Rift Herald}}, {{ui|Baron Nashor}})\n* '''Zyra''' has a hidden passive that grants her 10% increased [[size]] for {{tt|33 seconds|Estimated}} after having {{cai|Sunlight|Leona}} applied to her.",
+      "skillkey": "I",
+      "skillid": "i1",
+      "effects": []
+    },
+    "q1": {
+      "riotId": "ZyraQ",
+      "name": "Deadly Spines",
+      "maxrank": 5,
+      "cooldown": [
+        7,
+        6.5,
+        6,
+        5.5,
+        5
+      ],
+      "cost": 70,
+      "costtype": "mana",
+      "targeting": "Location",
+      "target_range": 800,
+      "image": {
+        "full": "ZyraQ.png",
+        "sprite": "spell15.png",
+        "group": "spell",
+        "x": 96,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Zyra''' sprouts thorny spines at the target location that appear after a {{fd|0.625}}-seconds delay, dealing {{as|magic damage}} to all enemies they hit.",
+        "If ''Deadly Spines'' hits a ''Seed'', it sprouts into a [[File:Zyra Deadly Spines Render.png|20px|link=Zyra#Pets]] ''[[Zyra#Pets|Thorn Spitter]]'', which remains on the battlefield for 8 seconds."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Zyra</b> sprouts thorny spines at the target location that appear after a <span style=\"font-variant-numeric: tabular-nums;\">0.625</span>-seconds delay, dealing <span class=\"magic-damage\">magic damage</span> to all enemies they hit.<br />If <i>Deadly Spines</i> hits a <i>Seed</i>, it sprouts into a <a class=\"effect link\" title=\"20px\">File:Zyra Deadly Spines Render.png</a> <i><a class=\"effect link\" title=\"Thorn Spitter\">Zyra#Pets</a></i>, which remains on the battlefield for 8 seconds.",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|60|95|130|165|200}} {{as|(+ 60% AP)}}}}"
+      ],
+      "notes": "* No additional details.",
+      "skillkey": "Q",
+      "skillid": "q1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[60,95,130,165,200]\"></SpellSpan> <span class=\"ap\">(+ 60% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.6
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[60,95,130,165,200]\"></SpellSpan> <span class=\"ap\">(+ 60% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                60,
+                95,
+                130,
+                165,
+                200
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  60,
+                  95,
+                  130,
+                  165,
+                  200
+                ],
+                "player_total_ap": 0.6
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "w1": {
+      "riotId": "ZyraW",
+      "name": "Rampant Growth",
+      "maxrank": 5,
+      "cooldown": 0,
+      "cost": 1,
+      "costtype": "Seed",
+      "targeting": "Location",
+      "target_range": 850,
+      "image": {
+        "full": "ZyraW.png",
+        "sprite": "spell15.png",
+        "group": "spell",
+        "x": 144,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Passive:}} '''Zyra''' periodically stores a {{as|Seed|placed}}, up to 2. Killing an enemy unit grants 20% charge toward a {{as|Seed|placed}}, increased to 100% for large enemy units killed and enemy {{tip|champion}} {{tip|takedown|takedowns}}.",
+        "{{sbc|Active:}} '''Zyra''' plants a {{as|Seed|placed}} at the target location, which lasts for 60 seconds and briefly grants {{tip|sight}} of the spot '''Zyra''' planted it in.",
+        "After {{fd|1.5}} seconds, enemy champions can destroy {{as|Seeds|placed}} by stepping on them, but doing so {{tip|true sight|reveals}} them for 2 seconds."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Passive:</span> <b>Zyra</b> periodically stores a <span class=\"placed\">Seed</span>, up to 2. Killing an enemy unit grants 20% charge toward a <span class=\"placed\">Seed</span>, increased to 100% for large enemy units killed and enemy <HtmlTooltip class=\"blue link\">champion<template #content><div><h4>champion<hr></h4><p>Description for keyword champion</p></div></template></HtmlTooltip> <HtmlTooltip class=\"blue link\">takedowns<template #content><div><h4>takedown<hr></h4><p>Description for keyword takedown</p></div></template></HtmlTooltip>.<br /><span class=\"sbc\">Active:</span> <b>Zyra</b> plants a <span class=\"placed\">Seed</span> at the target location, which lasts for 60 seconds and briefly grants <HtmlTooltip class=\"blue link\">sight<template #content><div><h4>sight<hr></h4><p>Description for keyword sight</p></div></template></HtmlTooltip> of the spot <b>Zyra</b> planted it in.<br />After <span style=\"font-variant-numeric: tabular-nums;\">1.5</span> seconds, enemy champions can destroy <span class=\"placed\">Seeds</span> by stepping on them, but doing so <HtmlTooltip class=\"blue link\">reveals<template #content><div><h4>true sight<hr></h4><p>Description for keyword true sight</p></div></template></HtmlTooltip> them for 2 seconds.",
+      "leveling": [],
+      "notes": "* {{as|Seeds|placed}} are {{tip|untargetable}} to enemies.\n** They can be targeted by allied abilities ({{si|Teleport}}, {{ai|Leap Strike|Jax}}, {{ai|Shunpo|Katarina}}, {{ai|Safeguard|Lee Sin}}).",
+      "skillkey": "W",
+      "skillid": "w1",
+      "cost_warn": "Wiki's and Riot's mana costs do not match: Wiki's value  1 as 1 and riot's value 0,0,0,0,0 as 0",
+      "effects": []
+    },
+    "e1": {
+      "riotId": "ZyraE",
+      "name": "Grasping Roots",
+      "maxrank": 5,
+      "cooldown": 12,
+      "cost": [
+        70,
+        75,
+        80,
+        85,
+        90
+      ],
+      "costtype": "Mana",
+      "targeting": "Direction",
+      "target_range": 1100,
+      "image": {
+        "full": "ZyraE.png",
+        "sprite": "spell15.png",
+        "group": "spell",
+        "x": 192,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Zyra''' sends a surge of vines in the target direction, dealing {{as|magic damage}} to all enemies hit and {{tip|root|rooting}} them for a short duration.",
+        "If ''Grasping Roots'' hits a ''Seed'', it sprouts into a [[File:Zyra Grasping Roots Render.png|20px|link=Zyra#Pets]] ''[[Zyra#Pets|Vine Lasher]]'', which remains on the battlefield for 8 seconds."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Zyra</b> sends a surge of vines in the target direction, dealing <span class=\"magic-damage\">magic damage</span> to all enemies hit and <HtmlTooltip class=\"blue link\">rooting<template #content><div><h4>Root / Snare / Binding<hr></h4><p>Unit is unable to control movement, use a mobility spells (dash and blink) or use summoner <b>Flash</b> and <b>Teleport</b> for the duration.</p></div></template></HtmlTooltip> them for a short duration.<br />If <i>Grasping Roots</i> hits a <i>Seed</i>, it sprouts into a <a class=\"effect link\" title=\"20px\">File:Zyra Grasping Roots Render.png</a> <i><a class=\"effect link\" title=\"Vine Lasher\">Zyra#Pets</a></i>, which remains on the battlefield for 8 seconds.",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|60|105|150|195|240}} {{as|(+ 50% AP)}}}}<!--\n-->{{st|Root Duration|{{ap|1|1.25|1.5|1.75|2}}}}"
+      ],
+      "notes": "* No additional details.",
+      "skillkey": "E",
+      "skillid": "e1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[60,105,150,195,240]\"></SpellSpan> <span class=\"ap\">(+ 50% AP)</span></span></li></ul><br><ul class=\"st\"><li><span class=\"blue\">Root Duration</span>: <span><SpellSpan :list=\"[1,1.25,1.5,1.75,2]\"></SpellSpan></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.5
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[60,105,150,195,240]\"></SpellSpan> <span class=\"ap\">(+ 50% AP)</span>"
+              ],
+              [
+                "Root Duration",
+                "<SpellSpan :list=\"[1,1.25,1.5,1.75,2]\"></SpellSpan>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                60,
+                105,
+                150,
+                195,
+                240
+              ],
+              [
+                1,
+                1.25,
+                1.5,
+                1.75,
+                2
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  60,
+                  105,
+                  150,
+                  195,
+                  240
+                ],
+                "player_total_ap": 0.5
+              }
+            },
+            {
+              "index": 1,
+              "title": "Root Duration",
+              "damage_type": "unknown",
+              "ratios": {
+                "base_damage": [
+                  1,
+                  1.25,
+                  1.5,
+                  1.75,
+                  2
+                ],
+                "player_total_ap": 0.5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "r1": {
+      "riotId": "ZyraR",
+      "name": "Stranglethorns",
+      "maxrank": 3,
+      "cooldown": [
+        110,
+        100,
+        90
+      ],
+      "cost": 100,
+      "costtype": "Mana",
+      "targeting": "Location",
+      "target_range": 700,
+      "image": {
+        "full": "ZyraR.png",
+        "sprite": "spell15.png",
+        "group": "spell",
+        "x": 240,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Zyra''' summons a monstrous thicket at the target location, dealing {{as|magic damage}} to all enemies in the area as it expands.",
+        "After 2 seconds, the vines snap upward, {{tip|airborne|knocking up}} all enemies caught in the thicket for 1 second.",
+        "{{ai|Garden of Thorns|Zyra|Plants}} hit by the thicket are enraged, restoring {{as|{{sti|health|50% of their '''current''' health}}}}, increasing their {{as|{{sti|health|'''maximum''' health by 50%}}}}, gaining 25% increased size and refreshing their duration while the thicket expands. Additionally they attack in a flurry, launching two shots per attack, dealing {{ft|150% damage per flurry.|75% damage per shot.}}"
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Zyra</b> summons a monstrous thicket at the target location, dealing <span class=\"magic-damage\">magic damage</span> to all enemies in the area as it expands.<br />After 2 seconds, the vines snap upward, <HtmlTooltip class=\"blue link\">knocking up<template #content><div><h4>airborne<hr></h4><p>Description for keyword airborne</p></div></template></HtmlTooltip> all enemies caught in the thicket for 1 second.<br /><HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Zyra\">Plants<template #content>Garden of Thorns</template></HtmlTooltip> hit by the thicket are enraged, restoring <span class=\"health\"><span>50% of their <b>current</b> health</span></span>, increasing their <span class=\"health\"><span><b>maximum</b> health by 50%</span></span>, gaining 25% increased size and refreshing their duration while the thicket expands. Additionally they attack in a flurry, launching two shots per attack, dealing <label class=\"ft\"><input type=\"checkbox\"><span class=\"flipText1\">「&nbsp;150% damage per flurry.&nbsp;」</span><span class=\"flipText2\">「&nbsp;75% damage per shot.&nbsp;」</span></label>",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|180 to 350}} {{as|(+ 70% AP)}}}}"
+      ],
+      "notes": "* {{ai|Garden of Thorns||Plants}} grown during the 2 seconds prior to the displacement will also be enraged.\n* {{ai|Garden of Thorns||Plants}} already grown before ''Stranglethorns'' is cast will have their duration refreshed if they are inside the area of effect.\n* ''Stranglethorns''\\' buff on {{ai|Garden of Thorns||Plants}} lasts 10 seconds, however the ''Plants'' normally die naturally after 8 seconds.",
+      "skillkey": "R",
+      "skillid": "r1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[180,265,350]\"></SpellSpan> <span class=\"ap\">(+ 70% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.7000000000000001
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[180,265,350]\"></SpellSpan> <span class=\"ap\">(+ 70% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                180,
+                265,
+                350
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  180,
+                  265,
+                  350
+                ],
+                "player_total_ap": 0.7000000000000001
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

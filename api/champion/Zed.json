@@ -1,0 +1,296 @@
+{
+  "patch": "V1.0.0.151",
+  "changes": "10.25.1",
+  "id": "Zed",
+  "name": "Zed",
+  "title": "the Master of Shadows",
+  "image": {
+    "full": "Zed.png",
+    "sprite": "champion4.png",
+    "group": "champion",
+    "x": 384,
+    "y": 96,
+    "w": 48,
+    "h": 48
+  },
+  "resource": "Energy",
+  "herotype": "Assassin",
+  "alttype": "",
+  "rangetype": "Melee",
+  "be_cost": 4800,
+  "rp_cost": 880,
+  "adaptivetype": "physical",
+  "info": {
+    "attack": 9,
+    "defense": 2,
+    "magic": 1,
+    "difficulty": 7
+  },
+  "stats": {
+    "hp": 584,
+    "hpperlevel": 85,
+    "mp": 200,
+    "mpperlevel": 0,
+    "movespeed": 345,
+    "armor": 32,
+    "armorperlevel": 3.5,
+    "spellblock": 32.1,
+    "spellblockperlevel": 1.25,
+    "attackrange": 125,
+    "hpregen": 7,
+    "hpregenperlevel": 0.65,
+    "mpregen": 50,
+    "mpregenperlevel": 0,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 63,
+    "attackdamageperlevel": 3.4,
+    "attackspeedperlevel": 3.3,
+    "attackspeed": 0.651
+  },
+  "skills": {
+    "i1": {
+      "riotId": "",
+      "name": "Contempt for the Weak",
+      "maxrank": 0,
+      "targeting": "Passive",
+      "image": {
+        "full": "shadowninja_P.png",
+        "sprite": "passive4.png",
+        "group": "passive",
+        "x": 384,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Innate:}} '''Zed's''' [[basic attack]]s against targets {{sti|health|{{as|below 50% of their '''maximum''' health}}}} deal {{as|{{pp|key=%|6 to 10 for 3|1;7;17}} of the target's '''maximum''' health}} as {{as|'''bonus''' magic damage}}. Against {{tip|monster|monsters}}, the damage is increased by 100%, but is capped at {{pp|200 to 500 for 3|1;7;17}}.",
+        "''Contempt for the Weak'' can only affect the same target once every few seconds."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Innate:</span> <b>Zed's</b> <a class=\"effect link\" title=\"basic attack\">basic attack</a>s against targets <span><span class=\"health\">below 50% of their <b>maximum</b> health</span></span> deal <span class=\"health\"><span class=\"title-tooltip\" title=\"\">1;7;17 ‒ undefined</span> of the target's <b>maximum</b> health</span> as <span class=\"magic-damage\"><b>bonus</b> magic damage</span>. Against <HtmlTooltip class=\"blue link\">monsters<template #content><div><h4>monster<hr></h4><p>Description for keyword monster</p></div></template></HtmlTooltip>, the damage is increased by 100%, but is capped at <span class=\"title-tooltip\" title=\"\">1;7;17 ‒ undefined</span>.<br /><i>Contempt for the Weak</i> can only affect the same target once every few seconds.",
+      "leveling": [],
+      "notes": "* The enhanced attack applies other [[on-hit effect]]s and can {{tip|critical strike|critically strike}} as normal (the bonus damage cannot) but does not affect [[structures]].\n* ''Contempt for the Weak'' is not consumed when {{tip|dodged}} or {{tip|blind|missed}}, but it is consumed when {{tip|blocked}}.\n* ''Contempt for the Weak'' considers the target's health upon landing the attack, not when it's declared.\n** If the target falls below the threshold while '''Zed''' is winding up the attack, ''Contempt for the Weak'' applies, and vice versa.",
+      "skillkey": "I",
+      "skillid": "i1",
+      "effects": []
+    },
+    "q1": {
+      "riotId": "ZedQ",
+      "name": "Razor Shuriken",
+      "maxrank": 5,
+      "cooldown": 6,
+      "cost": [
+        75,
+        70,
+        65,
+        60,
+        55
+      ],
+      "costtype": "energy",
+      "targeting": "Direction",
+      "target_range": "{{tip|cr|icononly = true}} 925",
+      "image": {
+        "full": "ZedQ.png",
+        "sprite": "spell15.png",
+        "group": "spell",
+        "x": 288,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Zed''' and his [[File:Zed's Shadow.png|20px|border]] ''Shadows'' throw their spinning blades toward the target location. Each blade deals {{as|physical damage}} to all enemies struck, reduced to 60% against units beyond the first."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Zed</b> and his <a class=\"effect link\" title=\"20px\">File:Zed's Shadow.png</a> <i>Shadows</i> throw their spinning blades toward the target location. Each blade deals <span class=\"physical-damage\">physical damage</span> to all enemies struck, reduced to 60% against units beyond the first.",
+      "leveling": [
+        "{{st|Physical Damage|{{ap|80 to 220}} {{as|(+ 100% '''bonus''' AD)}}|Secondary Damage|{{ap|80*0.6 to 220*0.6}} {{as|(+ 60% '''bonus''' AD)}}}}"
+      ],
+      "notes": "* ''Razor Shuriken'' has been special cased to apply a stack of {{ri|Electrocute}} and {{ri|Phase Rush}} for each ''Shuriken'' hit.\n* {{tip|Spell shield}} only blocks the damage from one ''Razor Shuriken'' even if two hit at the same time.\n** ''Shurikens'' blocked by {{tip|spell shield}} still count as being hit for the reduced pass-through damage.\n* If '''Zed''' buffers an attack command during ''Razor Shuriken's'' cast time the attack will perform slower than if '''Zed''' had attacked after the cast time.\n** The same does not happen if '''Zed''' recasts {{ai|Living Shadow 2|Zed|Living Shadow}} during ''Razor Shuriken's'' cast time.",
+      "skillkey": "Q",
+      "skillid": "q1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Physical Damage</span>: <span><SpellSpan :list=\"[80,115,150,185,220]\"></SpellSpan> <span class=\"ad\">(+ 100% <b>bonus</b> AD)</span></span></li><li><span class=\"blue\">Secondary Damage</span>: <span><SpellSpan :list=\"[48,69,90,111,132]\"></SpellSpan> <span class=\"ad\">(+ 60% <b>bonus</b> AD)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_bonus_ad": 1
+              },
+              {
+                "player_bonus_ad": 0.6
+              }
+            ],
+            "st_slices": [
+              [
+                "Physical Damage",
+                "<SpellSpan :list=\"[80,115,150,185,220]\"></SpellSpan> <span class=\"ad\">(+ 100% '''bonus''' AD)</span>",
+                "Secondary Damage",
+                "<SpellSpan :list=\"[48,69,90,111,132]\"></SpellSpan> <span class=\"ad\">(+ 60% '''bonus''' AD)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                80,
+                115,
+                150,
+                185,
+                220
+              ],
+              [
+                48,
+                69,
+                90,
+                111,
+                132
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Physical Damage",
+              "damage_type": "physical",
+              "ratios": {
+                "base_damage": [
+                  80,
+                  115,
+                  150,
+                  185,
+                  220
+                ],
+                "player_bonus_ad": 0.6
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "e1": {
+      "riotId": "ZedE",
+      "name": "Shadow Slash",
+      "maxrank": 5,
+      "cooldown": [
+        5,
+        4.5,
+        4,
+        3.5,
+        3
+      ],
+      "cost": 50,
+      "costtype": "energy",
+      "targeting": "Auto",
+      "image": {
+        "full": "ZedE.png",
+        "sprite": "spell15.png",
+        "group": "spell",
+        "x": 384,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Zed''' and his [[File:Zed's Shadow.png|20px|border]] ''Shadows'' slash, dealing {{as|physical damage}} to enemies surrounding them.",
+        "Enemies hit by the slash of a [[File:Zed's Shadow.png|20px|border]] ''Shadow'' are {{tip|slow|slowed}} for {{fd|1.5}} seconds. Enemies hit by multiple slashes take no additional damage but the slow's potency is increased by 50%.",
+        "Each enemy {{tip|champion}} hit by '''Zed's''' slash reduces {{ai|Living Shadow|Zed|Living Shadow's}} {{sti|cooldown}} by 2 seconds."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Zed</b> and his <a class=\"effect link\" title=\"20px\">File:Zed's Shadow.png</a> <i>Shadows</i> slash, dealing <span class=\"physical-damage\">physical damage</span> to enemies surrounding them.<br />Enemies hit by the slash of a <a class=\"effect link\" title=\"20px\">File:Zed's Shadow.png</a> <i>Shadow</i> are <HtmlTooltip class=\"blue link\">slowed<template #content><div><h4>Slow<hr></h4><p>A unit that is <i>slowed</i> has reduced movement speed for the duration.<br><br>Duration reduced by <b>Tenacity</b>.<br>Strength is reduced by <b>Slow resist</b>.</p></div></template></HtmlTooltip> for <span style=\"font-variant-numeric: tabular-nums;\">1.5</span> seconds. Enemies hit by multiple slashes take no additional damage but the slow's potency is increased by 50%.<br />Each enemy <HtmlTooltip class=\"blue link\">champion<template #content><div><h4>champion<hr></h4><p>Description for keyword champion</p></div></template></HtmlTooltip> hit by <b>Zed's</b> slash reduces <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Zed\">Living Shadow's<template #content>Living Shadow</template></HtmlTooltip> <span>cooldown</span> by 2 seconds.",
+      "leveling": [
+        "{{st|Physical Damage|{{ap|70 to 150}} {{as|(+ 80% '''bonus''' AD)}}}}",
+        "{{st|Slow|{{ap|20 to 40}}%|Enhanced Slow|{{ap|20*1.5 to 40*1.5}}%}}"
+      ],
+      "notes": "* ''Shadow Slash'' has been special cased to apply a stack of {{ri|Electrocute}} and {{ri|Phase Rush}} for each slash hit.\n* {{tip|Spell shield|Spell shield}} will only block one ''Shadow Slash'' even if two hit at the same time, the {{tip|slow}} will not apply regardless.\n* ''Shadow Slash'' does not interrupt attack commands.",
+      "skillkey": "E",
+      "skillid": "e1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Physical Damage</span>: <span><SpellSpan :list=\"[70,90,110,130,150]\"></SpellSpan> <span class=\"ad\">(+ 80% <b>bonus</b> AD)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_bonus_ad": 0.8
+              }
+            ],
+            "st_slices": [
+              [
+                "Physical Damage",
+                "<SpellSpan :list=\"[70,90,110,130,150]\"></SpellSpan> <span class=\"ad\">(+ 80% '''bonus''' AD)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                70,
+                90,
+                110,
+                130,
+                150
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Physical Damage",
+              "damage_type": "physical",
+              "ratios": {
+                "base_damage": [
+                  70,
+                  90,
+                  110,
+                  130,
+                  150
+                ],
+                "player_bonus_ad": 0.8
+              }
+            }
+          ]
+        },
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Slow</span>: <span><SpellSpan :list=\"[20,25,30,35,40]\"></SpellSpan>%</span></li><li><span class=\"blue\">Enhanced Slow</span>: <span><SpellSpan :list=\"[30,37.5,45,52.5,60]\"></SpellSpan>%</span></li></ul>",
+          "vars": {
+            "as_ratios": [],
+            "st_slices": [
+              [
+                "Slow",
+                "<SpellSpan :list=\"[20,25,30,35,40]\"></SpellSpan>%",
+                "Enhanced Slow",
+                "<SpellSpan :list=\"[30,37.5,45,52.5,60]\"></SpellSpan>%"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                20,
+                25,
+                30,
+                35,
+                40
+              ],
+              [
+                30,
+                37.5,
+                45,
+                52.5,
+                60
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Slow",
+              "damage_type": "physical",
+              "ratios": {
+                "base_damage": [
+                  20,
+                  25,
+                  30,
+                  35,
+                  40
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

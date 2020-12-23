@@ -1,0 +1,445 @@
+{
+  "patch": "April 18, 2009 Patch",
+  "changes": "10.18.1",
+  "id": "Singed",
+  "name": "Singed",
+  "title": "the Mad Chemist",
+  "image": {
+    "full": "Singed.png",
+    "sprite": "champion3.png",
+    "group": "champion",
+    "x": 432,
+    "y": 48,
+    "w": 48,
+    "h": 48
+  },
+  "resource": "Mana",
+  "herotype": "Tank",
+  "alttype": "Fighter",
+  "rangetype": "Melee",
+  "be_cost": 450,
+  "rp_cost": 260,
+  "adaptivetype": "magic",
+  "info": {
+    "attack": 4,
+    "defense": 8,
+    "magic": 7,
+    "difficulty": 5
+  },
+  "stats": {
+    "hp": 580,
+    "hpperlevel": 85,
+    "mp": 330,
+    "mpperlevel": 45,
+    "movespeed": 345,
+    "armor": 34,
+    "armorperlevel": 3.5,
+    "spellblock": 32.1,
+    "spellblockperlevel": 1.25,
+    "attackrange": 125,
+    "hpregen": 9.5,
+    "hpregenperlevel": 0.55,
+    "mpregen": 7.5,
+    "mpregenperlevel": 0.55,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 63,
+    "attackdamageperlevel": 3.375,
+    "attackspeedperlevel": 1.9,
+    "attackspeed": 0.613
+  },
+  "skills": {
+    "i1": {
+      "riotId": "",
+      "name": "Noxious Slipstream",
+      "maxrank": 0,
+      "targeting": "Passive",
+      "image": {
+        "full": "Singed_Passive.png",
+        "sprite": "passive3.png",
+        "group": "passive",
+        "x": 432,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Innate:}} Moving near a {{tip|champion}} grants '''Singed''' {{sti|ms|{{as|20% '''bonus''' movement speed}}}} for 2 seconds. The effects of ''Noxious Slipstream'' can stack up to 25 times.",
+        "''This effect cannot occur on the same target more than once every few seconds.''"
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Innate:</span> Moving near a <HtmlTooltip class=\"blue link\">champion<template #content><div><h4>champion<hr></h4><p>Description for keyword champion</p></div></template></HtmlTooltip> grants <b>Singed</b> <span><span class=\"movement-speed\">20% <b>bonus</b> movement speed</span></span> for 2 seconds. The effects of <i>Noxious Slipstream</i> can stack up to 25 times.<br /><i>This effect cannot occur on the same target more than once every few seconds.</i>",
+      "leveling": [],
+      "notes": "* No additional details.",
+      "skillkey": "I",
+      "skillid": "i1",
+      "effects": []
+    },
+    "q1": {
+      "riotId": "PoisonTrail",
+      "name": "Poison Trail",
+      "maxrank": 5,
+      "cooldown": 0,
+      "cost": 13,
+      "costtype": "Mana per second",
+      "targeting": "Auto",
+      "image": {
+        "full": "PoisonTrail.png",
+        "sprite": "spell11.png",
+        "group": "spell",
+        "x": 0,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Toggle:}} '''Singed''' leaves a {{tip|poison}} cloud behind him for {{fd|3.25}} seconds.",
+        "Enemies standing in the cloud's trail are {{tip|poison|poisoned}} for 2 seconds, taking {{as|magic damage}} every {{fd|0.25}} seconds for the duration, refreshing every {{fd|0.5}} seconds while remaining in the affected area."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Toggle:</span> <b>Singed</b> leaves a <HtmlTooltip class=\"blue link\">poison<template #content><div><h4>poison<hr></h4><p>Description for keyword poison</p></div></template></HtmlTooltip> cloud behind him for <span style=\"font-variant-numeric: tabular-nums;\">3.25</span> seconds.<br />Enemies standing in the cloud's trail are <HtmlTooltip class=\"blue link\">poisoned<template #content><div><h4>poison<hr></h4><p>Description for keyword poison</p></div></template></HtmlTooltip> for 2 seconds, taking <span class=\"magic-damage\">magic damage</span> every <span style=\"font-variant-numeric: tabular-nums;\">0.25</span> seconds for the duration, refreshing every <span style=\"font-variant-numeric: tabular-nums;\">0.5</span> seconds while remaining in the affected area.",
+      "leveling": [
+        "{{st|Magic Damage per {{fd|0.25}} Seconds|{{ap|5 to 15}} {{as|(+ 10% AP)}}|Total Magic Damage|{{ap|5*8 to 15*8}} {{as|(+ 80% AP)}}}}"
+      ],
+      "notes": "*Toggle abilities do not count as ability activations for the purposes of on-cast effects such as {{nie|Spellblade}} and stacking {{ai|Force Pulse|Kassadin}}.\n* {{tip|Poison}} clouds check for enemy targets in the area immediately upon being spawned. After a {{fd|0.25}}- to {{fd|0.5}}-second delay, they check every {{fd|0.25}} seconds again until they fade.\n** Targets already poisoned can have the debuff refreshed only every {{fd|0.5}} seconds.\n** Due to the inconsistent offset between the first and future ticks is it possible for a static target to miss out on one refresh of the debuff, equal to 3 ticks of damage.\n* ''Poison Trail'' interacts with {{ai|Twin Fang|Cassiopeia}}.",
+      "skillkey": "Q",
+      "skillid": "q1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage per <span style=\"font-variant-numeric: tabular-nums;\">0.25</span> Seconds</span>: <span><SpellSpan :list=\"[5,7.5,10,12.5,15]\"></SpellSpan> <span class=\"ap\">(+ 10% AP)</span></span></li><li><span class=\"blue\">Total Magic Damage</span>: <span><SpellSpan :list=\"[40,60,80,100,120]\"></SpellSpan> <span class=\"ap\">(+ 80% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.1
+              },
+              {
+                "player_total_ap": 0.8
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage per <span style=\"font-variant-numeric: tabular-nums;\">0.25</span> Seconds",
+                "<SpellSpan :list=\"[5,7.5,10,12.5,15]\"></SpellSpan> <span class=\"ap\">(+ 10% AP)</span>",
+                "Total Magic Damage",
+                "<SpellSpan :list=\"[40,60,80,100,120]\"></SpellSpan> <span class=\"ap\">(+ 80% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                5,
+                7.5,
+                10,
+                12.5,
+                15
+              ],
+              [
+                40,
+                60,
+                80,
+                100,
+                120
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage per <span style=\"font-variant-numeric: tabular-nums;\">0.25</span> Seconds",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  5,
+                  7.5,
+                  10,
+                  12.5,
+                  15
+                ],
+                "player_total_ap": 0.8
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "w1": {
+      "riotId": "MegaAdhesive",
+      "name": "Mega Adhesive",
+      "maxrank": 5,
+      "cooldown": [
+        17,
+        16,
+        15,
+        14,
+        13
+      ],
+      "cost": [
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "costtype": "Mana",
+      "targeting": "Location",
+      "target_range": 1000,
+      "image": {
+        "full": "MegaAdhesive.png",
+        "sprite": "spell11.png",
+        "group": "spell",
+        "x": 48,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Singed''' covers the target area with a potent adhesive for 3 seconds, {{tip|slow|slowing}} by 60% and {{tip|ground|grounding}} all enemies within."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Singed</b> covers the target area with a potent adhesive for 3 seconds, <HtmlTooltip class=\"blue link\">slowing<template #content><div><h4>Slow<hr></h4><p>A unit that is <i>slowed</i> has reduced movement speed for the duration.<br><br>Duration reduced by <b>Tenacity</b>.<br>Strength is reduced by <b>Slow resist</b>.</p></div></template></HtmlTooltip> by 60% and <HtmlTooltip class=\"blue link\">grounding<template #content><div><h4>Ground / Grounded <hr></h4><p>Unit that is grounded is unable to activate mobility spells (dash and blink). <br><br>Does <b>not</b> interrupts an in progress dash or blink.<br>Does Interrupts channeled and charged dashes.</p></div></template></HtmlTooltip> all enemies within.",
+      "leveling": [],
+      "notes": "* ''Mega Adhesive'' can be {{tip|cleanse|cleansed}}, providing immunity to the persistent area of effect if the target stays within the area.\n** Leaving the area and entering back inside applies the {{tip|ground}} regardless.\n* '''Singed''' {{tip|sight|reveals}} himself to enemies briefly if casting ''Mega Adhesive'' from the fog of war.",
+      "skillkey": "W",
+      "skillid": "w1",
+      "effects": []
+    },
+    "e1": {
+      "riotId": "Fling",
+      "name": "Fling",
+      "maxrank": 5,
+      "cooldown": 10,
+      "cost": [
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "costtype": "Mana",
+      "targeting": "Unit",
+      "target_range": "{{tip|er|icononly = true}} 125",
+      "image": {
+        "full": "Fling.png",
+        "sprite": "spell11.png",
+        "group": "spell",
+        "x": 96,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Singed''' {{tip|airborne|flings}} the target enemy over his shoulder, dropping at a location 550 units behind '''Singed's''' casting position after {{fd|0.75}} seconds and dealing {{as|magic damage}}, capped against {{tip|minions}} and {{tip|monsters}}.",
+        "Targets landing in {{ais|Mega Adhesive|Singed}} area of effect are temporarily {{tip|root|rooted}}."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Singed</b> <HtmlTooltip class=\"blue link\">flings<template #content><div><h4>airborne<hr></h4><p>Description for keyword airborne</p></div></template></HtmlTooltip> the target enemy over his shoulder, dropping at a location 550 units behind <b>Singed's</b> casting position after <span style=\"font-variant-numeric: tabular-nums;\">0.75</span> seconds and dealing <span class=\"magic-damage\">magic damage</span>, capped against <HtmlTooltip class=\"blue link\">minions<template #content><div><h4>Lane Minions<hr></h4><p>A unit that is <i>slowed</i> has reduced movement speed for the duration.<br><br>Duration reduced by <b>Tenacity</b>.<br>Strength is reduced by <b>Slow resist</b>.</p></div></template></HtmlTooltip> and <HtmlTooltip class=\"blue link\">monsters<template #content><div><h4>monsters<hr></h4><p>Description for keyword monsters</p></div></template></HtmlTooltip>.<br />Targets landing in <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Singed\">Mega Adhesive's<template #content>Mega Adhesive</template></HtmlTooltip> area of effect are temporarily <HtmlTooltip class=\"blue link\">rooted<template #content><div><h4>Root / Snare / Binding<hr></h4><p>Unit is unable to control movement, use a mobility spells (dash and blink) or use summoner <b>Flash</b> and <b>Teleport</b> for the duration.</p></div></template></HtmlTooltip>.",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|50 to 110}} {{as|(+ {{ap|6 to 8}}% of target's '''maximum''' health)}} {{as|(+ 75% AP)}}|Maximum Non-Champion Damage|{{ap|350 to 410}} {{as|(+ 75% AP)}}}}",
+        "{{st|Root Duration|{{ap|1 to 2}}}}"
+      ],
+      "notes": "* ''Fling'' can throw enemies over walls (circumstances permitting).\n* {{tip|Slow-immune}} enemies will not be {{tip|root|rooted}} when ''flung'' into {{ai|Mega Adhesive|Singed}}.\n* ''Fling'' is special cased to not {{tip|airborne|fling}} {{ci|Warwick}} while '''Singed''' is {{tip|suppression|suppressed}} by {{ai|Infinite Duress|Warwick}} after the cast time.",
+      "skillkey": "E",
+      "skillid": "e1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[50,65,80,95,110]\"></SpellSpan> <span class=\"health\">(+ <SpellSpan :list=\"[6,6.5,7,7.5,8]\"></SpellSpan>% of target's <b>maximum</b> health)</span> <span class=\"ap\">(+ 75% AP)</span></span></li><li><span class=\"blue\">Maximum Non-Champion Damage</span>: <span><SpellSpan :list=\"[350,365,380,395,410]\"></SpellSpan> <span class=\"ap\">(+ 75% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.75
+              },
+              {
+                "player_total_ap": 0.75
+              },
+              {
+                "target_total_hp": [
+                  3.5,
+                  3.65,
+                  3.8,
+                  3.95,
+                  4.1
+                ]
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[50,65,80,95,110]\"></SpellSpan> <span class=\"health\">(+ <SpellSpan :list=\"[6,6.5,7,7.5,8]\"></SpellSpan>% of target's '''maximum''' health)</span> <span class=\"ap\">(+ 75% AP)</span>",
+                "Maximum Non-Champion Damage",
+                "<SpellSpan :list=\"[350,365,380,395,410]\"></SpellSpan> <span class=\"ap\">(+ 75% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                50,
+                65,
+                80,
+                95,
+                110
+              ],
+              [
+                6,
+                6.5,
+                7,
+                7.5,
+                8
+              ],
+              null
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  50,
+                  65,
+                  80,
+                  95,
+                  110
+                ],
+                "player_total_ap": 0.75,
+                "target_total_hp": [
+                  3.5,
+                  3.65,
+                  3.8,
+                  3.95,
+                  4.1
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Root Duration</span>: <span><SpellSpan :list=\"[1,1.25,1.5,1.75,2]\"></SpellSpan></span></li></ul>",
+          "vars": {
+            "as_ratios": [],
+            "st_slices": [
+              [
+                "Root Duration",
+                "<SpellSpan :list=\"[1,1.25,1.5,1.75,2]\"></SpellSpan>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                1,
+                1.25,
+                1.5,
+                1.75,
+                2
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Root Duration",
+              "damage_type": "unknown",
+              "ratios": {
+                "base_damage": [
+                  1,
+                  1.25,
+                  1.5,
+                  1.75,
+                  2
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "r1": {
+      "riotId": "InsanityPotion",
+      "name": "Insanity Potion",
+      "maxrank": 3,
+      "cooldown": [
+        120,
+        110,
+        100
+      ],
+      "cost": 100,
+      "costtype": "mana",
+      "targeting": "Auto",
+      "image": {
+        "full": "InsanityPotion.png",
+        "sprite": "spell11.png",
+        "group": "spell",
+        "x": 144,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Singed''' drinks a potent chemical brew, gaining {{sti|ap|{{as|'''bonus''' ability power}}}}, {{sti|armor|{{as|'''bonus''' armor}}}}, {{sti|mr|{{as|'''bonus''' magic resistance}}}}, {{sti|ms|{{as|'''bonus''' movement speed}}}}, {{sti|{{as|'''bonus''' health regeneration}}}}, and {{sti|{{as|'''bonus''' mana regeneration}}}}, all for the next 25 seconds."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Singed</b> drinks a potent chemical brew, gaining <span><span class=\"ability-power\"><b>bonus</b> ability power</span></span>, <span><span class=\"armor\"><b>bonus</b> armor</span></span>, <span><span class=\"magic-resist\"><b>bonus</b> magic resistance</span></span>, <span><span class=\"movement-speed\"><b>bonus</b> movement speed</span></span>, <span><span class=\"health\"><b>bonus</b> health regeneration</span></span>, and <span><span class=\"mana\"><b>bonus</b> mana regeneration</span></span>, all for the next 25 seconds.",
+      "leveling": [
+        "{{st|Bonus Stats|{{ap|30 to 90}}}}\n{{st|Regeneration per Second|{{ap|30/5 to 90/5}}|Total Regeneration|{{ap|30*5 to 90*5}}}}"
+      ],
+      "notes": "* No additional notes.",
+      "skillkey": "R",
+      "skillid": "r1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Bonus Stats</span>: <span><SpellSpan :list=\"[30,60,90]\"></SpellSpan></span></li></ul><br><ul class=\"st\"><li><span class=\"blue\">Regeneration per Second</span>: <span><SpellSpan :list=\"[6,12,18]\"></SpellSpan></span></li><li><span class=\"blue\">Total Regeneration</span>: <span><SpellSpan :list=\"[150,300,450]\"></SpellSpan></span></li></ul>",
+          "vars": {
+            "as_ratios": [],
+            "st_slices": [
+              [
+                "Bonus Stats",
+                "<SpellSpan :list=\"[30,60,90]\"></SpellSpan>"
+              ],
+              [
+                "Regeneration per Second",
+                "<SpellSpan :list=\"[6,12,18]\"></SpellSpan>",
+                "Total Regeneration",
+                "<SpellSpan :list=\"[150,300,450]\"></SpellSpan>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                30,
+                60,
+                90
+              ],
+              [
+                6,
+                12,
+                18
+              ],
+              [
+                150,
+                300,
+                450
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Bonus Stats",
+              "damage_type": "unknown",
+              "ratios": {
+                "base_damage": [
+                  30,
+                  60,
+                  90
+                ]
+              }
+            },
+            {
+              "index": 1,
+              "title": "Regeneration per Second",
+              "damage_type": "unknown",
+              "ratios": {
+                "base_damage": [
+                  6,
+                  12,
+                  18
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

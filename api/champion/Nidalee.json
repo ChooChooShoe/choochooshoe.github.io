@@ -1,0 +1,79 @@
+{
+  "patch": "V1.0.0.63",
+  "changes": "10.25.1",
+  "id": "Nidalee",
+  "name": "Nidalee",
+  "title": "the Bestial Huntress",
+  "image": {
+    "full": "Nidalee.png",
+    "sprite": "champion2.png",
+    "group": "champion",
+    "x": 48,
+    "y": 96,
+    "w": 48,
+    "h": 48
+  },
+  "resource": "Mana",
+  "herotype": "Assassin",
+  "alttype": "Mage",
+  "rangetype": "Ranged",
+  "be_cost": 3150,
+  "rp_cost": 790,
+  "adaptivetype": "magic",
+  "info": {
+    "attack": 5,
+    "defense": 4,
+    "magic": 7,
+    "difficulty": 8
+  },
+  "stats": {
+    "hp": 545,
+    "hpperlevel": 85,
+    "mp": 295,
+    "mpperlevel": 45,
+    "movespeed": 335,
+    "armor": 28,
+    "armorperlevel": 3.5,
+    "spellblock": 30,
+    "spellblockperlevel": 0.5,
+    "attackrange": 525,
+    "hpregen": 6,
+    "hpregenperlevel": 0.6,
+    "mpregen": 6,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 58,
+    "attackdamageperlevel": 3.5,
+    "attackspeedperlevel": 3.22,
+    "attackspeed": 0.638
+  },
+  "skills": {
+    "i1": {
+      "riotId": "",
+      "name": "Prowl",
+      "maxrank": 0,
+      "targeting": "Passive",
+      "image": {
+        "full": "Nidalee_Passive.png",
+        "sprite": "passive2.png",
+        "group": "passive",
+        "x": 48,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Innate - Prowl:}} Being in {{tip|brush}} grants '''Nidalee''' {{sti|ms|{{as|10% '''bonus''' movement speed}}}} for 2 seconds, increased to {{as|30%|ms}} when facing a {{tt|nearby|1400 range}} {{tip|sight|visible}} enemy {{tip|champion}}.",
+        "{{sbc|Innate - Hunt:}} Hitting {{tt|nearby|3000 range}} {{tip|monster|monsters}} or enemy champions with {{ai|Javelin Toss|Nidalee}} or {{ai|Bushwhack|Nidalee}} marks them as ''Hunted'', {{tip|true sight|revealing}} them for 4 seconds and granting '''Nidalee''' {{sti|ms|{{as|10% '''bonus''' movement speed}}}} for the same duration, increased to {{as|30%|ms}} when facing a {{tt|nearby|5500 range}} ''Hunted'' target. Additionally, '''Nidalee's''' first use of {{ai|Takedown|Nidalee}} and {{ai|Pounce|Nidalee}} against ''Hunted'' targets are empowered.",
+        "The {{as|'''bonus''' movement speed}} from ''Prowl'' and ''Hunt'' can stack, but cannot exceed {{as|30%|ms}}."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Innate - Prowl:</span> Being in <HtmlTooltip class=\"blue link\">brush<template #content><div><h4>brush<hr></h4><p>Description for keyword brush</p></div></template></HtmlTooltip> grants <b>Nidalee</b> <span><span class=\"movement-speed\">10% <b>bonus</b> movement speed</span></span> for 2 seconds, increased to <span class=\"ms\">30%</span> when facing a <span class=\"title-tooltip\" title=\"1400 range\">nearby</span> <HtmlTooltip class=\"blue link\">visible<template #content><div><h4>sight<hr></h4><p>Description for keyword sight</p></div></template></HtmlTooltip> enemy <HtmlTooltip class=\"blue link\">champion<template #content><div><h4>champion<hr></h4><p>Description for keyword champion</p></div></template></HtmlTooltip>.<br /><span class=\"sbc\">Innate - Hunt:</span> Hitting <span class=\"title-tooltip\" title=\"3000 range\">nearby</span> <HtmlTooltip class=\"blue link\">monsters<template #content><div><h4>monster<hr></h4><p>Description for keyword monster</p></div></template></HtmlTooltip> or enemy champions with <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Nidalee\">Javelin Toss<template #content>Javelin Toss</template></HtmlTooltip> or <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Nidalee\">Bushwhack<template #content>Bushwhack</template></HtmlTooltip> marks them as <i>Hunted</i>, <HtmlTooltip class=\"blue link\">revealing<template #content><div><h4>true sight<hr></h4><p>Description for keyword true sight</p></div></template></HtmlTooltip> them for 4 seconds and granting <b>Nidalee</b> <span><span class=\"movement-speed\">10% <b>bonus</b> movement speed</span></span> for the same duration, increased to <span class=\"ms\">30%</span> when facing a <span class=\"title-tooltip\" title=\"5500 range\">nearby</span> <i>Hunted</i> target. Additionally, <b>Nidalee's</b> first use of <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Nidalee\">Takedown<template #content>Takedown</template></HtmlTooltip> and <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Nidalee\">Pounce<template #content>Pounce</template></HtmlTooltip> against <i>Hunted</i> targets are empowered.<br />The <span class=\"movement-speed\"><b>bonus</b> movement speed</span> from <i>Prowl</i> and <i>Hunt</i> can stack, but cannot exceed <span class=\"ms\">30%</span>.",
+      "leveling": [],
+      "notes": "* No additional notes.",
+      "skillkey": "I",
+      "skillid": "i1",
+      "effects": []
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "patch": "V1.0.0.148",
+  "changes": "10.24.1",
+  "id": "Khazix",
+  "name": "Kha'Zix",
+  "title": "the Voidreaver",
+  "image": {
+    "full": "Khazix.png",
+    "sprite": "champion1.png",
+    "group": "champion",
+    "x": 336,
+    "y": 96,
+    "w": 48,
+    "h": 48
+  },
+  "resource": "Mana",
+  "herotype": "Assassin",
+  "alttype": "",
+  "rangetype": "Melee",
+  "be_cost": 4800,
+  "rp_cost": 880,
+  "adaptivetype": "physical",
+  "info": {
+    "attack": 9,
+    "defense": 4,
+    "magic": 3,
+    "difficulty": 6
+  },
+  "stats": {
+    "hp": 572.8,
+    "hpperlevel": 85,
+    "mp": 327.2,
+    "mpperlevel": 40,
+    "movespeed": 350,
+    "armor": 36,
+    "armorperlevel": 3,
+    "spellblock": 32.1,
+    "spellblockperlevel": 1.25,
+    "attackrange": 125,
+    "hpregen": 7.5,
+    "hpregenperlevel": 0.75,
+    "mpregen": 7.59,
+    "mpregenperlevel": 0.5,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 63,
+    "attackdamageperlevel": 3.1,
+    "attackspeedperlevel": 2.7,
+    "attackspeed": 0.668
+  },
+  "skills": {
+    "i1": {
+      "riotId": "",
+      "name": "Unseen Threat",
+      "maxrank": 0,
+      "targeting": "Passive",
+      "image": {
+        "full": "Khazix_P.png",
+        "sprite": "passive1.png",
+        "group": "passive",
+        "x": 336,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Innate:}} '''Kha'Zix''' gains ''Unseen Threat'' whenever the enemy loses {{tip|sight}} of him or he activates {{ai|Void Assault|Kha'Zix}}. ''Unseen Threat'' causes his next [[basic attack]] against an enemy champion to deal {{pp|14 to 116|color=magic damage}} {{as|(+ 40% '''bonus''' AD)}} {{as|'''bonus''' magic damage}} and {{tip|slow}} them by 25% for 2 seconds. Once gained, the empowered attack lasts until used."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Innate:</span> <b>Kha'Zix</b> gains <i>Unseen Threat</i> whenever the enemy loses <HtmlTooltip class=\"blue link\">sight<template #content><div><h4>sight<hr></h4><p>Description for keyword sight</p></div></template></HtmlTooltip> of him or he activates <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Kha'Zix\">Void Assault<template #content>Void Assault</template></HtmlTooltip>. <i>Unseen Threat</i> causes his next <a class=\"effect link\" title=\"basic attack\">basic attack</a> against an enemy champion to deal <HtmlTooltip class=\"blue link\">14undefined − 116undefined (based on level)<template #content>Values: 14, 20, 26, 32, 38, 44, 50, 56, 62, 68, 74, 80, 86, 92, 98, 104, 110, 116<br>At levels: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18</template></HtmlTooltip> <span class=\"ad\">(+ 40% <b>bonus</b> AD)</span> <span class=\"magic-damage\"><b>bonus</b> magic damage</span> and <HtmlTooltip class=\"blue link\">slow<template #content><div><h4>Slow<hr></h4><p>A unit that is <i>slowed</i> has reduced movement speed for the duration.<br><br>Duration reduced by <b>Tenacity</b>.<br>Strength is reduced by <b>Slow resist</b>.</p></div></template></HtmlTooltip> them by 25% for 2 seconds. Once gained, the empowered attack lasts until used.",
+      "leveling": [],
+      "notes": "* Any form of vision loss may trigger ''Unseen Threat'', such as {{ai|Curse of the Black Mist|Senna}}, {{tip|nearsight}} and {{ai|Brushmaker|Ivern}}.\n* {{ai|Void Assault|Kha'Zix}} grants ''Unseen Threat'' even if '''Kha'Zix''' never becomes unseen (e.g. affected by {{tip|true sight}}).\n** Other {{tip|stealth}} such as {{cai|E|Senna}} and {{ii|Duskblade of Draktharr}} does not do this.\n* Both the attack's damage and bonus spell damage are grouped under the same Spell ID.\n** Because of this, a single ''Unseen Threat'' attack does '''not''' trigger two {{ri|Electrocute}} stacks or {{iis|Muramana}} {{nie|Shock}} damage twice.",
+      "skillkey": "I",
+      "skillid": "i1",
+      "effects": []
+    }
+  }
+}

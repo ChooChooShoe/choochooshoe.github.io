@@ -1,0 +1,475 @@
+{
+  "patch": "Alpha Week 2",
+  "changes": "10.23.1",
+  "id": "Jax",
+  "name": "Jax",
+  "title": "Grandmaster at Arms",
+  "image": {
+    "full": "Jax.png",
+    "sprite": "champion1.png",
+    "group": "champion",
+    "x": 192,
+    "y": 48,
+    "w": 48,
+    "h": 48
+  },
+  "resource": "Mana",
+  "herotype": "Fighter",
+  "alttype": "Assassin",
+  "rangetype": "Melee",
+  "be_cost": 1350,
+  "rp_cost": 585,
+  "adaptivetype": "physical",
+  "info": {
+    "attack": 7,
+    "defense": 5,
+    "magic": 7,
+    "difficulty": 5
+  },
+  "stats": {
+    "hp": 592.8,
+    "hpperlevel": 85,
+    "mp": 338.8,
+    "mpperlevel": 52,
+    "movespeed": 350,
+    "armor": 36,
+    "armorperlevel": 3,
+    "spellblock": 32.1,
+    "spellblockperlevel": 1.25,
+    "attackrange": 125,
+    "hpregen": 8.5,
+    "hpregenperlevel": 0.55,
+    "mpregen": 7.576,
+    "mpregenperlevel": 0.7,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 68,
+    "attackdamageperlevel": 3.375,
+    "attackspeedperlevel": 3.4,
+    "attackspeed": 0.638
+  },
+  "skills": {
+    "i1": {
+      "riotId": "",
+      "name": "Relentless Assault",
+      "maxrank": 0,
+      "targeting": "Passive",
+      "image": {
+        "full": "Armsmaster_MasterOfArms.png",
+        "sprite": "passive1.png",
+        "group": "passive",
+        "x": 192,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Innate:}} '''Jax's''' [[basic attack]]s [[on-attack]] grant him a [[stack]] of ''Relentless Assault'' for {{fd|2.5}} seconds, stacking up to 8 times, with the duration refreshing on subsequent attacks. Each stack grants him {{sti|{{as|{{pp|key=%|3.5 to 11 for 6|1 to 16}} '''bonus''' attack speed}}}}, for a maximum of {{as|{{pp|key=%|28 to 88 for 6|1 to 16}} '''bonus''' attack speed}} at 8 stacks.",
+        "[[Stack|Stacks]] are deducted one at a time every {{fd|0.25}} seconds after not attacking for {{fd|2.5}} seconds."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Innate:</span> <b>Jax's</b> <a class=\"effect link\" title=\"basic attack\">basic attack</a>s <a class=\"effect link\" title=\"on-attack\">on-attack</a> grant him a <a class=\"effect link\" title=\"stack\">stack</a> of <i>Relentless Assault</i> for <span style=\"font-variant-numeric: tabular-nums;\">2.5</span> seconds, stacking up to 8 times, with the duration refreshing on subsequent attacks. Each stack grants him <span><span class=\"attack-speed\"><span class=\"title-tooltip\" title=\"\">1 to 16 ‒ undefined</span> <b>bonus</b> attack speed</span></span>, for a maximum of <span class=\"attack-speed\"><span class=\"title-tooltip\" title=\"\">1 to 16 ‒ undefined</span> <b>bonus</b> attack speed</span> at 8 stacks.<br /><a class=\"effect link\" title=\"Stacks\">Stack</a> are deducted one at a time every <span style=\"font-variant-numeric: tabular-nums;\">0.25</span> seconds after not attacking for <span style=\"font-variant-numeric: tabular-nums;\">2.5</span> seconds.",
+      "leveling": [],
+      "notes": "* No additional details.",
+      "skillkey": "I",
+      "skillid": "i1",
+      "effects": []
+    },
+    "q1": {
+      "riotId": "JaxLeapStrike",
+      "name": "Leap Strike",
+      "maxrank": 5,
+      "cooldown": [
+        8,
+        7.5,
+        7,
+        6.5,
+        6
+      ],
+      "cost": 65,
+      "costtype": "Mana",
+      "targeting": "Unit",
+      "target_range": 700,
+      "image": {
+        "full": "JaxLeapStrike.png",
+        "sprite": "spell4.png",
+        "group": "spell",
+        "x": 0,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Jax''' {{tip|dashes}} to the target unit's location.",
+        "If the target is an enemy and they are in range upon arrival, '''Jax''' deals {{as|physical damage}} to them.",
+        "'''''Jax''' will attempt to automatically basic attack his target at the end of the dash.''"
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Jax</b> <HtmlTooltip class=\"blue link\">dashes<template #content><div><h4>dashes<hr></h4><p>Description for keyword dashes</p></div></template></HtmlTooltip> to the target unit's location.<br />If the target is an enemy and they are in range upon arrival, <b>Jax</b> deals <span class=\"physical-damage\">physical damage</span> to them.<br /><b><i>Jax</b> will attempt to automatically basic attack his target at the end of the dash.</i>",
+      "leveling": [
+        "{{st|Physical Damage|{{ap|65 to 225}} {{as|(+ 100% '''bonus''' AD)}} {{as|(+ 60% AP)}}}}"
+      ],
+      "notes": "* ''Leap Strike'' can be used on any targetable allied or enemy unit excluding [[structures]].\n** This includes {{tip|champions}}, {{tip|minions}}, {{tip|ward|wards}}, [[jungle plants]], and [[champion summoned units]] (e.g. {{ai|Noxious Trap|Teemo}}, {{ai|Demacian Standard|Jarvan IV}}, {{ai|Dark Passage|Thresh}}).\n* {{tip|Spell shield}} will block the damage (including when {{ai|Empower|Jax|empowered}}) but will not prevent the dash.",
+      "skillkey": "Q",
+      "skillid": "q1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Physical Damage</span>: <span><SpellSpan :list=\"[65,105,145,185,225]\"></SpellSpan> <span class=\"ad\">(+ 100% <b>bonus</b> AD)</span> <span class=\"ap\">(+ 60% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_bonus_ad": 1
+              },
+              {
+                "player_total_ap": 0.6
+              }
+            ],
+            "st_slices": [
+              [
+                "Physical Damage",
+                "<SpellSpan :list=\"[65,105,145,185,225]\"></SpellSpan> <span class=\"ad\">(+ 100% '''bonus''' AD)</span> <span class=\"ap\">(+ 60% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                65,
+                105,
+                145,
+                185,
+                225
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Physical Damage",
+              "damage_type": "physical",
+              "ratios": {
+                "base_damage": [
+                  65,
+                  105,
+                  145,
+                  185,
+                  225
+                ],
+                "player_bonus_ad": 1,
+                "player_total_ap": 0.6
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "w1": {
+      "riotId": "JaxEmpowerTwo",
+      "name": "Empower",
+      "maxrank": 5,
+      "cooldown": [
+        7,
+        6,
+        5,
+        4,
+        3
+      ],
+      "cost": 30,
+      "costtype": "Mana",
+      "targeting": "Auto",
+      "image": {
+        "full": "JaxEmpowerTwo.png",
+        "sprite": "spell4.png",
+        "group": "spell",
+        "x": 48,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Jax's''' next [[basic attack]] on non-{{tip|turrets|structures}} or {{ai|Leap Strike|Jax}} if used on an enemy within 10 seconds deals {{as|'''bonus''' magic damage}}. If ''Empower'' is used on a basic attack, it will gain {{sti|range|50 '''bonus''' range}}.",
+        "''Empower'' {{tip|basic attack reset|resets}} '''Jax's''' basic attack timer."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Jax's</b> next <a class=\"effect link\" title=\"basic attack\">basic attack</a> on non-<HtmlTooltip class=\"blue link\">structures<template #content><div><h4>turrets<hr></h4><p>Description for keyword turrets</p></div></template></HtmlTooltip> or <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Jax\">Leap Strike<template #content>Leap Strike</template></HtmlTooltip> if used on an enemy within 10 seconds deals <span class=\"magic-damage\"><b>bonus</b> magic damage</span>. If <i>Empower</i> is used on a basic attack, it will gain <span>50 <b>bonus</b> range</span>.<br /><i>Empower</i> <HtmlTooltip class=\"blue link\">resets<template #content><div><h4>basic attack reset<hr></h4><p>Description for keyword basic attack reset</p></div></template></HtmlTooltip> <b>Jax's</b> basic attack timer.",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|40 to 180}} {{as|(+ 60% AP)}}}}"
+      ],
+      "notes": "* ''Empower's'' bonus damage will cause {{iis|Muramana}} to trigger twice with a single basic attack.\n* {{tip|Spell shield}} will only negate the bonus damage.",
+      "skillkey": "W",
+      "skillid": "w1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[40,75,110,145,180]\"></SpellSpan> <span class=\"ap\">(+ 60% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.6
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[40,75,110,145,180]\"></SpellSpan> <span class=\"ap\">(+ 60% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                40,
+                75,
+                110,
+                145,
+                180
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  40,
+                  75,
+                  110,
+                  145,
+                  180
+                ],
+                "player_total_ap": 0.6
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "e1": {
+      "riotId": "JaxCounterStrike",
+      "name": "Counter Strike",
+      "maxrank": 5,
+      "cooldown": [
+        14,
+        12.5,
+        11,
+        9.5,
+        8
+      ],
+      "cost": [
+        50,
+        60,
+        70,
+        80,
+        90
+      ],
+      "costtype": "Mana",
+      "targeting": "Auto",
+      "image": {
+        "full": "JaxCounterStrike.png",
+        "sprite": "spell4.png",
+        "group": "spell",
+        "x": 96,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Jax''' enters ''Evasion'', a defensive stance, for 2 seconds, causing all non-{{tip|turret}} basic attacks against him to be {{tip|dodge|dodged}}. '''Jax''' also takes 25% {{tip|Damage reduction|reduced}} [[damage]] from all [[area of effect]] abilities sourced from {{tip|champions}}. ''Counter Strike'' can be recast after 1 second.",
+        "At the end of the duration, '''Jax''' {{tip|stun|stuns}} all nearby enemies for 1 second and deals {{as|physical damage}} to them, increased by 20% for each attack dodged, up to a 100% increase.",
+        "{{sbc|Recast:}} '''Jax''' ends ''Counter Strike'' early."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Jax</b> enters <i>Evasion</i>, a defensive stance, for 2 seconds, causing all non-<HtmlTooltip class=\"blue link\">turret<template #content><div><h4>turret<hr></h4><p>Description for keyword turret</p></div></template></HtmlTooltip> basic attacks against him to be <HtmlTooltip class=\"blue link\">dodged<template #content><div><h4>dodge<hr></h4><p>Description for keyword dodge</p></div></template></HtmlTooltip>. <b>Jax</b> also takes 25% <HtmlTooltip class=\"blue link\">reduced<template #content><div><h4>Damage reduction<hr></h4><p>Description for keyword Damage reduction</p></div></template></HtmlTooltip> <a class=\"effect link\" title=\"damage\">damage</a> from all <a class=\"effect link\" title=\"area of effect\">area of effect</a> abilities sourced from <HtmlTooltip class=\"blue link\">champions<template #content><div><h4>champions<hr></h4><p>Description for keyword champions</p></div></template></HtmlTooltip>. <i>Counter Strike</i> can be recast after 1 second.<br />At the end of the duration, <b>Jax</b> <HtmlTooltip class=\"blue link\">stuns<template #content><div><h4>Stun<hr></h4><p>Unit is unable to control its movement, declare attacks, cast abilities, activate items, or use the summoner <b>Flash</b> and <b>Teleport</b> for the duration.<br><br>\nInterrupts all channeled and charged abilities<br>\nDuration reduced by <b>Tenacity</b>.<br>\nResisted by Spell and Crowd Control Immunity.<br>\nRemoved by <b>Cleanse</b>, <b>Quicksilver</b>, <b>Mikael's Crucible</b><br></p></div></template></HtmlTooltip> all nearby enemies for 1 second and deals <span class=\"physical-damage\">physical damage</span> to them, increased by 20% for each attack dodged, up to a 100% increase.<br /><span class=\"sbc\">Recast:</span> <b>Jax</b> ends <i>Counter Strike</i> early.",
+      "leveling": [
+        "{{st|Minimum Physical Damage|{{ap|55 to 155}} {{as|(+ 50% '''bonus''' AD)}}|Maximum Physical Damage|{{ap|55*2 to 155*2}} {{as|(+ 100% '''bonus''' AD)}}}}"
+      ],
+      "notes": "*The initial cast and the manual recast count as ability activations for the purposes of on-cast effects such as {{nie|Spellblade}} and stacking {{ai|Force Pulse|Kassadin}}.\n**If the ability is not manually recasted, the secondary effect will trigger without being considered as an ability activation.\n* ''Counter Strike'' will also dodge abilities that can trigger [[on-hit effect]]s ({{ai|Parrrley|Gangplank}}, {{ai|Mystic Shot|Ezreal}}) which will count towards ''Counter Strike's'' increased damage. There are exceptions however.",
+      "skillkey": "E",
+      "skillid": "e1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Minimum Physical Damage</span>: <span><SpellSpan :list=\"[55,80,105,130,155]\"></SpellSpan> <span class=\"ad\">(+ 50% <b>bonus</b> AD)</span></span></li><li><span class=\"blue\">Maximum Physical Damage</span>: <span><SpellSpan :list=\"[110,160,210,260,310]\"></SpellSpan> <span class=\"ad\">(+ 100% <b>bonus</b> AD)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_bonus_ad": 0.5
+              },
+              {
+                "player_bonus_ad": 1
+              }
+            ],
+            "st_slices": [
+              [
+                "Minimum Physical Damage",
+                "<SpellSpan :list=\"[55,80,105,130,155]\"></SpellSpan> <span class=\"ad\">(+ 50% '''bonus''' AD)</span>",
+                "Maximum Physical Damage",
+                "<SpellSpan :list=\"[110,160,210,260,310]\"></SpellSpan> <span class=\"ad\">(+ 100% '''bonus''' AD)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                55,
+                80,
+                105,
+                130,
+                155
+              ],
+              [
+                110,
+                160,
+                210,
+                260,
+                310
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Minimum Physical Damage",
+              "damage_type": "physical",
+              "ratios": {
+                "base_damage": [
+                  55,
+                  80,
+                  105,
+                  130,
+                  155
+                ],
+                "player_bonus_ad": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "r1": {
+      "riotId": "JaxRelentlessAssault",
+      "name": "Grandmaster's Might",
+      "maxrank": 3,
+      "cooldown": [
+        80
+      ],
+      "cost": 100,
+      "costtype": "mana",
+      "targeting": "Auto",
+      "image": {
+        "full": "JaxRelentlessAssault.png",
+        "sprite": "spell4.png",
+        "group": "spell",
+        "x": 144,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Passive:}} '''Jax's''' [[basic attacks]] [[on-hit]] grant a stack for {{fd|2.5}} seconds, stacking up to 2 times, and refreshing the duration on subsequent attacks. At 2 stacks, '''Jax's''' next basic attack on-hit consumes the stacks to deal {{as|'''bonus''' magic damage}}.",
+        "{{sbc|Active:}} '''Jax''' gains '''bonus''' {{sti|armor|{{as|armor}}}} and {{sti|mr|{{as|magic resistance}}}} for 8 seconds."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Passive:</span> <b>Jax's</b> <a class=\"effect link\" title=\"basic attacks\">basic attacks</a> <a class=\"effect link\" title=\"on-hit\">on-hit</a> grant a stack for <span style=\"font-variant-numeric: tabular-nums;\">2.5</span> seconds, stacking up to 2 times, and refreshing the duration on subsequent attacks. At 2 stacks, <b>Jax's</b> next basic attack on-hit consumes the stacks to deal <span class=\"magic-damage\"><b>bonus</b> magic damage</span>.<br /><span class=\"sbc\">Active:</span> <b>Jax</b> gains <b>bonus</b> <span><span class=\"armor\">armor</span></span> and <span><span class=\"magic-resist\">magic resistance</span></span> for 8 seconds.",
+      "leveling": [
+        "{{st|Magic damage|{{ap|100|140|180}} {{as|(+ 70% AP)}}}}",
+        "{{st|Bonus Armor|{{ap|30|50|70}} {{as|(+ 50% '''bonus''' AD)}}}}\n{{st|Bonus Magic Resistance|{{ap|30|50|70}} {{as|(+ 20% AP)}}}}"
+      ],
+      "notes": "* The {{as|'''bonus''' magic damage}} can be {{ai|Counter Strike|Jax|dodged}} and {{ai|Spirit's Refuge|Shen|blocked}} but it cannot {{tip|blind|miss}}.\n* The empowered attack at 2 stacks does not activate against [[structures]] and [[ward]]s, thus not consuming the stacks.\n* ''Grandmaster's Might's'' bonus resistances are calculated both on-cast and will update dynamically {{tt|every {{fd|0.25}}|on every 'update frame', the first update to adjust the stats again post-activation is therefore at a variable time ≤ 0.25 after cast, and all further ones in 0.25s intervals again}} seconds over the duration.\n* {{tip|Spell shield}} will only block the bonus damage from the third attack if it is {{ai|Empower|Jax|empowered}}.",
+      "skillkey": "R",
+      "skillid": "r1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic damage</span>: <span><SpellSpan :list=\"[100,140,180]\"></SpellSpan> <span class=\"ap\">(+ 70% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.7000000000000001
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic damage",
+                "<SpellSpan :list=\"[100,140,180]\"></SpellSpan> <span class=\"ap\">(+ 70% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                100,
+                140,
+                180
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  100,
+                  140,
+                  180
+                ],
+                "player_total_ap": 0.7000000000000001
+              }
+            }
+          ]
+        },
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Bonus Armor</span>: <span><SpellSpan :list=\"[30,50,70]\"></SpellSpan> <span class=\"ad\">(+ 50% <b>bonus</b> AD)</span></span></li></ul><br><ul class=\"st\"><li><span class=\"blue\">Bonus Magic Resistance</span>: <span><SpellSpan :list=\"[30,50,70]\"></SpellSpan> <span class=\"ap\">(+ 20% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_bonus_ad": 0.5
+              },
+              {
+                "player_total_ap": 0.2
+              }
+            ],
+            "st_slices": [
+              [
+                "Bonus Armor",
+                "<SpellSpan :list=\"[30,50,70]\"></SpellSpan> <span class=\"ad\">(+ 50% '''bonus''' AD)</span>"
+              ],
+              [
+                "Bonus Magic Resistance",
+                "<SpellSpan :list=\"[30,50,70]\"></SpellSpan> <span class=\"ap\">(+ 20% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                30,
+                50,
+                70
+              ],
+              [
+                30,
+                50,
+                70
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Bonus Armor",
+              "damage_type": "unknown",
+              "ratios": {
+                "base_damage": [
+                  30,
+                  50,
+                  70
+                ],
+                "player_bonus_ad": 0.5
+              }
+            },
+            {
+              "index": 1,
+              "title": "Bonus Magic Resistance",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  30,
+                  50,
+                  70
+                ],
+                "player_bonus_ad": 0.5
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

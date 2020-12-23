@@ -1,0 +1,258 @@
+{
+  "patch": "V0.9.25.21",
+  "changes": "10.23.1",
+  "id": "Corki",
+  "name": "Corki",
+  "title": "the Daring Bombardier",
+  "image": {
+    "full": "Corki.png",
+    "sprite": "champion0.png",
+    "group": "champion",
+    "x": 432,
+    "y": 48,
+    "w": 48,
+    "h": 48
+  },
+  "resource": "Mana",
+  "herotype": "Marksman",
+  "alttype": "",
+  "rangetype": "Ranged",
+  "be_cost": 3150,
+  "rp_cost": 790,
+  "adaptivetype": "physical",
+  "info": {
+    "attack": 8,
+    "defense": 3,
+    "magic": 6,
+    "difficulty": 6
+  },
+  "stats": {
+    "hp": 518,
+    "hpperlevel": 87,
+    "mp": 350,
+    "mpperlevel": 54,
+    "movespeed": 325,
+    "armor": 28,
+    "armorperlevel": 3.5,
+    "spellblock": 30,
+    "spellblockperlevel": 0.5,
+    "attackrange": 550,
+    "hpregen": 5.5,
+    "hpregenperlevel": 0.55,
+    "mpregen": 7.424,
+    "mpregenperlevel": 0.55,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 55,
+    "attackdamageperlevel": 2.5,
+    "attackspeedperlevel": 2.3,
+    "attackspeed": 0.638
+  },
+  "skills": {
+    "q1": {
+      "riotId": "PhosphorusBomb",
+      "name": "Phosphorus Bomb",
+      "maxrank": 5,
+      "cooldown": 8,
+      "cost": [
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "costtype": "mana",
+      "targeting": "Location",
+      "target_range": 825,
+      "image": {
+        "full": "PhosphorusBomb.png",
+        "sprite": "spell2.png",
+        "group": "spell",
+        "x": 0,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Corki''' launches a bomb at the target area that explodes upon impact, dealing {{as|magic damage}} to enemies hit.",
+        "The bomb also {{tip|sight|reveals}} the area and enemy {{tip|champions}} hit for 6 seconds."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Corki</b> launches a bomb at the target area that explodes upon impact, dealing <span class=\"magic-damage\">magic damage</span> to enemies hit.<br />The bomb also <HtmlTooltip class=\"blue link\">reveals<template #content><div><h4>sight<hr></h4><p>Description for keyword sight</p></div></template></HtmlTooltip> the area and enemy <HtmlTooltip class=\"blue link\">champions<template #content><div><h4>champions<hr></h4><p>Description for keyword champions</p></div></template></HtmlTooltip> hit for 6 seconds.",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|75 to 255}} {{as|(+ 70% '''bonus''' AD)}} {{as|(+ 50% AP)}}}}"
+      ],
+      "notes": "* No additional details.",
+      "skillkey": "Q",
+      "skillid": "q1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[75,120,165,210,255]\"></SpellSpan> <span class=\"ad\">(+ 70% <b>bonus</b> AD)</span> <span class=\"ap\">(+ 50% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_bonus_ad": 0.7000000000000001
+              },
+              {
+                "player_total_ap": 0.5
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[75,120,165,210,255]\"></SpellSpan> <span class=\"ad\">(+ 70% '''bonus''' AD)</span> <span class=\"ap\">(+ 50% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                75,
+                120,
+                165,
+                210,
+                255
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  75,
+                  120,
+                  165,
+                  210,
+                  255
+                ],
+                "player_bonus_ad": 0.7000000000000001,
+                "player_total_ap": 0.5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "e1": {
+      "riotId": "GGun",
+      "name": "Gatling Gun",
+      "maxrank": 5,
+      "cooldown": [
+        16
+      ],
+      "cost": 50,
+      "costtype": "mana",
+      "targeting": "Auto",
+      "image": {
+        "full": "GGun.png",
+        "sprite": "spell2.png",
+        "group": "spell",
+        "x": 96,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Corki''' sprays bullets in a frontal cone for 4 seconds, dealing equal parts {{as|physical|physical damage}} and {{as|magic|magic damage}} damage every {{fd|0.25}} seconds to all enemies hit, and reducing the targets' {{sti|lethality|{{as|armor}}}} and {{sti|magic penetration|{{as|magic resistance}}}} with each tick, stacking up to 8 times and lasting for 2 seconds, which refreshes on subsequent ticks."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Corki</b> sprays bullets in a frontal cone for 4 seconds, dealing equal parts <span class=\"physical-damage\">physical</span> and <span class=\"magic-damage\">magic</span> damage every <span style=\"font-variant-numeric: tabular-nums;\">0.25</span> seconds to all enemies hit, and reducing the targets' <span><span class=\"armor\">armor</span></span> and <span><span class=\"magic-resist\">magic resistance</span></span> with each tick, stacking up to 8 times and lasting for 2 seconds, which refreshes on subsequent ticks.",
+      "leveling": [
+        "{{st|Mixed Damage Per Tick|{{ap|120/16 to 320/16}} {{as|(+ 10% '''bonus''' AD)}}|Total Mixed Damage|{{ap|120 to 320}} {{as|(+ 160% '''bonus''' AD)}}}}{{st|Resistance Reduction Per Tick|{{ap|1 to 2.5}}|Total Resistance Reduction|{{ap|1*8 to 2.5*8}}}}"
+      ],
+      "notes": "* The direction of the gun firing changes depending on where '''Corki''' is facing.\n** '''Corki''' will turn to face in the direction of the cursor upon casting ''Gatling Gun''.",
+      "skillkey": "E",
+      "skillid": "e1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Mixed Damage Per Tick</span>: <span><SpellSpan :list=\"[7.5,10.625,13.75,16.875,20]\"></SpellSpan> <span class=\"ad\">(+ 10% <b>bonus</b> AD)</span></span></li><li><span class=\"blue\">Total Mixed Damage</span>: <span><SpellSpan :list=\"[120,170,220,270,320]\"></SpellSpan> <span class=\"ad\">(+ 160% <b>bonus</b> AD)</span></span></li></ul><ul class=\"st\"><li><span class=\"blue\">Resistance Reduction Per Tick</span>: <span><SpellSpan :list=\"[1,1.375,1.75,2.125,2.5]\"></SpellSpan></span></li><li><span class=\"blue\">Total Resistance Reduction</span>: <span><SpellSpan :list=\"[8,11,14,17,20]\"></SpellSpan></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_bonus_ad": 0.1
+              },
+              {
+                "player_bonus_ad": 1.6
+              }
+            ],
+            "st_slices": [
+              [
+                "Mixed Damage Per Tick",
+                "<SpellSpan :list=\"[7.5,10.625,13.75,16.875,20]\"></SpellSpan> <span class=\"ad\">(+ 10% '''bonus''' AD)</span>",
+                "Total Mixed Damage",
+                "<SpellSpan :list=\"[120,170,220,270,320]\"></SpellSpan> <span class=\"ad\">(+ 160% '''bonus''' AD)</span>"
+              ],
+              [
+                "Resistance Reduction Per Tick",
+                "<SpellSpan :list=\"[1,1.375,1.75,2.125,2.5]\"></SpellSpan>",
+                "Total Resistance Reduction",
+                "<SpellSpan :list=\"[8,11,14,17,20]\"></SpellSpan>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                7.5,
+                10.625,
+                13.75,
+                16.875,
+                20
+              ],
+              [
+                120,
+                170,
+                220,
+                270,
+                320
+              ],
+              [
+                1,
+                1.375,
+                1.75,
+                2.125,
+                2.5
+              ],
+              [
+                8,
+                11,
+                14,
+                17,
+                20
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Mixed Damage Per Tick",
+              "damage_type": "unknown",
+              "ratios": {
+                "base_damage": [
+                  7.5,
+                  10.625,
+                  13.75,
+                  16.875,
+                  20
+                ],
+                "player_bonus_ad": 0.1
+              }
+            },
+            {
+              "index": 1,
+              "title": "Resistance Reduction Per Tick",
+              "damage_type": "unknown",
+              "ratios": {
+                "base_damage": [
+                  120,
+                  170,
+                  220,
+                  270,
+                  320
+                ],
+                "player_bonus_ad": 0.1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,553 @@
+{
+  "patch": "Alpha Week 2",
+  "changes": "10.23.1",
+  "id": "Soraka",
+  "name": "Soraka",
+  "title": "the Starchild",
+  "image": {
+    "full": "Soraka.png",
+    "sprite": "champion3.png",
+    "group": "champion",
+    "x": 192,
+    "y": 96,
+    "w": 48,
+    "h": 48
+  },
+  "resource": "Mana",
+  "herotype": "Support",
+  "alttype": "Mage",
+  "rangetype": "Ranged",
+  "be_cost": 450,
+  "rp_cost": 260,
+  "adaptivetype": "magic",
+  "info": {
+    "attack": 2,
+    "defense": 5,
+    "magic": 7,
+    "difficulty": 3
+  },
+  "stats": {
+    "hp": 535,
+    "hpperlevel": 74,
+    "mp": 425,
+    "mpperlevel": 40,
+    "movespeed": 325,
+    "armor": 32,
+    "armorperlevel": 3.8,
+    "spellblock": 30,
+    "spellblockperlevel": 0.5,
+    "attackrange": 550,
+    "hpregen": 2.5,
+    "hpregenperlevel": 0.5,
+    "mpregen": 11.5,
+    "mpregenperlevel": 0.4,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 50,
+    "attackdamageperlevel": 3,
+    "attackspeedperlevel": 2.14,
+    "attackspeed": 0.625
+  },
+  "skills": {
+    "i1": {
+      "riotId": "",
+      "name": "Salvation",
+      "maxrank": 0,
+      "targeting": "Passive",
+      "image": {
+        "full": "Soraka_Passive.png",
+        "sprite": "passive3.png",
+        "group": "passive",
+        "x": 192,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Innate:}} '''Soraka''' gains {{sti|ms|{{as|70% '''bonus''' movement speed}}}} when moving towards allied [[champion]]s below {{as|{{sti|health|40% of their '''maximum''' health}}}}."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Innate:</span> <b>Soraka</b> gains <span><span class=\"movement-speed\">70% <b>bonus</b> movement speed</span></span> when moving towards allied <a class=\"effect link\" title=\"champion\">champion</a>s below <span class=\"health\"><span>40% of their <b>maximum</b> health</span></span>.",
+      "leveling": [],
+      "notes": "* '''Soraka''' will be able to recognize champions under the health threshold for the sake of both ''Salvation'' and {{ai|Wish|Soraka}}.\n* The movement speed of ''Salvation'' only applies when '''Soraka''' is facing in the direction of her low-health ally, even if her line of {{tip|sight}} is obstructed by terrain. Merely pathing towards their location will not necessarily grant her the buff.\n** A line of arrows points to allied targets, similar to that displayed by {{cai|Dark Passage|Thresh}} or {{cai|Last Breath|Yasuo}}, indicating the direction in which she can gain the bonus movement speed.",
+      "skillkey": "I",
+      "skillid": "i1",
+      "effects": []
+    },
+    "q1": {
+      "riotId": "SorakaQ",
+      "name": "Starcall",
+      "maxrank": 5,
+      "cooldown": [
+        8,
+        7,
+        6,
+        5,
+        4
+      ],
+      "cost": [
+        45,
+        50,
+        55,
+        60,
+        65
+      ],
+      "costtype": "Mana",
+      "targeting": "Location",
+      "target_range": 800,
+      "image": {
+        "full": "SorakaQ.png",
+        "sprite": "spell11.png",
+        "group": "spell",
+        "x": 0,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Soraka''' calls down a star upon the target area, granting {{tip|sight}} over it before landing after {{pp|type=target range|0.25 to 1 for 16|50 to 800}} seconds, dealing {{as|magic damage}} to enemies hit and {{tip|slow|slowing}} them by 30% for {{fd|1.5}} seconds.",
+        "Hitting at least one enemy {{tip|champion}} returns the star dust toward '''Soraka''', granting her ''Rejuvenation'' for {{fd|2.5}} seconds, {{tip|heal|healing}} her every {{fd|0.5}} seconds and granting her {{sti|ms|{{as|'''bonus''' movement speed}}}}, decaying over the duration.",
+        "While '''Soraka''' is ''Rejuvenated'' she can ''Rejuvenate'' other allies with {{ai|Astral Infusion|Soraka}}, granting them the same effects for the same duration."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Soraka</b> calls down a star upon the target area, granting <HtmlTooltip class=\"blue link\">sight<template #content><div><h4>sight<hr></h4><p>Description for keyword sight</p></div></template></HtmlTooltip> over it before landing after <span class=\"title-tooltip\" title=\"\">50 to 800 ‒ undefined</span> seconds, dealing <span class=\"magic-damage\">magic damage</span> to enemies hit and <HtmlTooltip class=\"blue link\">slowing<template #content><div><h4>Slow<hr></h4><p>A unit that is <i>slowed</i> has reduced movement speed for the duration.<br><br>Duration reduced by <b>Tenacity</b>.<br>Strength is reduced by <b>Slow resist</b>.</p></div></template></HtmlTooltip> them by 30% for <span style=\"font-variant-numeric: tabular-nums;\">1.5</span> seconds.<br />Hitting at least one enemy <HtmlTooltip class=\"blue link\">champion<template #content><div><h4>champion<hr></h4><p>Description for keyword champion</p></div></template></HtmlTooltip> returns the star dust toward <b>Soraka</b>, granting her <i>Rejuvenation</i> for <span style=\"font-variant-numeric: tabular-nums;\">2.5</span> seconds, <HtmlTooltip class=\"blue link\">healing<template #content><div><h4>Healing<hr></h4><p><b>Healing</b> restores some of the user or the target's <span class=\"health\">current health</span> directly.<br><br>Healing can be reduced by <b>Grievous Wounds</b>.</p></div></template></HtmlTooltip> her every <span style=\"font-variant-numeric: tabular-nums;\">0.5</span> seconds and granting her <span><span class=\"movement-speed\"><b>bonus</b> movement speed</span></span>, decaying over the duration.<br />While <b>Soraka</b> is <i>Rejuvenated</i> she can <i>Rejuvenate</i> other allies with <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Soraka\">Astral Infusion<template #content>Astral Infusion</template></HtmlTooltip>, granting them the same effects for the same duration.",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|85 to 225}} {{as|(+ 35% AP)}}}}",
+        "{{st|Total Self-Heal|{{ap|50 to 90}} {{as|(+ 30% AP)}}}}\n{{st|Bonus Movement Speed|{{ap|15 to 25}}%}}"
+      ],
+      "notes": "* ''Starcall'' counts as hitting even if it gets blocked by {{tip|spell shield}} or {{ai|Riposte|Fiora}}, granting ''Rejuvenation''.\n* {{cai|Wind Wall|Yasuo}} and {{cai|Unbreakable|Braum}} can block the ''Rejuvenation'' projectile.\n* ''Rejuvenation'' heals over 12 ticks, with the first 4 each healing for about 15% of the heal, the next 4 ticks for about {{fd|5.5}}% each, and the last 4 for about {{fd|4.5}}% each.\n* ''Rejuvenation'' won't be granted and '''Soraka''' won't be able to make use of the health cost reduction on {{ai|Astral Infusion|Soraka}} until the projectile gets to her, but she is able to ''Rejuvenate'' allies as soon as the target is hit.",
+      "skillkey": "Q",
+      "skillid": "q1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[85,120,155,190,225]\"></SpellSpan> <span class=\"ap\">(+ 35% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.35000000000000003
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[85,120,155,190,225]\"></SpellSpan> <span class=\"ap\">(+ 35% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                85,
+                120,
+                155,
+                190,
+                225
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  85,
+                  120,
+                  155,
+                  190,
+                  225
+                ],
+                "player_total_ap": 0.35000000000000003
+              }
+            }
+          ]
+        },
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Total Self-Heal</span>: <span><SpellSpan :list=\"[50,60,70,80,90]\"></SpellSpan> <span class=\"ap\">(+ 30% AP)</span></span></li></ul><br><ul class=\"st\"><li><span class=\"blue\">Bonus Movement Speed</span>: <span><SpellSpan :list=\"[15,17.5,20,22.5,25]\"></SpellSpan>%</span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.3
+              }
+            ],
+            "st_slices": [
+              [
+                "Total Self-Heal",
+                "<SpellSpan :list=\"[50,60,70,80,90]\"></SpellSpan> <span class=\"ap\">(+ 30% AP)</span>"
+              ],
+              [
+                "Bonus Movement Speed",
+                "<SpellSpan :list=\"[15,17.5,20,22.5,25]\"></SpellSpan>%"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                50,
+                60,
+                70,
+                80,
+                90
+              ],
+              [
+                15,
+                17.5,
+                20,
+                22.5,
+                25
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Total Self-Heal",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  50,
+                  60,
+                  70,
+                  80,
+                  90
+                ],
+                "player_total_ap": 0.3
+              }
+            },
+            {
+              "index": 1,
+              "title": "Bonus Movement Speed",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  15,
+                  17.5,
+                  20,
+                  22.5,
+                  25
+                ],
+                "player_total_ap": 0.3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "w1": {
+      "riotId": "SorakaW",
+      "name": "Astral Infusion",
+      "maxrank": 5,
+      "cooldown": [
+        6,
+        5,
+        4,
+        3,
+        2
+      ],
+      "cost": [
+        10
+      ],
+      "costtype": "{{as|Maximum Health}} + {{ap|40 to 60}} Mana",
+      "targeting": "Unit",
+      "target_range": 550,
+      "image": {
+        "full": "SorakaW.png",
+        "sprite": "spell11.png",
+        "group": "spell",
+        "x": 48,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Soraka''' {{tip|heals}} the target ally champion (excluding herself).",
+        "If cast while {{ai|Starcall|Soraka|Rejuvenated}}, the health cost will be reduced by a percentage.",
+        "''Astral Infusion'' cannot be cast if '''Soraka''' is {{as|{{sti|health|below 5% of her '''maximum''' health}}}}."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Soraka</b> <HtmlTooltip class=\"blue link\">heals<template #content><div><h4>heals<hr></h4><p>Description for keyword heals</p></div></template></HtmlTooltip> the target ally champion (excluding herself).<br />If cast while <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Soraka\">Rejuvenated<template #content>Starcall</template></HtmlTooltip>, the health cost will be reduced by a percentage.<br /><i>Astral Infusion</i> cannot be cast if <b>Soraka</b> is <span class=\"health\"><span>below 5% of her <b>maximum</b> health</span></span>.",
+      "leveling": [
+        "{{st|Heal|{{ap|80 to 220}} {{as|(+ 60% AP)}}}}",
+        "{{st|Health Cost Reduction|{{ap|80 to 100}}%}}"
+      ],
+      "notes": "* ''Astral Infusion'' can also be targeted on allied {{tip|clone|decoys}}.\n* ''Astral Infusion'' can be cast even if '''Soraka''' doesn't have the sufficient amount of health to pay for the health cost while above {{as|{{sti|health|5% of her '''maximum''' health}}}}.\n** As with all abilities with health costs, ''Astral Infusion'' will not reduce '''Soraka's''' health below {{as|1|hp}}.\n* {{ii|Spirit Visage}} will only increase the health donated to allies if the target ally possesses it, although owning it ''will'' boost the heal that '''Soraka''' receives from {{ai|Starcall|Soraka}} and {{ai|Wish|Soraka}}.",
+      "skillkey": "W",
+      "skillid": "w1",
+      "cost_warn": "Wiki's and Riot's mana costs do not match: Wiki's value  {{as|10%|health}} as 10 and riot's value 40,45,50,55,60 as 40/45/50/55/60",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Heal</span>: <span><SpellSpan :list=\"[80,115,150,185,220]\"></SpellSpan> <span class=\"ap\">(+ 60% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.6
+              }
+            ],
+            "st_slices": [
+              [
+                "Heal",
+                "<SpellSpan :list=\"[80,115,150,185,220]\"></SpellSpan> <span class=\"ap\">(+ 60% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                80,
+                115,
+                150,
+                185,
+                220
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Heal",
+              "damage_type": "none",
+              "ratios": {
+                "player_total_ap": 0.6
+              }
+            }
+          ]
+        },
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Health Cost Reduction</span>: <span><SpellSpan :list=\"[80,85,90,95,100]\"></SpellSpan>%</span></li></ul>",
+          "vars": {
+            "as_ratios": [],
+            "st_slices": [
+              [
+                "Health Cost Reduction",
+                "<SpellSpan :list=\"[80,85,90,95,100]\"></SpellSpan>%"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                80,
+                85,
+                90,
+                95,
+                100
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Health Cost Reduction",
+              "damage_type": "none",
+              "ratios": {}
+            }
+          ]
+        }
+      ]
+    },
+    "e1": {
+      "riotId": "SorakaE",
+      "name": "Equinox",
+      "maxrank": 5,
+      "cooldown": [
+        20,
+        19,
+        18,
+        17,
+        16
+      ],
+      "cost": [
+        70,
+        75,
+        80,
+        85,
+        90
+      ],
+      "costtype": "Mana",
+      "targeting": "Location",
+      "target_range": 925,
+      "image": {
+        "full": "SorakaE.png",
+        "sprite": "spell11.png",
+        "group": "spell",
+        "x": 96,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Soraka''' creates a celestial zone at the target location, dealing {{as|magic damage}} to enemy champions that were inside it upon creation. The zone then persists for {{fd|1.5}} seconds, {{tip|silence|silencing}} all enemy champions within.",
+        "After the duration, the zone detonates, dealing the same {{as|magic damage}} to all enemy champions within and briefly {{tip|root|rooting}} them."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Soraka</b> creates a celestial zone at the target location, dealing <span class=\"magic-damage\">magic damage</span> to enemy champions that were inside it upon creation. The zone then persists for <span style=\"font-variant-numeric: tabular-nums;\">1.5</span> seconds, <HtmlTooltip class=\"blue link\">silencing<template #content><div><h4>Slence<hr></h4><p>Cannot cast abilities, activate items, or use summoner <b>Flash</b> and <b>Teleport</b>.<br><br>Interrupts channeled and charged abilities. (Except: Lucian's The Culling)<br>Duration reduced by <b>Tenacity</b></p></div></template></HtmlTooltip> all enemy champions within.<br />After the duration, the zone detonates, dealing the same <span class=\"magic-damage\">magic damage</span> to all enemy champions within and briefly <HtmlTooltip class=\"blue link\">rooting<template #content><div><h4>Root / Snare / Binding<hr></h4><p>Unit is unable to control movement, use a mobility spells (dash and blink) or use summoner <b>Flash</b> and <b>Teleport</b> for the duration.</p></div></template></HtmlTooltip> them.",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|70 to 170}} {{as|(+ 40% AP)}}|Total Magic Damage|{{ap|70*2 to 170*2}} {{as|(+ 80% AP)}}}}",
+        "{{st|Root Duration|{{ap|1 to 2}}}}"
+      ],
+      "notes": "* ''Equinox's'' {{tip|silence}} is removed by {{tip|cleanse|cleanses}} but does not grant immunity to it; leaving the area and coming back inside applies the ''silence debuff'' regardless.",
+      "skillkey": "E",
+      "skillid": "e1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[70,95,120,145,170]\"></SpellSpan> <span class=\"ap\">(+ 40% AP)</span></span></li><li><span class=\"blue\">Total Magic Damage</span>: <span><SpellSpan :list=\"[140,190,240,290,340]\"></SpellSpan> <span class=\"ap\">(+ 80% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.4
+              },
+              {
+                "player_total_ap": 0.8
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[70,95,120,145,170]\"></SpellSpan> <span class=\"ap\">(+ 40% AP)</span>",
+                "Total Magic Damage",
+                "<SpellSpan :list=\"[140,190,240,290,340]\"></SpellSpan> <span class=\"ap\">(+ 80% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                70,
+                95,
+                120,
+                145,
+                170
+              ],
+              [
+                140,
+                190,
+                240,
+                290,
+                340
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  70,
+                  95,
+                  120,
+                  145,
+                  170
+                ],
+                "player_total_ap": 0.8
+              }
+            }
+          ]
+        },
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Root Duration</span>: <span><SpellSpan :list=\"[1,1.25,1.5,1.75,2]\"></SpellSpan></span></li></ul>",
+          "vars": {
+            "as_ratios": [],
+            "st_slices": [
+              [
+                "Root Duration",
+                "<SpellSpan :list=\"[1,1.25,1.5,1.75,2]\"></SpellSpan>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                1,
+                1.25,
+                1.5,
+                1.75,
+                2
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Root Duration",
+              "damage_type": "unknown",
+              "ratios": {
+                "base_damage": [
+                  1,
+                  1.25,
+                  1.5,
+                  1.75,
+                  2
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "r1": {
+      "riotId": "SorakaR",
+      "name": "Wish",
+      "maxrank": 3,
+      "cooldown": [
+        160,
+        145,
+        130
+      ],
+      "cost": 100,
+      "costtype": "Mana",
+      "targeting": "Auto",
+      "image": {
+        "full": "SorakaR.png",
+        "sprite": "spell11.png",
+        "group": "spell",
+        "x": 144,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Soraka''' calls upon the stars, instantly {{tip|healing}} all allied champions, and herself, which is increased by 50% on targets below {{as|{{sti|health|40% of their '''maximum''' health}}}}."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Soraka</b> calls upon the stars, instantly <HtmlTooltip class=\"blue link\">healing<template #content><div><h4>healing<hr></h4><p>Description for keyword healing</p></div></template></HtmlTooltip> all allied champions, and herself, which is increased by 50% on targets below <span class=\"health\"><span>40% of their <b>maximum</b> health</span></span>.",
+      "leveling": [
+        "{{st|Heal|{{ap|150|250|350}} {{as|(+ 55% AP)}}|Enhanced Heal|{{ap|225|375|525}} {{as|(+ {{fd|82.5}}% AP)}}}}"
+      ],
+      "notes": "* {{tip|Untargetable|Untargetability}} does not invalidate the targeting of the heal.\n* ''Wish'' will not credit '''Soraka''' for [[assist]]ing in a [[kill|champion kill]] if the target ally is at full health.\n* ''Wish'' will apply heal effects (such as {{ri|Summon Aery}}) prioritizing targets based on the ''Spawn ID'', which is the order in which units were added to an ongoing game. For {{tip|champions}}, this is the order they appear in from left to right in the loading screen.\n* ''Wish's'' effects occur before the cast time.",
+      "skillkey": "R",
+      "skillid": "r1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Heal</span>: <span><SpellSpan :list=\"[150,250,350]\"></SpellSpan> <span class=\"ap\">(+ 55% AP)</span></span></li><li><span class=\"blue\">Enhanced Heal</span>: <span><SpellSpan :list=\"[225,375,525]\"></SpellSpan> <span class=\"ap\">(+ <span style=\"font-variant-numeric: tabular-nums;\">82.5</span>% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.55
+              },
+              {
+                "player_total_ap": 0.8250000000000001
+              }
+            ],
+            "st_slices": [
+              [
+                "Heal",
+                "<SpellSpan :list=\"[150,250,350]\"></SpellSpan> <span class=\"ap\">(+ 55% AP)</span>",
+                "Enhanced Heal",
+                "<SpellSpan :list=\"[225,375,525]\"></SpellSpan> <span class=\"ap\">(+ <span style=\"font-variant-numeric: tabular-nums;\">82.5</span>% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                150,
+                250,
+                350
+              ],
+              [
+                225,
+                375,
+                525
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Heal",
+              "damage_type": "none",
+              "ratios": {
+                "player_total_ap": 0.8250000000000001
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "patch": "V1.0.0.110",
+  "changes": "10.23.1",
+  "id": "Karma",
+  "name": "Karma",
+  "title": "the Enlightened One",
+  "image": {
+    "full": "Karma.png",
+    "sprite": "champion1.png",
+    "group": "champion",
+    "x": 0,
+    "y": 96,
+    "w": 48,
+    "h": 48
+  },
+  "resource": "Mana",
+  "herotype": "Mage",
+  "alttype": "Support",
+  "rangetype": "Ranged",
+  "be_cost": 3150,
+  "rp_cost": 790,
+  "adaptivetype": "magic",
+  "info": {
+    "attack": 1,
+    "defense": 7,
+    "magic": 8,
+    "difficulty": 5
+  },
+  "stats": {
+    "hp": 534,
+    "hpperlevel": 95,
+    "mp": 374,
+    "mpperlevel": 50,
+    "movespeed": 335,
+    "armor": 26,
+    "armorperlevel": 3.8,
+    "spellblock": 30,
+    "spellblockperlevel": 0.5,
+    "attackrange": 525,
+    "hpregen": 5.5,
+    "hpregenperlevel": 0.55,
+    "mpregen": 11.5,
+    "mpregenperlevel": 0.5,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 53.544,
+    "attackdamageperlevel": 3.3,
+    "attackspeedperlevel": 2.3,
+    "attackspeed": 0.625
+  },
+  "skills": {
+    "i1": {
+      "riotId": "",
+      "name": "Gathering Fire",
+      "maxrank": 0,
+      "targeting": "Passive",
+      "image": {
+        "full": "Karma_Passive.png",
+        "sprite": "passive1.png",
+        "group": "passive",
+        "x": 0,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Innate:}} '''Karma''' reduces {{ais|Mantra|Karma}} {{sti|cooldown}} by {{pp|showtype=true|2 to 5 for 3|1 to 11}} seconds for each enemy {{tip|champion}} she damages with an [[Champion ability|ability]], or by 1 second whenever she uses her [[basic attack]]s [[on-hit]] against them."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Innate:</span> <b>Karma</b> reduces <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Karma\">Mantra's<template #content>Mantra</template></HtmlTooltip> <span>cooldown</span> by <span class=\"title-tooltip\" title=\"\">1 to 11 ‒ undefined</span> seconds for each enemy <HtmlTooltip class=\"blue link\">champion<template #content><div><h4>champion<hr></h4><p>Description for keyword champion</p></div></template></HtmlTooltip> she damages with an <a class=\"effect link\" title=\"ability\">Champion ability</a>, or by 1 second whenever she uses her <a class=\"effect link\" title=\"basic attack\">basic attack</a>s <a class=\"effect link\" title=\"on-hit\">on-hit</a> against them.",
+      "leveling": [],
+      "notes": "* {{ai|Inner Flame|Karma}} / {{ai|Soulflare|Karma}} reduces {{ais|Mantra|Karma}} cooldown per target hit (for a total of {{pp|2*5 to 5*5 for 3|1 to 13|showtype=true}} seconds if 5 enemy champions are hit at once).\n* {{ai|Focused Resolve|Karma}} / {{ai|Renewal|Karma}} reduces {{ais|Mantra|Karma}} cooldown per tick (for a total of {{pp|2*2 to 5*2 for 3|1 to 13|showtype=true}} seconds for the entire duration).\n* {{ai|Inspire|Karma}} / {{ai|Defiance|Karma}} does not reduce {{ais|Mantra|Karma}} cooldown (it has no damage component).",
+      "skillkey": "I",
+      "skillid": "i1",
+      "effects": []
+    },
+    "r1": {
+      "riotId": "KarmaMantra",
+      "name": "Mantra",
+      "maxrank": 4,
+      "cooldown": [
+        40,
+        38,
+        36,
+        34
+      ],
+      "cost": 0,
+      "targeting": "Auto",
+      "image": {
+        "full": "KarmaMantra.png",
+        "sprite": "spell5.png",
+        "group": "spell",
+        "x": 336,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Karma''' empowers her next basic ability within 8 seconds for an additional effect.",
+        "'''Karma''' begins the game with one rank in ''Mantra''.",
+        "''Mantra can be used while affected by {{tip|crowd control}}.''"
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Karma</b> empowers her next basic ability within 8 seconds for an additional effect.<br /><b>Karma</b> begins the game with one rank in <i>Mantra</i>.<br /><i>Mantra can be used while affected by <HtmlTooltip class=\"blue link\">crowd control<template #content><div><h4>Crowd Control (CC)<hr></h4><p><b>Crowd Control</b> or CC are spells effects the prevent enemny movement, spell casting, or something.</p></div></template></HtmlTooltip>.</i>",
+      "leveling": [],
+      "notes": "*''Mantra'' counts as an ability activation for the purposes of on-cast effects such as {{nie|Spellblade}} and stacking {{ai|Force Pulse|Kassadin}}.\n* ''Mantra's'' bonus effects are added on top of '''Karma's''' basic abilities.",
+      "skillkey": "R",
+      "skillid": "r1",
+      "effects": []
+    }
+  }
+}

@@ -1,0 +1,488 @@
+{
+  "patch": "V1.0.0.102",
+  "changes": "10.15.1",
+  "id": "Swain",
+  "name": "Swain",
+  "title": "the Noxian Grand General",
+  "image": {
+    "full": "Swain.png",
+    "sprite": "champion3.png",
+    "group": "champion",
+    "x": 240,
+    "y": 96,
+    "w": 48,
+    "h": 48
+  },
+  "resource": "Mana",
+  "herotype": "Mage",
+  "alttype": "Fighter",
+  "rangetype": "Ranged",
+  "be_cost": 4800,
+  "rp_cost": 880,
+  "adaptivetype": "magic",
+  "info": {
+    "attack": 2,
+    "defense": 6,
+    "magic": 9,
+    "difficulty": 8
+  },
+  "stats": {
+    "hp": 525,
+    "hpperlevel": 85,
+    "mp": 468,
+    "mpperlevel": 28.5,
+    "movespeed": 325,
+    "armor": 22.72,
+    "armorperlevel": 4,
+    "spellblock": 30,
+    "spellblockperlevel": 0.5,
+    "attackrange": 525,
+    "hpregen": 7,
+    "hpregenperlevel": 0.65,
+    "mpregen": 8,
+    "mpregenperlevel": 0.8,
+    "crit": 0,
+    "critperlevel": 0,
+    "attackdamage": 58,
+    "attackdamageperlevel": 2.7,
+    "attackspeedperlevel": 2.11,
+    "attackspeed": 0.625
+  },
+  "skills": {
+    "i1": {
+      "riotId": "",
+      "name": "Ravenous Flock",
+      "maxrank": 0,
+      "cooldown": 10,
+      "targeting": "Unit",
+      "target_range": 1125,
+      "image": {
+        "full": "Swain_P.png",
+        "sprite": "passive3.png",
+        "group": "passive",
+        "x": 240,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Innate - Ravenous:}} '''Swain''' can periodically target a nearby {{tip|immobilize|immobilized}} enemy {{tip|champion}} to rip out a {{as|Soul Fragment|buzzword3}} from them, dealing them {{as|{{pp|20 to 105}}|magic damage}} {{as|(+ 30% AP)}} {{as|magic damage}} and {{tip|airborne|pulling}} them 290-units towards him over a {{fd|0.25}}-second cast time. If the target would be brought past '''Swain''', they are instead {{tip|airborne|knocked back}} the excess distance.",
+        "Enemy champions also leave behind a {{as|Soul Fragment|buzzword3}} for 16 seconds upon their {{tip|death}}, which can be harvested after 1 second if '''Swain''' is near them.",
+        "{{sbc|Innate - Flock:}} '''Swain's''' ravens bring nearby {{as|Soul Fragments|buzzword3}} to him, {{tip|healing}} him for {{as|{{pp|key=%|4 to 7 for 3|1 to 11}} of his '''maximum''' health}}. Each {{as|Soul Fragment|buzzword3}} collected permanently increases his {{as|'''maximum''' health by 5}}."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Innate - Ravenous:</span> <b>Swain</b> can periodically target a nearby <HtmlTooltip class=\"blue link\">immobilized<template #content><div><h4>immobilize<hr></h4><p>Description for keyword immobilize</p></div></template></HtmlTooltip> enemy <HtmlTooltip class=\"blue link\">champion<template #content><div><h4>champion<hr></h4><p>Description for keyword champion</p></div></template></HtmlTooltip> to rip out a <span class=\"buzzword3\">Soul Fragment</span> from them, dealing them <span class=\"magic-damage\"><HtmlTooltip class=\"blue link\">20undefined − 105undefined (based on level)<template #content>Values: 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105<br>At levels: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18</template></HtmlTooltip></span> <span class=\"ap\">(+ 30% AP)</span> <span class=\"magic-damage\">magic damage</span> and <HtmlTooltip class=\"blue link\">pulling<template #content><div><h4>airborne<hr></h4><p>Description for keyword airborne</p></div></template></HtmlTooltip> them 290-units towards him over a <span style=\"font-variant-numeric: tabular-nums;\">0.25</span>-second cast time. If the target would be brought past <b>Swain</b>, they are instead <HtmlTooltip class=\"blue link\">knocked back<template #content><div><h4>airborne<hr></h4><p>Description for keyword airborne</p></div></template></HtmlTooltip> the excess distance.<br />Enemy champions also leave behind a <span class=\"buzzword3\">Soul Fragment</span> for 16 seconds upon their <HtmlTooltip class=\"blue link\">death<template #content><div><h4>death<hr></h4><p>Description for keyword death</p></div></template></HtmlTooltip>, which can be harvested after 1 second if <b>Swain</b> is near them.<br /><span class=\"sbc\">Innate - Flock:</span> <b>Swain's</b> ravens bring nearby <span class=\"buzzword3\">Soul Fragments</span> to him, <HtmlTooltip class=\"blue link\">healing<template #content><div><h4>healing<hr></h4><p>Description for keyword healing</p></div></template></HtmlTooltip> him for <span class=\"health\"><span class=\"title-tooltip\" title=\"\">1 to 11 ‒ undefined</span> of his <b>maximum</b> health</span>. Each <span class=\"buzzword3\">Soul Fragment</span> collected permanently increases his <span class=\"health\"><b>maximum</b> health by 5</span>.",
+      "leveling": [],
+      "notes": "* ''Ravenous Flock's'' {{tip|airborne|pull}} requires the target to be {{tip|immobilize|immobilized}} by an {{tt|enemy source|from the target's perspective}}.\n** Self-applied or allied-applied {{tip|immobilize|immobilizes}} do not allow ''Ravenous Flock'' to cast against the champion. Those applied by the ''neutral'' team (e.g. {{uis|Dragon}} initial knock back) '''can''' be targeted.\n** ''Ravenous Flock'' can be used against {{tip|cc-immune}} or {{tip|displacement immune}} targets that are affected by an ongoing {{tip|immobilize|immobilization}}. This will apply the damage, but the target will be prevented from being {{tip|airborne|pulled}}.\n* The crows carrying the souls will only be seen by the enemies if they have {{tip|sight|vision}} of '''Swain'''.\n* The pull will interrupt {{tip|channel|channels}} at the very beginning, but does not keep the target stunned for the rest of the movement.\n** {{tip|channel|Channels}} can be started successfully during the pull, provided the previous crowd control does not prevent them still.",
+      "skillkey": "I",
+      "skillid": "i1",
+      "effects": []
+    },
+    "q1": {
+      "riotId": "SwainQ",
+      "name": "Death's Hand",
+      "maxrank": 5,
+      "cooldown": [
+        9,
+        7.5,
+        6,
+        4.5,
+        3
+      ],
+      "cost": [
+        65,
+        70,
+        75,
+        80,
+        85
+      ],
+      "costtype": "Mana",
+      "targeting": "Direction",
+      "target_range": "",
+      "image": {
+        "full": "SwainQ.png",
+        "sprite": "spell11.png",
+        "group": "spell",
+        "x": 192,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Swain''' unleashes five bolts of eldritch power in the target direction, dealing {{as|magic damage}} to all enemies in a cone. Enemies can be hit by multiple bolts, taking {{as|'''bonus''' magic damage}}."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Swain</b> unleashes five bolts of eldritch power in the target direction, dealing <span class=\"magic-damage\">magic damage</span> to all enemies in a cone. Enemies can be hit by multiple bolts, taking <span class=\"magic-damage\"><b>bonus</b> magic damage</span>.",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|55 to 135}} {{as|(+ 40% AP)}}}}\n{{st|Bonus Magic Damage Per Bolt|{{ap|15 to 35}}%|Maximum Damage|{{ap|(55 to 135)*(1+(15 to 35)*4/100)}} {{as|(+ {{ap|40*(1+(15 to 35)*4/100)}}% AP)}}}}"
+      ],
+      "notes": "* ''Death's Hand'' will still cast and deal damage if '''Swain''' dies during the cast time.\n* ''Death's Hand'' will cast from wherever '''Swain''' is at the end of the cast time.",
+      "skillkey": "Q",
+      "skillid": "q1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[55,75,95,115,135]\"></SpellSpan> <span class=\"ap\">(+ 40% AP)</span></span></li></ul><br><ul class=\"st\"><li><span class=\"blue\">Bonus Magic Damage Per Bolt</span>: <span><SpellSpan :list=\"[15,20,25,30,35]\"></SpellSpan>%</span></li><li><span class=\"blue\">Maximum Damage</span>: <span><simple-tooltip class=\"red\" dname=\"ap (55 to 135)*(1+(15 to 35)*4/100)\">Error: SyntaxError: Unexpected end of input</simple-tooltip> <span class=\"ap\">(+ <simple-tooltip class=\"red\" dname=\"ap 40*(1+(15 to 35)*4/100)\">Error: SyntaxError: Unexpected end of input</simple-tooltip>% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.4
+              },
+              {
+                "player_total_ap": 401153541
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[55,75,95,115,135]\"></SpellSpan> <span class=\"ap\">(+ 40% AP)</span>"
+              ],
+              [
+                "Bonus Magic Damage Per Bolt",
+                "<SpellSpan :list=\"[15,20,25,30,35]\"></SpellSpan>%",
+                "Maximum Damage",
+                "<simple-tooltip class=\"red\" dname=\"ap (55 to 135)*(1+(15 to 35)*4/100)\">Error: SyntaxError: Unexpected end of input</simple-tooltip> <span class=\"ap\">(+ <simple-tooltip class=\"red\" dname=\"ap 40*(1+(15 to 35)*4/100)\">Error: SyntaxError: Unexpected end of input</simple-tooltip>% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                55,
+                75,
+                95,
+                115,
+                135
+              ],
+              [
+                15,
+                20,
+                25,
+                30,
+                35
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  55,
+                  75,
+                  95,
+                  115,
+                  135
+                ],
+                "player_total_ap": 0.4
+              }
+            },
+            {
+              "index": 1,
+              "title": "Bonus Magic Damage Per Bolt",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  15,
+                  20,
+                  25,
+                  30,
+                  35
+                ],
+                "player_total_ap": 0.4
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "w1": {
+      "riotId": "SwainW",
+      "name": "Vision of Empire",
+      "maxrank": 5,
+      "cooldown": [
+        22,
+        21,
+        20,
+        19,
+        18
+      ],
+      "cost": [
+        70,
+        80,
+        90,
+        100,
+        110
+      ],
+      "costtype": "Mana",
+      "targeting": "Location",
+      "target_range": "{{ap|5500 to 7500}}",
+      "image": {
+        "full": "SwainW.png",
+        "sprite": "spell11.png",
+        "group": "spell",
+        "x": 240,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Swain''' summons a demonic eye at the target location, granting {{tip|sight}} of the area for 2 seconds, which explodes after {{fd|1.5}} seconds, dealing {{as|magic damage}} to all enemies hit, halved against {{tip|minions}}, and {{tip|slow|slowing}} them for {{fd|2.5}} seconds.",
+        "Enemy champions hit are also {{tip|sight|revealed}} for a duration and have a {{as|Soul Fragment|buzzword3}} ripped from them."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Swain</b> summons a demonic eye at the target location, granting <HtmlTooltip class=\"blue link\">sight<template #content><div><h4>sight<hr></h4><p>Description for keyword sight</p></div></template></HtmlTooltip> of the area for 2 seconds, which explodes after <span style=\"font-variant-numeric: tabular-nums;\">1.5</span> seconds, dealing <span class=\"magic-damage\">magic damage</span> to all enemies hit, halved against <HtmlTooltip class=\"blue link\">minions<template #content><div><h4>Lane Minions<hr></h4><p>A unit that is <i>slowed</i> has reduced movement speed for the duration.<br><br>Duration reduced by <b>Tenacity</b>.<br>Strength is reduced by <b>Slow resist</b>.</p></div></template></HtmlTooltip>, and <HtmlTooltip class=\"blue link\">slowing<template #content><div><h4>Slow<hr></h4><p>A unit that is <i>slowed</i> has reduced movement speed for the duration.<br><br>Duration reduced by <b>Tenacity</b>.<br>Strength is reduced by <b>Slow resist</b>.</p></div></template></HtmlTooltip> them for <span style=\"font-variant-numeric: tabular-nums;\">2.5</span> seconds.<br />Enemy champions hit are also <HtmlTooltip class=\"blue link\">revealed<template #content><div><h4>sight<hr></h4><p>Description for keyword sight</p></div></template></HtmlTooltip> for a duration and have a <span class=\"buzzword3\">Soul Fragment</span> ripped from them.",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|80 to 240}} {{as|(+ 70% AP)}}|Reduced Damage|{{ap|80/2 to 240/2}} {{as|(+ 35% AP)}}}}\n{{st|Slow Strength|{{ap|25 to 65}}%}}",
+        "{{st|Reveal Duration|{{ap|4 to 8}}}}"
+      ],
+      "notes": "* {{tip|Spell shield}} does not prevent '''Swain''' from ripping a {{as|Soul Fragment|buzzword3}}.\n* ''Vision of Empire'' will also grant {{as|Soul Fragments|buzzword3}} from hitting {{tip|clone|clones}}.\n* ''Vision of Empire'' is visible and audible to enemies through the [[sight|fog of war]].",
+      "skillkey": "W",
+      "skillid": "w1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[80,120,160,200,240]\"></SpellSpan> <span class=\"ap\">(+ 70% AP)</span></span></li><li><span class=\"blue\">Reduced Damage</span>: <span><SpellSpan :list=\"[40,60,80,100,120]\"></SpellSpan> <span class=\"ap\">(+ 35% AP)</span></span></li></ul><br><ul class=\"st\"><li><span class=\"blue\">Slow Strength</span>: <span><SpellSpan :list=\"[25,35,45,55,65]\"></SpellSpan>%</span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.7000000000000001
+              },
+              {
+                "player_total_ap": 0.35000000000000003
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[80,120,160,200,240]\"></SpellSpan> <span class=\"ap\">(+ 70% AP)</span>",
+                "Reduced Damage",
+                "<SpellSpan :list=\"[40,60,80,100,120]\"></SpellSpan> <span class=\"ap\">(+ 35% AP)</span>"
+              ],
+              [
+                "Slow Strength",
+                "<SpellSpan :list=\"[25,35,45,55,65]\"></SpellSpan>%"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                80,
+                120,
+                160,
+                200,
+                240
+              ],
+              [
+                40,
+                60,
+                80,
+                100,
+                120
+              ],
+              [
+                25,
+                35,
+                45,
+                55,
+                65
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  80,
+                  120,
+                  160,
+                  200,
+                  240
+                ],
+                "player_total_ap": 0.7000000000000001
+              }
+            },
+            {
+              "index": 1,
+              "title": "Slow Strength",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  40,
+                  60,
+                  80,
+                  100,
+                  120
+                ],
+                "player_total_ap": 0.7000000000000001
+              }
+            }
+          ]
+        },
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Reveal Duration</span>: <span><SpellSpan :list=\"[4,5,6,7,8]\"></SpellSpan></span></li></ul>",
+          "vars": {
+            "as_ratios": [],
+            "st_slices": [
+              [
+                "Reveal Duration",
+                "<SpellSpan :list=\"[4,5,6,7,8]\"></SpellSpan>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                4,
+                5,
+                6,
+                7,
+                8
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Reveal Duration",
+              "damage_type": "unknown",
+              "ratios": {
+                "base_damage": [
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "e1": {
+      "riotId": "SwainE",
+      "name": "Nevermove",
+      "maxrank": 5,
+      "cooldown": 10,
+      "cost": 50,
+      "costtype": "Mana",
+      "targeting": "Direction",
+      "target_range": 850,
+      "image": {
+        "full": "SwainE.png",
+        "sprite": "spell11.png",
+        "group": "spell",
+        "x": 288,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Swain''' launches a demonic wave in the target direction, dealing {{as|magic damage}} to enemies it passes through.",
+        "Upon reaching its maximum distance, the wave returns to '''Swain''', detonating at the first enemy hit, dealing {{as|magic damage}} to all nearby enemies and {{tip|root|rooting}} them for {{fd|1.5}} seconds."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Swain</b> launches a demonic wave in the target direction, dealing <span class=\"magic-damage\">magic damage</span> to enemies it passes through.<br />Upon reaching its maximum distance, the wave returns to <b>Swain</b>, detonating at the first enemy hit, dealing <span class=\"magic-damage\">magic damage</span> to all nearby enemies and <HtmlTooltip class=\"blue link\">rooting<template #content><div><h4>Root / Snare / Binding<hr></h4><p>Unit is unable to control movement, use a mobility spells (dash and blink) or use summoner <b>Flash</b> and <b>Teleport</b> for the duration.</p></div></template></HtmlTooltip> them for <span style=\"font-variant-numeric: tabular-nums;\">1.5</span> seconds.",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|35|70|105|140|175}} {{as|(+ 25% AP)}}}}",
+        "{{st|Detonation Damage|{{ap|35|45|55|65|75}} {{as|(+ 25% AP)}}|Maximum Damage|{{ap|70|115|160|205|250}} {{as|(+ 50% AP)}}}}"
+      ],
+      "notes": "* {{tip|Spell shield|Spell shields}} block either the pass-through or the detonation, not both.\n* ''Nevermove'' is always cast from the original casting position.",
+      "skillkey": "E",
+      "skillid": "e1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[35,70,105,140,175]\"></SpellSpan> <span class=\"ap\">(+ 25% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.25
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[35,70,105,140,175]\"></SpellSpan> <span class=\"ap\">(+ 25% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                35,
+                70,
+                105,
+                140,
+                175
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  35,
+                  70,
+                  105,
+                  140,
+                  175
+                ],
+                "player_total_ap": 0.25
+              }
+            }
+          ]
+        },
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Detonation Damage</span>: <span><SpellSpan :list=\"[35,45,55,65,75]\"></SpellSpan> <span class=\"ap\">(+ 25% AP)</span></span></li><li><span class=\"blue\">Maximum Damage</span>: <span><SpellSpan :list=\"[70,115,160,205,250]\"></SpellSpan> <span class=\"ap\">(+ 50% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.25
+              },
+              {
+                "player_total_ap": 0.5
+              }
+            ],
+            "st_slices": [
+              [
+                "Detonation Damage",
+                "<SpellSpan :list=\"[35,45,55,65,75]\"></SpellSpan> <span class=\"ap\">(+ 25% AP)</span>",
+                "Maximum Damage",
+                "<SpellSpan :list=\"[70,115,160,205,250]\"></SpellSpan> <span class=\"ap\">(+ 50% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                35,
+                45,
+                55,
+                65,
+                75
+              ],
+              [
+                70,
+                115,
+                160,
+                205,
+                250
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Detonation Damage",
+              "damage_type": "unknown",
+              "ratios": {
+                "base_damage": [
+                  35,
+                  45,
+                  55,
+                  65,
+                  75
+                ],
+                "player_total_ap": 0.5
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
