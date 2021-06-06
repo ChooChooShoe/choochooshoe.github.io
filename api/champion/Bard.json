@@ -49,6 +49,32 @@
     "attackspeed": 0.625
   },
   "skills": {
+    "i1": {
+      "riotId": "",
+      "name": "Traveler's Call",
+      "maxrank": 0,
+      "targeting": "Passive",
+      "image": {
+        "full": "Bard_Passive.png",
+        "sprite": "passive0.png",
+        "group": "passive",
+        "x": 48,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Innate - Ancient Chimes:}} '''Bard's''' presence causes sacred {{as|chimes|buzzword2}} to appear at random locations and linger for up to 10 minutes. Collecting a {{as|chime|buzzword2}} grants '''Bard''' {{sti|ms|{{as|24% '''bonus''' movement speed}}}} [[combat status|out of combat]] for 7 seconds, stacking up to 5 times, with every other {{as|chime|buzzword2}} collected beyond the first granting an additional {{as|14% '''bonus''' movement speed}}, up to a total of {{as|80% '''bonus''' movement speed}}, {{sti|Experience|{{as|20 + (''1 per minute after 5 minutes'') experience}}}}, and {{sti|mana|{{as|12% '''maximum''' mana}}}}. '''Bard''' empowers his {{as|Meeps|buzzword3}} each time he collects 5 {{as|chimes|buzzword2}}.",
+        "{{sbc|Innate - Meeps:}} '''Bard's''' presence attracts small spirits known as {{as|Meeps|buzzword3}} to his side. {{tip|On-attack}} he consumes a {{as|Meep|buzzword3}}, dealing {{as|30 (''+ 12 per 5 chimes collected'')|magic damage}} {{as|(+ 30% AP)}} {{as|'''bonus''' magic damage}}.\n* At {{as|5 chimes|buzzword2}}, {{as|Meeps|buzzword3}} start {{tip|slow|slowing}} damaged enemies by {{pp|type = number of Chimes|key=%|25 to 75 for 6|5;25;45;60;75;85}} for 1 second.\n* At {{as|15 chimes|buzzword2}}, {{as|Meeps|buzzword3}} deal splash damage to enemies within 150 units of his target as well as those in a cone behind them.\n* At {{as|35 chimes|buzzword2}}, the cone's radius increases.",
+        "{{as|Meeps|buzzword3}} spawn every {{pp|changedisplay=true|type = number of Chimes|8 to 4 for 5|0;20;40;55;70}} seconds and '''Bard''' can keep up to {{pp|type = number of Chimes|1 to 9 for 9|0;10;30;50;65;80;90;95;100}} of them at a time."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Innate - Ancient Chimes:</span> <b>Bard's</b> presence causes sacred <span class=\"buzzword2\">chimes</span> to appear at random locations and linger for up to 10 minutes. Collecting a <span class=\"buzzword2\">chime</span> grants <b>Bard</b> <span><span class=\"movement-speed\">24% <b>bonus</b> movement speed</span></span> <a class=\"effect link\" title=\"out of combat\">combat status</a> for 7 seconds, stacking up to 5 times, with every other <span class=\"buzzword2\">chime</span> collected beyond the first granting an additional <span class=\"movement-speed\">14% <b>bonus</b> movement speed</span>, up to a total of <span class=\"movement-speed\">80% <b>bonus</b> movement speed</span>, <span><span class=\"xp\">20 + (<i>1 per minute after 5 minutes</i>) experience</span></span>, and <span><span class=\"mana\">12% <b>maximum</b> mana</span></span>. <b>Bard</b> empowers his <span class=\"buzzword3\">Meeps</span> each time he collects 5 <span class=\"buzzword2\">chimes</span>.<br /><span class=\"sbc\">Innate - Meeps:</span> <b>Bard's</b> presence attracts small spirits known as <span class=\"buzzword3\">Meeps</span> to his side. <HtmlTooltip class=\"blue link\">On-attack<template #content><div><h4>On-attack<hr></h4><p>Description for keyword On-attack</p></div></template></HtmlTooltip> he consumes a <span class=\"buzzword3\">Meep</span>, dealing <span class=\"magic-damage\">30 (<i>+ 12 per 5 chimes collected</i>)</span> <span class=\"ap\">(+ 30% AP)</span> <span class=\"magic-damage\"><b>bonus</b> magic damage</span>.<br>* At <span class=\"buzzword2\">5 chimes</span>, <span class=\"buzzword3\">Meeps</span> start <HtmlTooltip class=\"blue link\">slowing<template #content><div><h4>Slow<hr></h4><p>A unit that is <i>slowed</i> has reduced movement speed for the duration.<br><br>Duration reduced by <b>Tenacity</b>.<br>Strength is reduced by <b>Slow resist</b>.</p></div></template></HtmlTooltip> damaged enemies by <span class=\"title-tooltip\" title=\"\">5;25;45;60;75;85 ‒ undefined</span> for 1 second.<br>* At <span class=\"buzzword2\">15 chimes</span>, <span class=\"buzzword3\">Meeps</span> deal splash damage to enemies within 150 units of his target as well as those in a cone behind them.<br>* At <span class=\"buzzword2\">35 chimes</span>, the cone's radius increases.<br /><span class=\"buzzword3\">Meeps</span> spawn every <span class=\"title-tooltip\" title=\"\">0;20;40;55;70 ‒ undefined</span> seconds and <b>Bard</b> can keep up to <span class=\"title-tooltip\" title=\"\">0;10;30;50;65;80;90;95;100 ‒ undefined</span> of them at a time.",
+      "leveling": [],
+      "notes": "* Primary target takes {{tip|spell damage}}, while secondary ones take {{tip|area damage}}.\n* {{as|Meeps|buzzword3}} grant additional stacks of {{ri|Electrocute}}, {{ri|Phase Rush}} and {{ri|Conqueror}}.\n* {{as|Chime|buzword2}} spawns are weighted towards the areas of the map that '''Bard''' is currently present in, and spawn every 50 seconds in pairs, with the only exception being the second and third spawns on {{tip|Summoner's Rift}}, which spawn only one.\n** {{as|Chimes|buzzword2}} will not spawn in either team's base and will not spawn in the enemy team's jungle before the 5 minute mark.\n* Only '''Bard''' can see a {{as|chime|buzzword2}} that is in the [[fog of war]]. All other players must have {{tip|sight}} of a {{as|chime|buzzword2}} for it to be visible to them.\n** Only '''Bard''' can see a minimap icon for an uncollected {{as|chime|buzzword2}}, regardless of whether other players have vision on it or not. The minimap icon will turn red when the {{as|chime|buzzword2}} is one minute away from expiration.\n** '''Bard''' cannot see {{as|chimes|buzzword2}} while {{tip|nearsight|nearsighted}}.\n* Only {{as|Meep|buzzword3}} cone attacks are absorbed by {{tip|spell shield|spell shields}}. Those that deal damage together with the basic attack don't.\n* {{Pending for test}}: On-attack interaction with ''parrying'' effects ({{tip|dodge}}, {{tip|block}}, {{tip|blind}}).\n{{chime list}}",
+      "skillkey": "I",
+      "skillid": "i1",
+      "effects": []
+    },
     "q1": {
       "riotId": "BardQ",
       "name": "Cosmic Binding",
@@ -239,11 +265,12 @@
       "name": "Magical Journey",
       "maxrank": 5,
       "cooldown": [
-        22,
-        20.5,
-        19,
-        17.5,
-        16
+        0,
+        20,
+        18,
+        16,
+        14,
+        0
       ],
       "cost": 30,
       "costtype": "Mana",
@@ -268,6 +295,7 @@
       "notes": "* Terrain also includes [[structures]].\n* ''Magical Journey's'' tunnel has a max range of 2600 units (about two screens long)<ref>[http://boards.na.leagueoflegends.com/en/c/gameplay-balance/Ev3qQR4G-bard-qa?show=flat&comment=00dc0001/ Bard Q&A comment by Rabid Llama]</ref>.\n* ''Magical Journey'' will score assists for '''Bard''' if an ally that uses it scores a [[kill]] or [[assist]] shortly after.\n* '''Bard''' can cast ''Magical Journey'' while {{tip|ground|grounded}} or {{tip|root|rooted}}.\n* There is no limit to how many times a given instance of ''Magical Journey'' may be used.\n* ''Magical Journey'' cannot interact with player-created terrain due to its short lifespan.<ref>[http://boards.na.leagueoflegends.com/en/c/gameplay-balance/Ev3qQR4G-bard-qa?show=flat&comment=001f0000/ Bard Q&A comment by Rabid Llama]</ref>\n* Any abilities that continue during normal movement, such as [[area of effect|point blank area of effects]] and various forms of {{tip|stealth}}, will continue during the travel within ''Magical Journey''.\n* If a champion's {{tip|dash}} is {{tip|interrupt|interrupted}} while inside terrain using ''Magical Journey'', they will be immediately displaced out to the nearest open space, but are not rendered {{tip|airborne}}.\n* Taking ''Magical Journey'' is considered a {{tip|dash}}, and so will interact with effects such as {{ri|Sudden Impact}} and {{tip|knockdown}}.",
       "skillkey": "E",
       "skillid": "e1",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '{{tt|{{ap|22 to 16}}|Starts on cast}}' as '0/20/18/16/14/0' and riot's value '22,20.5,19,17.5,16' as '22/20.5/19/17.5/16'",
       "effects": []
     },
     "r1": {

@@ -79,11 +79,12 @@
       "name": "Deceive",
       "maxrank": 5,
       "cooldown": [
-        12,
-        11.5,
-        11,
-        10.5,
-        10
+        0,
+        11.333,
+        10.667,
+        10,
+        9.333,
+        0
       ],
       "cost": 60,
       "costtype": "Mana",
@@ -112,6 +113,7 @@
       "notes": "* ''Deceive's'' smoke can be seen through [[Sight|fog of war]] if Shaco's nearby. \n* ''Deceive's'' bonus damage adds directly to the damage instance of the basic attack.",
       "skillkey": "Q",
       "skillid": "q1",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '{{tt|{{ap|12 to 10}}|Starts post-effect}}' as '0/11.333/10.667/10/9.333/0' and riot's value '12,11.5,11,10.5,10' as '12/11.5/11/10.5/10'",
       "effects": [
         {
           "str": "<ul class=\"st\"><li><span class=\"blue\">Invisibility Duration</span>: <span><SpellSpan :list=\"[2.5,2.75,3,3.25,3.5]\"></SpellSpan></span></li></ul>",
@@ -486,6 +488,133 @@
                   0.75
                 ],
                 "player_total_ap": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "r1": {
+      "riotId": "HallucinateFull",
+      "name": "Hallucinate",
+      "maxrank": 3,
+      "cooldown": [
+        0,
+        80,
+        60,
+        0
+      ],
+      "cost": 100,
+      "costtype": "Mana",
+      "targeting": "Direction",
+      "image": {
+        "full": "HallucinateFull.png",
+        "sprite": "spell11.png",
+        "group": "spell",
+        "x": 240,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Shaco''' {{tip|vanish|vanishes}} for {{fd|0.5}} seconds and then {{tip|blink|blinks}} in the {{tt|target direction|150 units}} while creating a copy of himself that ''blinks'' in the {{tt|opposite direction|150 units}}, remaining within {{tt|control range|1125 units}} of him as a controllable {{tip|clone}} for up to 18 seconds. ''Hallucinate'' can be recast at any time while the {{tip|clone}} is alive.",
+        "{{sbc|Recast:}} '''Shaco''' commands the {{tip|clone}} to move to the target location.",
+        "When the ''Hallucination'' [[death|dies]] or expires, it explodes, dealing {{as|magic damage}} to enemies near it and leaving behind three {{ai|Jack in the Box|Shaco|mini-boxes}} at its location which activate instantly, causing nearby enemies to {{tip|flee}} from them for 1 second.",
+        "The three boxes possess ''Jack in the Box's'' effects, except they have a doubled, but shared {{sti|health|{{as|health}}}}, and deal modified {{as|magic damage}} with each attack, increased if attacking a single unit.",
+        "''Hallucinate's recast can be used while affected by {{tip|cast-inhibiting crowd control}}.''"
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Shaco</b> <HtmlTooltip class=\"blue link\">vanishes<template #content><div><h4>vanish<hr></h4><p>Description for keyword vanish</p></div></template></HtmlTooltip> for <span style=\"font-variant-numeric: tabular-nums;\">0.5</span> seconds and then <HtmlTooltip class=\"blue link\">blinks<template #content><div><h4>blink<hr></h4><p>Description for keyword blink</p></div></template></HtmlTooltip> in the <span class=\"title-tooltip\" title=\"150 units\">target direction</span> while creating a copy of himself that <i>blinks</i> in the <span class=\"title-tooltip\" title=\"150 units\">opposite direction</span>, remaining within <span class=\"title-tooltip\" title=\"1125 units\">control range</span> of him as a controllable <HtmlTooltip class=\"blue link\">clone<template #content><div><h4>clone<hr></h4><p>Description for keyword clone</p></div></template></HtmlTooltip> for up to 18 seconds. <i>Hallucinate</i> can be recast at any time while the <HtmlTooltip class=\"blue link\">clone<template #content><div><h4>clone<hr></h4><p>Description for keyword clone</p></div></template></HtmlTooltip> is alive.<br /><span class=\"sbc\">Recast:</span> <b>Shaco</b> commands the <HtmlTooltip class=\"blue link\">clone<template #content><div><h4>clone<hr></h4><p>Description for keyword clone</p></div></template></HtmlTooltip> to move to the target location.<br />When the <i>Hallucination</i> <a class=\"effect link\" title=\"dies\">death</a> or expires, it explodes, dealing <span class=\"magic-damage\">magic damage</span> to enemies near it and leaving behind three <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Shaco\">mini-boxes<template #content>Jack in the Box</template></HtmlTooltip> at its location which activate instantly, causing nearby enemies to <HtmlTooltip class=\"blue link\">flee<template #content><div><h4>Fear<hr></h4><p>Spooky</p></div></template></HtmlTooltip> from them for 1 second.<br />The three boxes possess <i>Jack in the Box's</i> effects, except they have a doubled, but shared <span><span class=\"health\">health</span></span>, and deal modified <span class=\"magic-damage\">magic damage</span> with each attack, increased if attacking a single unit.<br /><i>Hallucinate's recast can be used while affected by <HtmlTooltip class=\"blue link\">cast-inhibiting crowd control<template #content><div><h4>cast-inhibiting crowd control<hr></h4><p>Description for keyword cast-inhibiting crowd control</p></div></template></HtmlTooltip>.</i>",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|150 to 300}} {{as|(+ 70% AP)}}}}",
+        "{{st|Mini-Box Magic Damage|{{ap|10 to 30}} {{as|(+ 10% AP)}}|Mini-Box Increased Damage|{{ap|25 to 75}} {{as|(+ 15% AP)}}}}"
+      ],
+      "notes": "* '''Shaco''' and the ''Hallucination'' will face each other the moment of their appearance.\n* The explosion and the ''boxes'' apply {{tip|area damage}}, while the clone deals {{tip|pet damage}}.\n* ''Hallucinate'' will cast from wherever '''Shaco''' is at the end of the cast time.\n* The clone will automatically begin attacking the nearest enemy when '''Shaco''' dies, unless it loses vision of the target. \n* The clone will always spawn in the opposite direction of the cursor.\n** If ''Deceive'' and ''Hallucinate'' are used in quick succession, the clone will spawn in the direction of the cursor instead.",
+      "skillkey": "R",
+      "skillid": "r1",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '{{tt|{{ap|100 to 80}}|Starts on cast}}' as '0/80/60/0' and riot's value '100,90,80' as '100/90/80'",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[150,225,300]\"></SpellSpan> <span class=\"ap\">(+ 70% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.7000000000000001
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[150,225,300]\"></SpellSpan> <span class=\"ap\">(+ 70% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                150,
+                225,
+                300
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  150,
+                  225,
+                  300
+                ],
+                "player_total_ap": 0.7000000000000001
+              }
+            }
+          ]
+        },
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Mini-Box Magic Damage</span>: <span><SpellSpan :list=\"[10,20,30]\"></SpellSpan> <span class=\"ap\">(+ 10% AP)</span></span></li><li><span class=\"blue\">Mini-Box Increased Damage</span>: <span><SpellSpan :list=\"[25,50,75]\"></SpellSpan> <span class=\"ap\">(+ 15% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.1
+              },
+              {
+                "player_total_ap": 0.15
+              }
+            ],
+            "st_slices": [
+              [
+                "Mini-Box Magic Damage",
+                "<SpellSpan :list=\"[10,20,30]\"></SpellSpan> <span class=\"ap\">(+ 10% AP)</span>",
+                "Mini-Box Increased Damage",
+                "<SpellSpan :list=\"[25,50,75]\"></SpellSpan> <span class=\"ap\">(+ 15% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                10,
+                20,
+                30
+              ],
+              [
+                25,
+                50,
+                75
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Mini-Box Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  10,
+                  20,
+                  30
+                ],
+                "player_total_ap": 0.15
               }
             }
           ]

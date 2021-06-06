@@ -339,6 +339,103 @@
           ]
         }
       ]
+    },
+    "r1": {
+      "riotId": "QuinnR",
+      "name": "Behind Enemy Lines",
+      "maxrank": 3,
+      "cooldown": [
+        3,
+        0
+      ],
+      "cost": [
+        100,
+        50,
+        0
+      ],
+      "costtype": "Mana",
+      "targeting": "Auto",
+      "image": {
+        "full": "QuinnR.png",
+        "sprite": "spell9.png",
+        "group": "spell",
+        "x": 240,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Quinn''' {{tip|channels}} for 2 seconds, signaling '''{{ci|Valor}}''' to come at her side. Upon completion, he picks her up and they unite, increasing her {{sti|ms|{{as|{{tt|'''total''' movement speed|Increases base movement as well as bonus movement speed}}}}}}, granting her {{tip|ghosted|ghosting}}, and allowing her to cast {{ai|Skystrike|Quinn}}. ''Behind Enemy Lines'' can be recast after {{fd|0.5}} seconds during the channel.",
+        "Taking damage from non-{{tip|minions}} while ''Behind Enemy Lines'' is active or while '''Quinn''' is {{tip|channel|channeling}} causes her to lose the {{as|'''bonus''' movement speed}} for 3 seconds. Becoming {{tip|immobilize|immobilized}}, {{tip|ground|grounded}}, or {{tip|silence|silenced}} ends ''Behind Enemy Lines'' immediately and puts it on {{sti|cooldown}} without performing {{ai|Skystrike|Quinn}}.",
+        "Once ''Behind Enemy Lines'' has been learned, [[death|respawning]] or returning to the [[Spawn|summoning platform]] will spawn '''{{ci|Valor}}''' instantly, but {{ai|Skystrike|Quinn}} is disabled for {{fd|2.5}} seconds upon uniting.",
+        "{{sbc|Recast:}} '''Quinn''' cancels the channel, placing ''Behind Enemy Lines'' on cooldown."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Quinn</b> <HtmlTooltip class=\"blue link\">channels<template #content><div><h4>channels<hr></h4><p>Description for keyword channels</p></div></template></HtmlTooltip> for 2 seconds, signaling <b><span class=\"chamption-name\" data-champkey=\"Valor\">Valor</span></b> to come at her side. Upon completion, he picks her up and they unite, increasing her <span><span class=\"movement-speed\"><span class=\"title-tooltip\" title=\"Increases base movement as well as bonus movement speed\"><b>total</b> movement speed</span></span></span>, granting her <HtmlTooltip class=\"blue link\">ghosting<template #content><div><h4>ghosted<hr></h4><p>Description for keyword ghosted</p></div></template></HtmlTooltip>, and allowing her to cast <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Quinn\">Skystrike<template #content>Skystrike</template></HtmlTooltip>. <i>Behind Enemy Lines</i> can be recast after <span style=\"font-variant-numeric: tabular-nums;\">0.5</span> seconds during the channel.<br />Taking damage from non-<HtmlTooltip class=\"blue link\">minions<template #content><div><h4>Lane Minions<hr></h4><p>A unit that is <i>slowed</i> has reduced movement speed for the duration.<br><br>Duration reduced by <b>Tenacity</b>.<br>Strength is reduced by <b>Slow resist</b>.</p></div></template></HtmlTooltip> while <i>Behind Enemy Lines</i> is active or while <b>Quinn</b> is <HtmlTooltip class=\"blue link\">channeling<template #content><div><h4>channel<hr></h4><p>Description for keyword channel</p></div></template></HtmlTooltip> causes her to lose the <span class=\"movement-speed\"><b>bonus</b> movement speed</span> for 3 seconds. Becoming <HtmlTooltip class=\"blue link\">immobilized<template #content><div><h4>immobilize<hr></h4><p>Description for keyword immobilize</p></div></template></HtmlTooltip>, <HtmlTooltip class=\"blue link\">grounded<template #content><div><h4>Ground / Grounded <hr></h4><p>Unit that is grounded is unable to activate mobility spells (dash and blink). <br><br>Does <b>not</b> interrupts an in progress dash or blink.<br>Does Interrupts channeled and charged dashes.</p></div></template></HtmlTooltip>, or <HtmlTooltip class=\"blue link\">silenced<template #content><div><h4>Slence<hr></h4><p>Cannot cast abilities, activate items, or use summoner <b>Flash</b> and <b>Teleport</b>.<br><br>Interrupts channeled and charged abilities. (Except: Lucian's The Culling)<br>Duration reduced by <b>Tenacity</b></p></div></template></HtmlTooltip> ends <i>Behind Enemy Lines</i> immediately and puts it on <span>cooldown</span> without performing <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Quinn\">Skystrike<template #content>Skystrike</template></HtmlTooltip>.<br />Once <i>Behind Enemy Lines</i> has been learned, <a class=\"effect link\" title=\"respawning\">death</a> or returning to the <a class=\"effect link\" title=\"summoning platform\">Spawn</a> will spawn <b><span class=\"chamption-name\" data-champkey=\"Valor\">Valor</span></b> instantly, but <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Quinn\">Skystrike<template #content>Skystrike</template></HtmlTooltip> is disabled for <span style=\"font-variant-numeric: tabular-nums;\">2.5</span> seconds upon uniting.<br /><span class=\"sbc\">Recast:</span> <b>Quinn</b> cancels the channel, placing <i>Behind Enemy Lines</i> on cooldown.",
+      "leveling": [
+        "{{st|Total Movement Speed Increase|{{ap|70 to 130}}%}}"
+      ],
+      "notes": "* ''Behind Enemy Lines'' removes the bonus movement speed buff temporarily by suppressing it with the status effect of a {{tip|slow}}.\n* ''Behind Enemy Lines'' does not refund its {{sti|{{as|mana cost}}}} if the channel was canceled via recast.\n** The only exception is if '''Quinn's''' {{as|mana}} falls below the {{as|mana cost}}, in which case she is granted enough {{as|mana}} back (the equal amount needed) to be able to cast ''Behind Enemy Lines'' again.\n* ''Behind Enemy Lines'' ends immediately without {{ai|Skystrike|Quinn}} being cast if she enters or is inside the enemy [[fountain]]. The ability will go on full {{sti|cooldown}}.\n** '''Quinn''' will also spawn '''{{ci|Valor}}''' when entering the enemy fountain but she will instantly lose him afterwards.\n* Self-{{tip|immobilize|immobilizations}} such as {{ii|Stopwatch}} and {{ii|Zhonya's Hourglass}} also count for ending ''Behind Enemy Lines''.\n* The following table refers for interactions while '''Quinn''' is {{tip|channel|channeling}}:\n** ''Behind Enemy Lines'' is not a [[Channel#Movement Channels|movement channel]], and so will not be {{tip|interrupt|interrupted}} by {{tip|root}} and {{tip|ground}}.\n{{ct|channel|attack=interrupts|cast=interrupts|move=false|items=interrupts,true,,false|spells=true, interrupts, interrupts, interrupts, interrupts}}",
+      "skillkey": "R",
+      "skillid": "r1",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '{{tt|3|Starts post-effect}}' as '3/0' and riot's value '3,3,3' as '3'",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Total Movement Speed Increase</span>: <span><SpellSpan :list=\"[70,100,130]\"></SpellSpan>%</span></li></ul>",
+          "vars": {
+            "as_ratios": [],
+            "st_slices": [
+              [
+                "Total Movement Speed Increase",
+                "<SpellSpan :list=\"[70,100,130]\"></SpellSpan>%"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                70,
+                100,
+                130
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Total Movement Speed Increase",
+              "damage_type": "none",
+              "ratios": {}
+            }
+          ]
+        }
+      ]
+    },
+    "r2": {
+      "riotId": "QuinnR",
+      "name": "Skystrike",
+      "maxrank": 3,
+      "cooldown": 0,
+      "cost": 0,
+      "targeting": "Auto",
+      "image": {
+        "full": "QuinnR.png",
+        "sprite": "spell9.png",
+        "group": "spell",
+        "x": 240,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Quinn''' detaches from '''{{ci|Valor}}''', ending {{ais|Behind Enemy Lines|Quinn}} effects, and rains down a flurry of arrows at the nearby area, dealing {{as|40% AD}} {{as|physical damage}} to all surrounding enemies.",
+        "Declaring a [[basic attack]] or casting {{ai|Blinding Assault|Quinn}} or {{ai|Vault|Quinn}} during {{ai|Behind Enemy Lines|Quinn}} automatically activates ''Skystrike''."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Quinn</b> detaches from <b><span class=\"chamption-name\" data-champkey=\"Valor\">Valor</span></b>, ending <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Quinn\">Behind Enemy Lines's<template #content>Behind Enemy Lines</template></HtmlTooltip> effects, and rains down a flurry of arrows at the nearby area, dealing <span class=\"ad\">40% AD</span> <span class=\"physical-damage\">physical damage</span> to all surrounding enemies.<br />Declaring a <a class=\"effect link\" title=\"basic attack\">basic attack</a> or casting <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Quinn\">Blinding Assault<template #content>Blinding Assault</template></HtmlTooltip> or <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Quinn\">Vault<template #content>Vault</template></HtmlTooltip> during <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Quinn\">Behind Enemy Lines<template #content>Behind Enemy Lines</template></HtmlTooltip> automatically activates <i>Skystrike</i>.",
+      "leveling": [],
+      "notes": "* If '''Quinn''' uses {{ai|Vault|Quinn}} while {{ai|Behind Enemy Lines|Quinn}} is active, ''Skystrike'' will activate at her target's location after she bounces back.",
+      "skillkey": "R",
+      "skillid": "r2",
+      "cost_warn": "Wiki's and Riot's mana costs do not match: Wiki's value  0 as 0 and riot's value 100,50,0 as 100/50/0",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '0' as '0' and riot's value '3,3,3' as '3'",
+      "effects": []
     }
   }
 }

@@ -234,11 +234,13 @@
       "name": "Power Fist",
       "maxrank": 5,
       "cooldown": [
+        0,
         9,
         8,
         7,
         6,
-        5
+        5,
+        0
       ],
       "cost": 25,
       "costtype": "mana",
@@ -261,6 +263,7 @@
       "notes": "* The {{tip|airborne|knockup}} is applied even if the attack is {{tip|dodge|dodged}} or {{tip|blind|missed}}.\n** It is not applied if it is {{tip|block|blocked}}.\n* {{tip|Spell shield}} prevents the {{tip|airborne|knockup}} but not the damage.\n* The enhanced attack will still complete and hit the target even if they become {{tip|untargetable}} during the {{tip|attack windup|attack's windup}}.\n* The target is displaced a short distance during the {{tip|airborne|knockup}} in a random direction.",
       "skillkey": "E",
       "skillid": "e1",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '{{tt|{{ap|9|8|7|6|5}}|Starts post-effect}}' as '0/9/8/7/6/5/0' and riot's value '9,8,7,6,5' as '9/8/7/6/5'",
       "effects": []
     },
     "r1": {

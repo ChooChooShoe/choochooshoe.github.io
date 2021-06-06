@@ -49,6 +49,31 @@
     "attackspeed": 0.69
   },
   "skills": {
+    "i1": {
+      "riotId": "",
+      "name": "Duelist's Dance",
+      "maxrank": 0,
+      "targeting": "Passive",
+      "image": {
+        "full": "Fiora_P.png",
+        "sprite": "passive0.png",
+        "group": "passive",
+        "x": 432,
+        "y": 96,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Innate:}} '''Fiora''' identifies the {{as|Vitals|buzzword}} of nearby {{tip|sight|visible}} enemy champions, marked as an arc around themselves. {{as|Vitals|buzzword}} take {{fd|1.75}} seconds to become targetable and linger for {{fd|13.25}} seconds afterwards while '''Fiora''' remains near the target, otherwise the {{as|Vital|buzzword}} will disappear. After a {{as|Vital|buzzword}} ends, '''Fiora''' identifies a new one on her target.",
+        "'''Fiora's''' damage against a {{as|Vital|buzzword}} will trigger it to deal {{as|{{fd|3}}% {{as|(+ {{fd|5.5}}% per 100 '''bonus''' AD)}} of target's '''maximum''' health}} {{sti|{{as|'''bonus''' true damage}}}}, {{tip|heal}} '''Fiora''' for {{pp|40 to 115}} and grant her {{pp|type=[[File:Grand Challenge.png|20px|link=]] Grand Challenge's Rank|key=%|20 to 50 for 4|0 to 3|formula=20%+(10%*Grand Challenge's Rank)|color=ms}} {{sti|ms|{{as|'''bonus''' movement speed}}}} that decays over {{fd|1.5}} seconds."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Innate:</span> <b>Fiora</b> identifies the <span class=\"buzzword\">Vitals</span> of nearby <HtmlTooltip class=\"blue link\">visible<template #content><div><h4>sight<hr></h4><p>Description for keyword sight</p></div></template></HtmlTooltip> enemy champions, marked as an arc around themselves. <span class=\"buzzword\">Vitals</span> take <span style=\"font-variant-numeric: tabular-nums;\">1.75</span> seconds to become targetable and linger for <span style=\"font-variant-numeric: tabular-nums;\">13.25</span> seconds afterwards while <b>Fiora</b> remains near the target, otherwise the <span class=\"buzzword\">Vital</span> will disappear. After a <span class=\"buzzword\">Vital</span> ends, <b>Fiora</b> identifies a new one on her target.<br /><b>Fiora's</b> damage against a <span class=\"buzzword\">Vital</span> will trigger it to deal <span class=\"health\"><span style=\"font-variant-numeric: tabular-nums;\">3</span>% <span class=\"ad\">(+ <span style=\"font-variant-numeric: tabular-nums;\">5.5</span>% per 100 <b>bonus</b> AD)</span> of target's <b>maximum</b> health</span> <span><span class=\"true-damage\"><b>bonus</b> true damage</span></span>, <HtmlTooltip class=\"blue link\">heal<template #content><div><h4>Healing<hr></h4><p><b>Healing</b> restores some of the user or the target's <span class=\"health\">current health</span> directly.<br><br>Healing can be reduced by <b>Grievous Wounds</b>.</p></div></template></HtmlTooltip> <b>Fiora</b> for <HtmlTooltip class=\"blue link\">40undefined − 115undefined (based on level)<template #content>Values: 40, 44.412, 48.824, 53.235, 57.647, 62.059, 66.471, 70.882, 75.294, 79.706, 84.118, 88.529, 92.941, 97.353, 101.765, 106.176, 110.588, 115<br>At levels: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18</template></HtmlTooltip> and grant her <span class=\"title-tooltip\" title=\"\">0 to 3 ‒ undefined</span> <span><span class=\"movement-speed\"><b>bonus</b> movement speed</span></span> that decays over <span style=\"font-variant-numeric: tabular-nums;\">1.5</span> seconds.",
+      "leveling": [],
+      "notes": "* {{as|Vitals|buzzword}} can be triggered by any source of damage '''Fiora''' deals, except those with {{tip|default damage}} and {{tip|reactive damage}} types.\n* The {{as|Vitals|buzzword}} are visible to all units.\n* A {{as|Vital's|buzzword}} angle is fixed to the champion's model and doesn't interact with its orientation.\n* {{as|Vitals|buzzword}} will not trigger if the attack is {{tip|dodge|dodged}}, {{tip|block|blocked}}, or missed while '''Fiora''' is {{tip|blind|blinded}}.\n** {{Pending for test}}: {{ai|Lunge|Fiora}} interaction.",
+      "skillkey": "I",
+      "skillid": "i1",
+      "effects": []
+    },
     "q1": {
       "riotId": "FioraQ",
       "name": "Lunge",
@@ -236,11 +261,12 @@
       "name": "Bladework",
       "maxrank": 5,
       "cooldown": [
-        11,
-        9.5,
-        8,
-        6.5,
-        5
+        0,
+        9,
+        7,
+        5,
+        3,
+        0
       ],
       "cost": 40,
       "costtype": "Mana",
@@ -267,6 +293,7 @@
       "notes": "* {{ii|Infinity Edge}} is not affected by the critical damage reduction and will increase the damage by 25% AD, instead of multiplying it by {{fd|112.5}}%.\n* {{tip|Spell shield}} will only block the slow from the first hit.\n* {{Pending for test}}: ''Bladework's'' interaction with {{tip|dodge|dodging}}, {{tip|block|blocking}}, and {{tip|blind|blinding}} effects.",
       "skillkey": "E",
       "skillid": "e1",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '{{tt|{{ap|11 to 5}}|Starts post-effect}}' as '0/9/7/5/3/0' and riot's value '11,9.5,8,6.5,5' as '11/9.5/8/6.5/5'",
       "effects": [
         {
           "str": "<ul class=\"st\"><li><span class=\"blue\">Bonus Attack Speed</span>: <span><SpellSpan :list=\"[50,60,70,80,90]\"></SpellSpan>%</span></li></ul>",
@@ -330,6 +357,116 @@
                   190,
                   200
                 ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "r1": {
+      "riotId": "FioraR",
+      "name": "Grand Challenge",
+      "maxrank": 3,
+      "cooldown": [
+        110,
+        90,
+        70
+      ],
+      "cost": 100,
+      "costtype": "Mana",
+      "targeting": "Unit",
+      "target_range": "{{tip|cr|icononly = true}} 500",
+      "image": {
+        "full": "FioraR.png",
+        "sprite": "spell3.png",
+        "group": "spell",
+        "x": 144,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Passive:}} {{ais|Duelist's Dance|Fiora}} {{sti|ms|{{as|'''bonus''' movement speed}}}} is increased.",
+        "{{sbc|Active:}} '''Fiora''' challenges the target enemy champion for 8 seconds, highlighting all four of their {{as|Vitals|buzzword}} after a {{fd|0.5}}-second delay. While in effect, {{ai|Duelist's Dance|Fiora}} does not identify new {{as|Vitals|buzzword}} on '''Fiora's''' target.",
+        "While near the target, '''Fiora''' gains {{ais|Duelist's Dance|Fiora}} {{sti|ms|{{as|'''bonus''' movement speed}}}}.",
+        "If '''Fiora''' triggers at least one {{as|Vital|buzzword}} before the target {{tip|death|dies}}, or triggers all four, she creates a {{ai|Grand Challenge 2|Fiora|''Victory Zone''}} at their location for {{pp|changedisplay=true|type=Vitals hit|2 to 5 for 4|color=buzzword}} seconds, which {{tip|heal|heals}} '''Fiora''' and all allies within the area every second.",
+        "''Unlike {{ai|Duelist's Dance|Fiora}}, the {{as|Vitals|buzzword}} will continue to linger even if '''Fiora''' is not nearby.''"
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Passive:</span> <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Fiora\">Duelist's Dance's<template #content>Duelist's Dance</template></HtmlTooltip> <span><span class=\"movement-speed\"><b>bonus</b> movement speed</span></span> is increased.<br /><span class=\"sbc\">Active:</span> <b>Fiora</b> challenges the target enemy champion for 8 seconds, highlighting all four of their <span class=\"buzzword\">Vitals</span> after a <span style=\"font-variant-numeric: tabular-nums;\">0.5</span>-second delay. While in effect, <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Fiora\">Duelist's Dance<template #content>Duelist's Dance</template></HtmlTooltip> does not identify new <span class=\"buzzword\">Vitals</span> on <b>Fiora's</b> target.<br />While near the target, <b>Fiora</b> gains <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Fiora\">Duelist's Dance's<template #content>Duelist's Dance</template></HtmlTooltip> <span><span class=\"movement-speed\"><b>bonus</b> movement speed</span></span>.<br />If <b>Fiora</b> triggers at least one <span class=\"buzzword\">Vital</span> before the target <HtmlTooltip class=\"blue link\">dies<template #content><div><h4>death<hr></h4><p>Description for keyword death</p></div></template></HtmlTooltip>, or triggers all four, she creates a <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Fiora\"><i>Victory Zone</i><template #content>Grand Challenge 2</template></HtmlTooltip> at their location for <HtmlTooltip class=\"blue link\">2undefined − 5 for 4undefined (based on level)<template #content>Values: 2, 2.176, 2.353, 2.529, 2.706, 2.882, 3.059, 3.235, 3.412, 3.588, 3.765, 3.941, 4.118, 4.294, 4.471, 4.647, 4.824, 5<br>At levels: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18</template></HtmlTooltip> seconds, which <HtmlTooltip class=\"blue link\">heals<template #content><div><h4>Healing<hr></h4><p><b>Healing</b> restores some of the user or the target's <span class=\"health\">current health</span> directly.<br><br>Healing can be reduced by <b>Grievous Wounds</b>.</p></div></template></HtmlTooltip> <b>Fiora</b> and all allies within the area every second.<br /><i>Unlike <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Fiora\">Duelist's Dance<template #content>Duelist's Dance</template></HtmlTooltip>, the <span class=\"buzzword\">Vitals</span> will continue to linger even if <b>Fiora</b> is not nearby.</i>",
+      "leveling": [
+        "{{st|Additional Bonus Movement Speed|{{ap|10 to 30}}%}}",
+        "{{st|Heal per Tick|{{ap|80 to 140}} {{as|(+ 60% '''bonus''' AD)}}|Maximum Heal|{{ap|80*5 to 140*5}} {{as|(+ 300% '''bonus''' AD)}}}}"
+      ],
+      "notes": "* ''Grand Challenge'' is dispelled instantly if targeting a [[decoy]].\n** {{Pending for test}}: {{cai|Glory in Death|Sion}}\n* The damage of this ability scales with {{ai|Duelist's Dance|Fiora}}.\n* Even if '''Fiora''' dies, the {{ai|Grand Challenge 2|Fiora|''Victory Zone''}} will trigger so long as she hit at least one {{as|Vital|buzzword}} and they die before the {{as|Vitals|buzzword}} wear off. \n** {{tip|Resurrection}} effects will not prevent the activation of the {{ai|Grand Challenge 2|Fiora|''Victory Zone''}}.\n* Ally units in {{tip|stasis (buff)|stasis}} will not be {{tip|heal|healed}} by the {{ai|Grand Challenge 2|Fiora|Victory Zone}}.\n* '''Fiora''' will automatically attack the target upon casting if the target was selected while they weren't in range of the ability.",
+      "skillkey": "R",
+      "skillid": "r1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Additional Bonus Movement Speed</span>: <span><SpellSpan :list=\"[10,20,30]\"></SpellSpan>%</span></li></ul>",
+          "vars": {
+            "as_ratios": [],
+            "st_slices": [
+              [
+                "Additional Bonus Movement Speed",
+                "<SpellSpan :list=\"[10,20,30]\"></SpellSpan>%"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                10,
+                20,
+                30
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Additional Bonus Movement Speed",
+              "damage_type": "none",
+              "ratios": {}
+            }
+          ]
+        },
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Heal per Tick</span>: <span><SpellSpan :list=\"[80,110,140]\"></SpellSpan> <span class=\"ad\">(+ 60% <b>bonus</b> AD)</span></span></li><li><span class=\"blue\">Maximum Heal</span>: <span><SpellSpan :list=\"[400,550,700]\"></SpellSpan> <span class=\"ad\">(+ 300% <b>bonus</b> AD)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_bonus_ad": 0.6
+              },
+              {
+                "player_bonus_ad": 3
+              }
+            ],
+            "st_slices": [
+              [
+                "Heal per Tick",
+                "<SpellSpan :list=\"[80,110,140]\"></SpellSpan> <span class=\"ad\">(+ 60% '''bonus''' AD)</span>",
+                "Maximum Heal",
+                "<SpellSpan :list=\"[400,550,700]\"></SpellSpan> <span class=\"ad\">(+ 300% '''bonus''' AD)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                80,
+                110,
+                140
+              ],
+              [
+                400,
+                550,
+                700
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Heal per Tick",
+              "damage_type": "none",
+              "ratios": {
+                "player_bonus_ad": 3
               }
             }
           ]

@@ -49,6 +49,32 @@
     "attackspeed": 0.658
   },
   "skills": {
+    "i1": {
+      "riotId": "",
+      "name": "Trial by Fire",
+      "maxrank": 0,
+      "targeting": "Passive",
+      "image": {
+        "full": "Gangplank_Passive.png",
+        "sprite": "passive1.png",
+        "group": "passive",
+        "x": 96,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Innate:}} '''Gangplank''' periodically empowers his next [[basic attack]] to burn the target, dealing them{{ft|{{pp|55/10 to 225/10|color=true damage}} {{as|(+ 10% '''bonus''' AD)}} {{sti|{{as|'''bonus''' true damage}}}} every {{fd|0.25}} seconds over {{fd|2.5}} seconds.|{{pp|55 to 225|color=true damage}} {{as|(+ 100% '''bonus''' AD)}} {{sti|{{as|'''bonus''' true damage}}}} over {{fd|2.5}} seconds.}} {{tip|turret|Turrets}} receive 50% reduced damage.",
+        "If '''Gangplank''' successfully hits a target with ''Trial by Fire'', he gains {{sti|ms|{{as|30% '''bonus''' movement speed}}}} for 2 seconds. Every time a {{ai|Powder Keg|Gangplank}} explodes, the {{sti|cooldown}} for ''Trial by Fire'' resets and '''Gangplank''' gains its {{sti|ms|{{as|'''bonus''' movement speed}}}}.",
+        "''Trial by Fire'' cannot be applied with {{ai|Parrrley|Gangplank}} nor {{ai|Powder Keg|Gangplank}}."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Innate:</span> <b>Gangplank</b> periodically empowers his next <a class=\"effect link\" title=\"basic attack\">basic attack</a> to burn the target, dealing them<label class=\"ft\"><input type=\"checkbox\"><span class=\"flipText1\">「&nbsp;<HtmlTooltip class=\"blue link\">55/10undefined − 225/10undefined (based on level)<template #content>Values: 5.5, 6.5, 7.5, 8.5, 9.5, 10.5, 11.5, 12.5, 13.5, 14.5, 15.5, 16.5, 17.5, 18.5, 19.5, 20.5, 21.5, 22.5<br>At levels: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18</template></HtmlTooltip> <span class=\"ad\">(+ 10% <b>bonus</b> AD)</span> <span><span class=\"true-damage\"><b>bonus</b> true damage</span></span> every <span style=\"font-variant-numeric: tabular-nums;\">0.25</span> seconds over <span style=\"font-variant-numeric: tabular-nums;\">2.5</span> seconds.&nbsp;」</span><span class=\"flipText2\">「&nbsp;<HtmlTooltip class=\"blue link\">55undefined − 225undefined (based on level)<template #content>Values: 55, 65, 75, 85, 95, 105, 115, 125, 135, 145, 155, 165, 175, 185, 195, 205, 215, 225<br>At levels: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18</template></HtmlTooltip> <span class=\"ad\">(+ 100% <b>bonus</b> AD)</span> <span><span class=\"true-damage\"><b>bonus</b> true damage</span></span> over <span style=\"font-variant-numeric: tabular-nums;\">2.5</span> seconds.&nbsp;」</span></label> <HtmlTooltip class=\"blue link\">Turrets<template #content><div><h4>turret<hr></h4><p>Description for keyword turret</p></div></template></HtmlTooltip> receive 50% reduced damage.<br />If <b>Gangplank</b> successfully hits a target with <i>Trial by Fire</i>, he gains <span><span class=\"movement-speed\">30% <b>bonus</b> movement speed</span></span> for 2 seconds. Every time a <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Gangplank\">Powder Keg<template #content>Powder Keg</template></HtmlTooltip> explodes, the <span>cooldown</span> for <i>Trial by Fire</i> resets and <b>Gangplank</b> gains its <span><span class=\"movement-speed\"><b>bonus</b> movement speed</span></span>.<br /><i>Trial by Fire</i> cannot be applied with <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Gangplank\">Parrrley<template #content>Parrrley</template></HtmlTooltip> nor <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Gangplank\">Powder Keg<template #content>Powder Keg</template></HtmlTooltip>.",
+      "leveling": [],
+      "notes": "* Unlike most [[damage over time]] debuffs, reapplying ''Trial by Fire'' before a previous application has run out will stack the full damage, instead of just refreshing the duration.\n* {{Pending for test}}: Interaction with ''parries'' ({{tip|dodge}}, {{tip|block}}, and {{tip|blind}}).\n** If the attack is {{tip|dodge|dodged}}, the effect is not applied nor does ''Trial by Fire'' go on cooldown.",
+      "skillkey": "I",
+      "skillid": "i1",
+      "effects": []
+    },
     "q1": {
       "riotId": "GangplankQWrapper",
       "name": "Parrrley",
@@ -361,9 +387,10 @@
       "name": "Cannon Barrage",
       "maxrank": 3,
       "cooldown": [
-        180,
-        160,
-        140
+        0,
+        140,
+        100,
+        0
       ],
       "cost": 100,
       "costtype": "Mana",
@@ -393,6 +420,7 @@
       "notes": "* ''Cannon Barrage's'' slow lingers for {{fd|0.25}} seconds after affected enemies leave the target area.",
       "skillkey": "R",
       "skillid": "r1",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '{{tt|{{ap|180 to 140}}|Starts on cast}}' as '0/140/100/0' and riot's value '180,160,140' as '180/160/140'",
       "effects": [
         {
           "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage Per Wave</span>: <span><SpellSpan :list=\"[40,70,100]\"></SpellSpan> <span class=\"ap\">(+ 10% AP)</span></span></li><li><span class=\"blue\">Magic Damage Per Cluster</span>: <span><SpellSpan :list=\"[120,210,300]\"></SpellSpan> <span class=\"ap\">(+ 30% AP)</span></span></li></ul>",

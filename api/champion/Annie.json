@@ -355,6 +355,85 @@
           ]
         }
       ]
+    },
+    "r1": {
+      "riotId": "AnnieR",
+      "name": "Summon: Tibbers",
+      "maxrank": 3,
+      "cooldown": [
+        0,
+        120,
+        100,
+        80,
+        0
+      ],
+      "cost": 100,
+      "costtype": "Mana",
+      "targeting": "Location",
+      "target_range": "{{tip|cr|icononly = true}} {{tt|600|Cast range}} <!-- / {{tt|X|Tibbers snap-back range}}-->",
+      "image": {
+        "full": "AnnieR.png",
+        "sprite": "spell1.png",
+        "group": "spell",
+        "x": 48,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Annie''' summons {{ui|Tibbers}} to the target location in a burst of flame, dealing {{as|magic damage}} to enemies near him. ''Summon: Tibbers'' can be recast at any time while {{ui|Tibbers}} is alive.",
+        "{{ui|Tibbers}} then remains on the field as a controllable {{tip|pet}} for up to 45 seconds.",
+        "{{sbc|Recast:}} '''Annie''' directs {{ui|Tibbers}} to the target location.",
+        "''Summon: Tibber's recast can be used while affected by {{tip|cast-inhibiting crowd control}}.''"
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Annie</b> summons <span class=\"title-tooltip blue\" title=\"The Unit 'Tibbers'\">Tibbers</span> to the target location in a burst of flame, dealing <span class=\"magic-damage\">magic damage</span> to enemies near him. <i>Summon: Tibbers</i> can be recast at any time while <span class=\"title-tooltip blue\" title=\"The Unit 'Tibbers'\">Tibbers</span> is alive.<br /><span class=\"title-tooltip blue\" title=\"The Unit 'Tibbers'\">Tibbers</span> then remains on the field as a controllable <HtmlTooltip class=\"blue link\">pet<template #content><div><h4>pet<hr></h4><p>Description for keyword pet</p></div></template></HtmlTooltip> for up to 45 seconds.<br /><span class=\"sbc\">Recast:</span> <b>Annie</b> directs <span class=\"title-tooltip blue\" title=\"The Unit 'Tibbers'\">Tibbers</span> to the target location.<br /><i>Summon: Tibber's recast can be used while affected by <HtmlTooltip class=\"blue link\">cast-inhibiting crowd control<template #content><div><h4>cast-inhibiting crowd control<hr></h4><p>Description for keyword cast-inhibiting crowd control</p></div></template></HtmlTooltip>.</i>",
+      "leveling": [
+        "{{st|Initial Magic Damage|{{ap|150 to 400}} {{as|(+ 75% AP)}}}}"
+      ],
+      "notes": "* Burst of flame deals {{tip|area damage}} and ''Tibbers' '' basic attacks apply {{tip|pet damage}}.\n* Tibbers will {{tip|blink}} back next to '''Annie''' if he gets too far away.",
+      "skillkey": "R",
+      "skillid": "r1",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '{{tt|{{ap|120|100|80}}|Starts on cast}}' as '0/120/100/80/0' and riot's value '120,100,80' as '120/100/80'",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Initial Magic Damage</span>: <span><SpellSpan :list=\"[150,275,400]\"></SpellSpan> <span class=\"ap\">(+ 75% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.75
+              }
+            ],
+            "st_slices": [
+              [
+                "Initial Magic Damage",
+                "<SpellSpan :list=\"[150,275,400]\"></SpellSpan> <span class=\"ap\">(+ 75% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                150,
+                275,
+                400
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Initial Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  150,
+                  275,
+                  400
+                ],
+                "player_total_ap": 0.75
+              }
+            }
+          ]
+        }
+      ]
     }
   }
 }

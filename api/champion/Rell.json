@@ -216,6 +216,240 @@
         }
       ]
     },
+    "w1": {
+      "riotId": "RellW_Dismount",
+      "name": "Ferromancy: Crash Down",
+      "maxrank": 5,
+      "cooldown": 13,
+      "cost": 40,
+      "costtype": "Mana",
+      "targeting": "Location",
+      "target_range": "{{tt|500|Initial dash range}} / {{tt|100|Minimum landing range}}",
+      "image": {
+        "full": "RellW_Dismount.png",
+        "sprite": "spell9.png",
+        "group": "spell",
+        "x": 432,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Passive:}} While mounted, '''Rell''' gains {{as|{{pp|key=%|5 to 15 for 11|1;7 to 16}} {{sti|'''bonus''' movement speed}}}}, which is only {{pp|key=%|25;30;33;35;36;38|1;8;11;13;15;16}} as effective for 3 seconds when she takes damage from non-{{tip|minions}} and is removed for 4 seconds when she becomes {{tip|immobilize|immobilized}}.",
+        "{{sbc|Active:}} '''Rell''' {{tip|dash|leaps}} to the target location over the cast time, transforming her mount into durable armor and upon landing dealing {{as|magic damage}} to nearby enemies and {{tip|airborne|knocking them up}} for 1 second. '''Rell''' keeps sliding forward another {{tt|300 units|Estimated}} over {{tt|{{fd|0.5}} seconds|Estimated}}, though not through terrain, affecting further enemies along her path.",
+        "While dismounted, she gains the ability to cast {{ai|Ferromancy: Mount Up|Rell}}. '''Rell''' will automatically mount up without casting {{ai|Ferromancy: Mount Up|Rell}} upon completing a {{si|Recall}} channel.",
+        "''This ability can only be cast while mounted. '''Rell''' can cast {{ai|Attract and Repel|Rell}} and {{ai|Magnet Storm|Rell}} during the leap.''"
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Passive:</span> While mounted, <b>Rell</b> gains <span class=\"movement-speed\"><span class=\"title-tooltip\" title=\"\">1;7 to 16 ‒ undefined</span> <span><b>bonus</b> movement speed</span></span>, which is only <span class=\"title-tooltip\" title=\"\">1;8;11;13;15;16 ‒ undefined</span> as effective for 3 seconds when she takes damage from non-<HtmlTooltip class=\"blue link\">minions<template #content><div><h4>Lane Minions<hr></h4><p>A unit that is <i>slowed</i> has reduced movement speed for the duration.<br><br>Duration reduced by <b>Tenacity</b>.<br>Strength is reduced by <b>Slow resist</b>.</p></div></template></HtmlTooltip> and is removed for 4 seconds when she becomes <HtmlTooltip class=\"blue link\">immobilized<template #content><div><h4>immobilize<hr></h4><p>Description for keyword immobilize</p></div></template></HtmlTooltip>.<br /><span class=\"sbc\">Active:</span> <b>Rell</b> <HtmlTooltip class=\"blue link\">leaps<template #content><div><h4>dash<hr></h4><p>Description for keyword dash</p></div></template></HtmlTooltip> to the target location over the cast time, transforming her mount into durable armor and upon landing dealing <span class=\"magic-damage\">magic damage</span> to nearby enemies and <HtmlTooltip class=\"blue link\">knocking them up<template #content><div><h4>airborne<hr></h4><p>Description for keyword airborne</p></div></template></HtmlTooltip> for 1 second. <b>Rell</b> keeps sliding forward another <span class=\"title-tooltip\" title=\"Estimated\">300 units</span> over <span class=\"title-tooltip\" title=\"Estimated\"><span style=\"font-variant-numeric: tabular-nums;\">0.5</span> seconds</span>, though not through terrain, affecting further enemies along her path.<br />While dismounted, she gains the ability to cast <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Rell\">Ferromancy: Mount Up<template #content>Ferromancy: Mount Up</template></HtmlTooltip>. <b>Rell</b> will automatically mount up without casting <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Rell\">Ferromancy: Mount Up<template #content>Ferromancy: Mount Up</template></HtmlTooltip> upon completing a <simple-tooltip dname=\"Recall\" data-spellkey=\"Recall\">Recall</simple-tooltip> channel.<br /><i>This ability can only be cast while mounted. <b>Rell</b> can cast <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Rell\">Attract and Repel<template #content>Attract and Repel</template></HtmlTooltip> and <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Rell\">Magnet Storm<template #content>Magnet Storm</template></HtmlTooltip> during the leap.</i>",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|70 to 210}} {{as|(+ 60% AP)}}}}"
+      ],
+      "notes": "* '''Rell''' {{tip|dash|slides}} between 250 and 350 units in testing, depending on how far the spell was targeted. It is not known where this is intended.\n* If '''Rell''' dashes before a wall on the map, the slide will cover a shorter distance to the terrain over the same time, moving slower.\n** {{pending for test}} Interaction with player-made walls.",
+      "skillkey": "W",
+      "skillid": "w1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[70,105,140,175,210]\"></SpellSpan> <span class=\"ap\">(+ 60% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.6
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[70,105,140,175,210]\"></SpellSpan> <span class=\"ap\">(+ 60% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                70,
+                105,
+                140,
+                175,
+                210
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  70,
+                  105,
+                  140,
+                  175,
+                  210
+                ],
+                "player_total_ap": 0.6
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "w2": {
+      "riotId": "RellW_Dismount",
+      "name": "Ferromancy: Mount Up",
+      "maxrank": 5,
+      "cooldown": 13,
+      "cost": 0,
+      "targeting": "Auto",
+      "target_range": "",
+      "image": {
+        "full": "RellW_Dismount.png",
+        "sprite": "spell9.png",
+        "group": "spell",
+        "x": 432,
+        "y": 144,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Passive:}} While dismounted, '''Rell''' gains {{sti|{{as|10% '''bonus''' armor}}}} and {{sti|{{as|10% '''bonus''' magic resistance}}}} and a {{tip|shield}} that lasts until destroyed or casting {{ai|Ferromancy: Mount Up|Rell}}, but her {{as|'''base''' movement speed}} is modified to {{as|250|ms}}.",
+        "{{sbc|Active:}} '''Rell''' transforms her armor into a mount, gaining {{as|15% '''bonus''' movement speed}} for {{fd|3.5}} seconds, increased to an amount when moving towards enemy champions.",
+        "Additionally, '''Rell's''' next basic attack during this time gains {{sti|100 '''bonus''' attack range}} and consumes the effect to have a {{fd|0.2}}-second cast time during which she {{tip|dash|charges}} at the target's location, at end of the dash or upon premature collision dealing them {{as|'''bonus''' magic damage}}, {{tip|stun|stunning}} them for 1 second, and {{tip|airborne|flinging}} them 150 units over herself.",
+        "''Ferromancy: Mount Up'' {{tip|basic attack reset|resets}} '''Rell's''' basic attack timer.",
+        "While mounted, she gains the ability to cast {{ai|Ferromancy: Crash Down|Rell}}."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Passive:</span> While dismounted, <b>Rell</b> gains <span><span class=\"armor\">10% <b>bonus</b> armor</span></span> and <span><span class=\"magic-resist\">10% <b>bonus</b> magic resistance</span></span> and a <HtmlTooltip class=\"blue link\">shield<template #content><div><h4>shield<hr></h4><p>Description for keyword shield</p></div></template></HtmlTooltip> that lasts until destroyed or casting <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Rell\">Ferromancy: Mount Up<template #content>Ferromancy: Mount Up</template></HtmlTooltip>, but her <span class=\"movement-speed\"><b>base</b> movement speed</span> is modified to <span class=\"ms\">250</span>.<br /><span class=\"sbc\">Active:</span> <b>Rell</b> transforms her armor into a mount, gaining <span class=\"movement-speed\">15% <b>bonus</b> movement speed</span> for <span style=\"font-variant-numeric: tabular-nums;\">3.5</span> seconds, increased to an amount when moving towards enemy champions.<br />Additionally, <b>Rell's</b> next basic attack during this time gains <span>100 <b>bonus</b> attack range</span> and consumes the effect to have a <span style=\"font-variant-numeric: tabular-nums;\">0.2</span>-second cast time during which she <HtmlTooltip class=\"blue link\">charges<template #content><div><h4>dash<hr></h4><p>Description for keyword dash</p></div></template></HtmlTooltip> at the target's location, at end of the dash or upon premature collision dealing them <span class=\"magic-damage\"><b>bonus</b> magic damage</span>, <HtmlTooltip class=\"blue link\">stunning<template #content><div><h4>Stun<hr></h4><p>Unit is unable to control its movement, declare attacks, cast abilities, activate items, or use the summoner <b>Flash</b> and <b>Teleport</b> for the duration.<br><br>\nInterrupts all channeled and charged abilities<br>\nDuration reduced by <b>Tenacity</b>.<br>\nResisted by Spell and Crowd Control Immunity.<br>\nRemoved by <b>Cleanse</b>, <b>Quicksilver</b>, <b>Mikael's Crucible</b><br></p></div></template></HtmlTooltip> them for 1 second, and <HtmlTooltip class=\"blue link\">flinging<template #content><div><h4>airborne<hr></h4><p>Description for keyword airborne</p></div></template></HtmlTooltip> them 150 units over herself.<br /><i>Ferromancy: Mount Up</i> <HtmlTooltip class=\"blue link\">resets<template #content><div><h4>basic attack reset<hr></h4><p>Description for keyword basic attack reset</p></div></template></HtmlTooltip> <b>Rell's</b> basic attack timer.<br />While mounted, she gains the ability to cast <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Rell\">Ferromancy: Crash Down<template #content>Ferromancy: Crash Down</template></HtmlTooltip>.",
+      "leveling": [
+        "{{st|Shield|{{ap|40 to 160}} {{as|(+ 13% of '''maximum''' health)}}}}",
+        "{{st|Increased Movement Speed|{{ap|25 to 45}}%}}",
+        "{{st|Bonus Magic Damage|{{ap|10 to 70}} {{as|(+ 40% AP)}}}}"
+      ],
+      "notes": "* '''Rell''' will always respawn and start the game as mounted.\n* The basic attack reset is not considered one for {{ri|Hail of Blades}}.\n* '''Rell''' can use the empowered attack even while {{tip|ground|grounded}} or {{tip|root|rooted}}.\n* The {{tip|dash}} can be {{tip|knockdown|knocked down}} but the attack's effects will still be applied.",
+      "skillkey": "W",
+      "skillid": "w2",
+      "cost_warn": "Wiki's and Riot's mana costs do not match: Wiki's value  0 as 0 and riot's value 40,40,40,40,40 as 40",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Shield</span>: <span><SpellSpan :list=\"[40,70,100,130,160]\"></SpellSpan> <span class=\"health\">(+ 13% of <b>maximum</b> health)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_hp": 0.13
+              }
+            ],
+            "st_slices": [
+              [
+                "Shield",
+                "<SpellSpan :list=\"[40,70,100,130,160]\"></SpellSpan> <span class=\"health\">(+ 13% of '''maximum''' health)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                40,
+                70,
+                100,
+                130,
+                160
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Shield",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  40,
+                  70,
+                  100,
+                  130,
+                  160
+                ],
+                "player_total_hp": 0.13
+              }
+            }
+          ]
+        },
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Increased Movement Speed</span>: <span><SpellSpan :list=\"[25,30,35,40,45]\"></SpellSpan>%</span></li></ul>",
+          "vars": {
+            "as_ratios": [],
+            "st_slices": [
+              [
+                "Increased Movement Speed",
+                "<SpellSpan :list=\"[25,30,35,40,45]\"></SpellSpan>%"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                25,
+                30,
+                35,
+                40,
+                45
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Increased Movement Speed",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  25,
+                  30,
+                  35,
+                  40,
+                  45
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Bonus Magic Damage</span>: <span><SpellSpan :list=\"[10,25,40,55,70]\"></SpellSpan> <span class=\"ap\">(+ 40% AP)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.4
+              }
+            ],
+            "st_slices": [
+              [
+                "Bonus Magic Damage",
+                "<SpellSpan :list=\"[10,25,40,55,70]\"></SpellSpan> <span class=\"ap\">(+ 40% AP)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                10,
+                25,
+                40,
+                55,
+                70
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Bonus Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  10,
+                  25,
+                  40,
+                  55,
+                  70
+                ],
+                "player_total_ap": 0.4
+              }
+            }
+          ]
+        }
+      ]
+    },
     "e1": {
       "riotId": "RellE",
       "name": "Attract and Repel",
@@ -303,9 +537,10 @@
       "name": "Magnet Storm",
       "maxrank": 3,
       "cooldown": [
-        120,
-        100,
-        80
+        0,
+        80,
+        40,
+        0
       ],
       "cost": 100,
       "costtype": "Mana",
@@ -330,6 +565,7 @@
       "notes": "* ''Magnet Storm'' will cast from wherever '''Rell''' is at the end of the cast time.\n* Enemies that leave the field can still be dragged after entering the corresponding area again.\n* ''Magnet Storm'' will '''not''' drag units that are:\n** {{tip|Dash|Dashing}}.\n** Being displaced (e.g. by {{tip|airborne}} effects or via abilities such as {{ai|Impale|Skarner}}).\n** {{tip|Attach|Attached}}.\n** {{tip|Displacement immune|Displacement immune}}.\n** {{tip|cc-immune|Immune to crowd control}}.\n* {{tip|Spell shield}} will block the initial {{tip|airborne|pull}} but not the dragging effect.\n* ''Magnet Storm'' will cancel if '''Rell''' casts {{ai|Attract and Repel|Rell}} during the cast time.",
       "skillkey": "R",
       "skillid": "r1",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '{{tt|{{ap|120 to 80}}|Starts on cast}}' as '0/80/40/0' and riot's value '120,100,80' as '120/100/80'",
       "effects": [
         {
           "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage Per Tick</span>: <span><SpellSpan :list=\"[15,25,35]\"></SpellSpan> <span class=\"ap\">(+ <span style=\"font-variant-numeric: tabular-nums;\">13.75</span>% AP)</span></span></li><li><span class=\"blue\">Total Magic Damage Per Target</span>: <span><SpellSpan :list=\"[120,200,280]\"></SpellSpan> <span class=\"ap\">(+ 110% AP)</span></span></li></ul>",

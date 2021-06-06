@@ -73,6 +73,130 @@
       "skillid": "i1",
       "effects": []
     },
+    "q1": {
+      "riotId": "RyzeQWrapper",
+      "name": "Overload",
+      "maxrank": 5,
+      "cooldown": 6,
+      "cost": [
+        40,
+        38,
+        36,
+        34,
+        32
+      ],
+      "costtype": "Mana",
+      "targeting": "Direction",
+      "target_range": "{{tip|cr|icononly = true}} 1000",
+      "image": {
+        "full": "RyzeQWrapper.png",
+        "sprite": "spell10.png",
+        "group": "spell",
+        "x": 384,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Passive:}} '''Ryze's''' other basic abilities reset {{sti|cdr|''Overload's'' cooldown}} and charge a {{ai|Overload 3||Rune}} for 4 seconds, up to 2.",
+        "{{sbc|Active:}} '''Ryze''' unleashes a runic blast in the target direction, dealing {{as|magic damage}} to the first enemy struck and consuming all of his {{ai|Overload 5||Runes}}.",
+        "If '''Ryze''' consumes 2 Runes, he gains {{sti|ms|{{as|'''bonus''' movement speed}}}} for 2 seconds.",
+        "{{sbc|{{ai|Spell Flux|Ryze|Flux:}}}} ''Overload'' deals {{pp|type=[[File:Realm Warp.png|20px|border]] Realm Warp's rank|key=%|10 to 100 for 4|0 to 3}} {{ccs|increased damage|magic}}, and spreads to all nearby enemies marked with ''Flux''."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Passive:</span> <b>Ryze's</b> other basic abilities reset <span><i>Overload's</i> cooldown</span> and charge a <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"\">Rune<template #content>Overload 3</template></HtmlTooltip> for 4 seconds, up to 2.<br /><span class=\"sbc\">Active:</span> <b>Ryze</b> unleashes a runic blast in the target direction, dealing <span class=\"magic-damage\">magic damage</span> to the first enemy struck and consuming all of his <HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"\">Runes<template #content>Overload 5</template></HtmlTooltip>.<br />If <b>Ryze</b> consumes 2 Runes, he gains <span><span class=\"movement-speed\"><b>bonus</b> movement speed</span></span> for 2 seconds.<br /><span class=\"sbc\"><HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Ryze\">Flux:<template #content>Spell Flux</template></HtmlTooltip></span> <i>Overload</i> deals <span class=\"title-tooltip\" title=\"\">0 to 3 ‒ undefined</span> <simple-tooltip class=\"capture-unknown\" dname=\"ccs increased damage magic\">Unknown value: ccs increased damage magic</simple-tooltip>, and spreads to all nearby enemies marked with <i>Flux</i>.",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|75 to 175}} {{as|(+ 45% AP)}} {{as|(+ 3% '''bonus''' mana)}}}}",
+        "{{st|Bonus Movement Speed|{{ap|28 to 44}}%}}"
+      ],
+      "notes": "* Applies {{tip|spell damage}} to the primary target and {{tip|area damage}} to secondary targets affected by {{ai|Spell Flux|Ryze|Flux}}.\n* ''Overload'' will fire from wherever '''Ryze''' was at the start of the cast time.",
+      "skillkey": "Q",
+      "skillid": "q1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[75,100,125,150,175]\"></SpellSpan> <span class=\"ap\">(+ 45% AP)</span> <span class=\"mana\">(+ 3% <b>bonus</b> mana)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.45
+              },
+              {
+                "player_bonus_mana": 0.03
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[75,100,125,150,175]\"></SpellSpan> <span class=\"ap\">(+ 45% AP)</span> <span class=\"mana\">(+ 3% '''bonus''' mana)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                75,
+                100,
+                125,
+                150,
+                175
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  75,
+                  100,
+                  125,
+                  150,
+                  175
+                ],
+                "player_total_ap": 0.45,
+                "player_bonus_mana": 0.03
+              }
+            }
+          ]
+        },
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Bonus Movement Speed</span>: <span><SpellSpan :list=\"[28,32,36,40,44]\"></SpellSpan>%</span></li></ul>",
+          "vars": {
+            "as_ratios": [],
+            "st_slices": [
+              [
+                "Bonus Movement Speed",
+                "<SpellSpan :list=\"[28,32,36,40,44]\"></SpellSpan>%"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                28,
+                32,
+                36,
+                40,
+                44
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Bonus Movement Speed",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  28,
+                  32,
+                  36,
+                  40,
+                  44
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
     "w1": {
       "riotId": "RyzeW",
       "name": "Rune Prison",

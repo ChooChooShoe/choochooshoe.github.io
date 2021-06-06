@@ -298,11 +298,12 @@
       "name": "Ruthless Predator",
       "maxrank": 5,
       "cooldown": [
-        13,
-        12,
-        11,
-        10,
-        9
+        0,
+        11.667,
+        10.333,
+        9,
+        7.667,
+        0
       ],
       "cost": 0,
       "targeting": "Auto",
@@ -329,6 +330,7 @@
       "notes": "* The basic attack can {{tip|critical strike|critically strike}} as normal (the modified damage cannot).",
       "skillkey": "W",
       "skillid": "w1",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '{{tt|{{ap|13 to 9}}|Starts post-effect}}' as '0/11.667/10.333/9/7.667/0' and riot's value '13,12,11,10,9' as '13/12/11/10/9'",
       "effects": [
         {
           "str": "<ul class=\"st\"><li><span class=\"blue\">Total Physical Damage</span>: <span><SpellSpan :list=\"[10,30,50,70,90]\"></SpellSpan> <span class=\"ad\">(+ 150% AD)</span></span></li><li><span class=\"blue\">Physical Damage Per Hit</span>: <span><SpellSpan :list=\"[5,15,25,35,45]\"></SpellSpan> <span class=\"ad\">(+ 75% AD)</span></span></li></ul>",
@@ -428,12 +430,252 @@
         }
       ]
     },
+    "e1": {
+      "riotId": "RenektonSliceAndDice",
+      "name": "Slice",
+      "maxrank": 5,
+      "cooldown": [
+        0,
+        16.667,
+        15.333,
+        14,
+        12.667,
+        0
+      ],
+      "cost": 0,
+      "targeting": "Direction",
+      "target_range": 450,
+      "image": {
+        "full": "RenektonSliceAndDice.png",
+        "sprite": "spell10.png",
+        "group": "spell",
+        "x": 192,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Renekton''' {{tip|dashes}} in the target direction, dealing {{as|physical damage}} to all enemies he passes through.",
+        "Hitting an enemy allows '''Renekton''' to cast ''Dice'' within the next 4 seconds."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Renekton</b> <HtmlTooltip class=\"blue link\">dashes<template #content><div><h4>dashes<hr></h4><p>Description for keyword dashes</p></div></template></HtmlTooltip> in the target direction, dealing <span class=\"physical-damage\">physical damage</span> to all enemies he passes through.<br />Hitting an enemy allows <b>Renekton</b> to cast <i>Dice</i> within the next 4 seconds.",
+      "leveling": [
+        "{{st|Physical Damage|{{ap|40 to 160}} {{as|(+ 90% '''bonus''' AD)}}}}"
+      ],
+      "notes": "* Movement speed has minimal to no impact on the dash speed.",
+      "skillkey": "E",
+      "skillid": "e1",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '{{tt|{{ap|18 to 14}}|Starts on cast}}' as '0/16.667/15.333/14/12.667/0' and riot's value '18,17,16,15,14' as '18/17/16/15/14'",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Physical Damage</span>: <span><SpellSpan :list=\"[40,70,100,130,160]\"></SpellSpan> <span class=\"ad\">(+ 90% <b>bonus</b> AD)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_bonus_ad": 0.9
+              }
+            ],
+            "st_slices": [
+              [
+                "Physical Damage",
+                "<SpellSpan :list=\"[40,70,100,130,160]\"></SpellSpan> <span class=\"ad\">(+ 90% '''bonus''' AD)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                40,
+                70,
+                100,
+                130,
+                160
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Physical Damage",
+              "damage_type": "physical",
+              "ratios": {
+                "base_damage": [
+                  40,
+                  70,
+                  100,
+                  130,
+                  160
+                ],
+                "player_bonus_ad": 0.9
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "e2": {
+      "riotId": "RenektonSliceAndDice",
+      "name": "Dice",
+      "maxrank": 5,
+      "cooldown": 0,
+      "cost": 0,
+      "targeting": "Direction",
+      "image": {
+        "full": "RenektonSliceAndDice.png",
+        "sprite": "spell10.png",
+        "group": "spell",
+        "x": 192,
+        "y": 0,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Renekton''' {{tip|dashes}} in the target direction, dealing the same {{as|physical damage}} to all enemies he passes through.",
+        "Both ''Slice'' and ''Dice'' generate {{tip|fury|{{as|2 Fury}}}} for each non-champion hit, and {{as|10 Fury}} for each champion hit, with the {{as|Fury}} generated per dash capped at 30.",
+        "{{sbc|{{ai|Reign of Anger|Renekton}}:}} ''Dice'' deals additional damage to all enemies and {{sti|armor penetration|{{as|reduces their armor}}}} for 4 seconds."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Renekton</b> <HtmlTooltip class=\"blue link\">dashes<template #content><div><h4>dashes<hr></h4><p>Description for keyword dashes</p></div></template></HtmlTooltip> in the target direction, dealing the same <span class=\"physical-damage\">physical damage</span> to all enemies he passes through.<br />Both <i>Slice</i> and <i>Dice</i> generate <HtmlTooltip class=\"blue link\"><span class=\"ad\">2 Fury</span><template #content><div><h4>fury<hr></h4><p>Description for keyword fury</p></div></template></HtmlTooltip> for each non-champion hit, and <span class=\"ad\">10 Fury</span> for each champion hit, with the <span class=\"ad\">Fury</span> generated per dash capped at 30.<br /><span class=\"sbc\"><HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"Renekton\">Reign of Anger<template #content>Reign of Anger</template></HtmlTooltip>:</span> <i>Dice</i> deals additional damage to all enemies and <span><span class=\"armor\">reduces their armor</span></span> for 4 seconds.",
+      "leveling": [
+        "{{st|Total Physical Damage|{{ap|40*2 to 160*2}} {{as|(+ 180% '''bonus''' AD)}}}}",
+        "{{st|Enhanced Physical Damage|{{ap|70 to 250}} {{as|(+ 135% '''bonus''' AD)}}|Total Enhanced Damage|{{ap|40+70 to 160+250}} {{as|(+ 225% '''bonus''' AD)}}}}\n{{st|Armor Reduction|{{as|{{ap|25 to 35}}%|armor}}}}"
+      ],
+      "notes": "* Movement speed has minimal to no impact on the dash speed.",
+      "skillkey": "E",
+      "skillid": "e2",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '0' as '0' and riot's value '18,17,16,15,14' as '18/17/16/15/14'",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Total Physical Damage</span>: <span><SpellSpan :list=\"[80,140,200,260,320]\"></SpellSpan> <span class=\"ad\">(+ 180% <b>bonus</b> AD)</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_bonus_ad": 1.8
+              }
+            ],
+            "st_slices": [
+              [
+                "Total Physical Damage",
+                "<SpellSpan :list=\"[80,140,200,260,320]\"></SpellSpan> <span class=\"ad\">(+ 180% '''bonus''' AD)</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                80,
+                140,
+                200,
+                260,
+                320
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Total Physical Damage",
+              "damage_type": "physical",
+              "ratios": {
+                "base_damage": [
+                  80,
+                  140,
+                  200,
+                  260,
+                  320
+                ],
+                "player_bonus_ad": 1.8
+              }
+            }
+          ]
+        },
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Enhanced Physical Damage</span>: <span><SpellSpan :list=\"[70,115,160,205,250]\"></SpellSpan> <span class=\"ad\">(+ 135% <b>bonus</b> AD)</span></span></li><li><span class=\"blue\">Total Enhanced Damage</span>: <span><SpellSpan :list=\"[110,185,260,335,410]\"></SpellSpan> <span class=\"ad\">(+ 225% <b>bonus</b> AD)</span></span></li></ul><br><ul class=\"st\"><li><span class=\"blue\">Armor Reduction</span>: <span><span class=\"armor\"><SpellSpan :list=\"[25,27.5,30,32.5,35]\"></SpellSpan>%</span></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_bonus_ad": 1.35
+              },
+              {
+                "player_bonus_ad": 2.25
+              },
+              {
+                "player_total_mana": [
+                  0.25,
+                  0.275,
+                  0.3,
+                  0.325,
+                  0.35
+                ]
+              }
+            ],
+            "st_slices": [
+              [
+                "Enhanced Physical Damage",
+                "<SpellSpan :list=\"[70,115,160,205,250]\"></SpellSpan> <span class=\"ad\">(+ 135% '''bonus''' AD)</span>",
+                "Total Enhanced Damage",
+                "<SpellSpan :list=\"[110,185,260,335,410]\"></SpellSpan> <span class=\"ad\">(+ 225% '''bonus''' AD)</span>"
+              ],
+              [
+                "Armor Reduction",
+                "<span class=\"armor\"><SpellSpan :list=\"[25,27.5,30,32.5,35]\"></SpellSpan>%</span>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                70,
+                115,
+                160,
+                205,
+                250
+              ],
+              [
+                110,
+                185,
+                260,
+                335,
+                410
+              ],
+              null
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Enhanced Physical Damage",
+              "damage_type": "physical",
+              "ratios": {
+                "base_damage": [
+                  70,
+                  115,
+                  160,
+                  205,
+                  250
+                ],
+                "player_bonus_ad": 2.25
+              }
+            },
+            {
+              "index": 1,
+              "title": "Armor Reduction",
+              "damage_type": "unknown",
+              "ratios": {
+                "base_damage": [
+                  110,
+                  185,
+                  260,
+                  335,
+                  410
+                ],
+                "player_bonus_ad": 2.25
+              }
+            }
+          ]
+        }
+      ]
+    },
     "r1": {
       "riotId": "RenektonReignOfTheTyrant",
       "name": "Dominus",
       "maxrank": 3,
       "cooldown": [
-        120
+        120,
+        0
       ],
       "cost": 0,
       "targeting": "Auto",
@@ -458,6 +700,7 @@
       "notes": "* ''Dominus' ''range increase does not stack with {{ai|Ruthless Predator|Renekton}}.\n* ''Dominus' ''{{sti|cooldown}} is not refunded if '''Renekton''' {{tip|death|dies}} during the cast animation.\n* ''Dominus' ''bonus health gain does not interact with {{ii|Spirit Visage}} or {{tip|Grievous Wounds}}.\n** '''Renekton''' retains ''Dominus' ''bonus health (if not over his normal maximum) once the duration ends.",
       "skillkey": "R",
       "skillid": "r1",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '{{tt|120|Starts on cast}}' as '120/0' and riot's value '120,120,120' as '120'",
       "effects": [
         {
           "str": "<ul class=\"st\"><li><span class=\"blue\">Bonus Health</span>: <span><span class=\"hp\"><SpellSpan :list=\"[250,400,550]\"></SpellSpan></span></span></li></ul>",

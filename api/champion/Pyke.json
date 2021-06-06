@@ -81,11 +81,12 @@
       "name": "Bone Skewer",
       "maxrank": 5,
       "cooldown": [
-        10,
-        9.5,
-        9,
-        8.5,
-        8
+        0,
+        9.333,
+        8.667,
+        8,
+        7.333,
+        0
       ],
       "cost": [
         50,
@@ -119,6 +120,7 @@
       "notes": "* Only the charged version of ''Bone Skewer'' will be {{tip|projectile|intercepted}}.\n* {{si|Flash}} can be used during the cast time and ''Bone Skewer'' will affect enemies at the new location.\n* '''Pyke''' can still use [[summoner spell]]s besides {{si|Flash}}, {{si|Teleport}}, {{si|Hexflash}}, and {{si|Mark}} / {{si|Dash}} while hurling the harpoon but he cannot perform any other action.\n* The following table refers for interactions while '''Pyke''' is {{tip|channel|channeling}}:\n{{ct|charge|cast=interrupts|items=false|consume=Disabled, but can use trinkets}}",
       "skillkey": "Q",
       "skillid": "q1",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '{{tt|{{ap|10 to 8}}|Starts post-effect}}' as '0/9.333/8.667/8/7.333/0' and riot's value '10,9.5,9,8.5,8' as '10/9.5/9/8.5/8'",
       "effects": [
         {
           "str": "<ul class=\"st\"><li><span class=\"blue\">Physical Damage</span>: <span><SpellSpan :list=\"[85,135,185,235,285]\"></SpellSpan> <span class=\"ad\">(+ 60% <b>bonus</b> AD)</span></span></li></ul>",
@@ -277,6 +279,42 @@
           ]
         }
       ]
+    },
+    "r1": {
+      "riotId": "PykeR",
+      "name": "Death from Below",
+      "maxrank": 3,
+      "cooldown": [
+        0,
+        80,
+        40,
+        0
+      ],
+      "cost": 100,
+      "costtype": "mana",
+      "targeting": "Location",
+      "target_range": 750,
+      "image": {
+        "full": "PykeR.png",
+        "sprite": "spell9.png",
+        "group": "spell",
+        "x": 336,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Pyke''' marks the target location with an ''X'' before striking it, {{ccs|{{tip|execute|executing|noimg=true}}|true}} enemy {{tip|champions}} within the area that are below {{as|{{pp|250;290;330;370;400;430;450;470;490;510;530;540;550|6 to 18}}|health}} {{as|(+ 80% '''bonus''' AD)}} {{as|(+ {{fd|1.5}} per 1 Lethality)}} {{sti|{{as|health}}}} while dealing{{ft|50% of the amount as {{as|physical damage}}|{{as|{{pp|125;145;165;185;200;215;225;235;245;255;265;270;275|6 to 18}}|physical damage}} {{as|(+ 40% '''bonus''' AD)}} {{as|(+ {{fd|0.75}} per 1 Lethality)}} {{as|physical damage}}}}to non-champion enemies and enemy champions whose health is not under the threshold for execution.",
+        "If ''Death from Below'' hits an enemy {{tip|champion}} or one {{tip|death|dies}} inside it, '''Pyke''' will {{tip|blink}} to the center of the ''X''. For the latter case '''Pyke''' also gains the ability to recast within 20 seconds at no cost.",
+        "Each ''execution'' grants one {{ii|'Your Cut'}} to both '''Pyke''' and the last assisting ally, instead of its natural [[assist]] {{g|gold}}. In addition, each enemy champion killed inside the ''X'' by an ally grants '''Pyke''' two stacks of {{ii|'Your Cut'}}."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Pyke</b> marks the target location with an <i>X</i> before striking it, <simple-tooltip class=\"capture-unknown\" dname=\"ccs <HtmlTooltip class=\"blue link\">executing<template #content><div><h4>execute<hr></h4><p>Description for keyword execute</p></div></template></HtmlTooltip> true\">Unknown value: ccs <HtmlTooltip class=\"blue link\">executing<template #content><div><h4>execute<hr></h4><p>Description for keyword execute</p></div></template></HtmlTooltip> true</simple-tooltip> enemy <HtmlTooltip class=\"blue link\">champions<template #content><div><h4>champions<hr></h4><p>Description for keyword champions</p></div></template></HtmlTooltip> within the area that are below <span class=\"health\"><span class=\"title-tooltip\" title=\"\">6 to 18 ‒ undefined</span></span> <span class=\"ad\">(+ 80% <b>bonus</b> AD)</span> <span class=\"lethality\">(+ <span style=\"font-variant-numeric: tabular-nums;\">1.5</span> per 1 Lethality)</span> <span><span class=\"health\">health</span></span> while dealing<label class=\"ft\"><input type=\"checkbox\"><span class=\"flipText1\">「&nbsp;50% of the amount as <span class=\"physical-damage\">physical damage</span>&nbsp;」</span><span class=\"flipText2\">「&nbsp;<span class=\"physical-damage\"><span class=\"title-tooltip\" title=\"\">6 to 18 ‒ undefined</span></span> <span class=\"ad\">(+ 40% <b>bonus</b> AD)</span> <span class=\"lethality\">(+ <span style=\"font-variant-numeric: tabular-nums;\">0.75</span> per 1 Lethality)</span> <span class=\"physical-damage\">physical damage</span>&nbsp;」</span></label>to non-champion enemies and enemy champions whose health is not under the threshold for execution.<br />If <i>Death from Below</i> hits an enemy <HtmlTooltip class=\"blue link\">champion<template #content><div><h4>champion<hr></h4><p>Description for keyword champion</p></div></template></HtmlTooltip> or one <HtmlTooltip class=\"blue link\">dies<template #content><div><h4>death<hr></h4><p>Description for keyword death</p></div></template></HtmlTooltip> inside it, <b>Pyke</b> will <HtmlTooltip class=\"blue link\">blink<template #content><div><h4>blink<hr></h4><p>Description for keyword blink</p></div></template></HtmlTooltip> to the center of the <i>X</i>. For the latter case <b>Pyke</b> also gains the ability to recast within 20 seconds at no cost.<br />Each <i>execution</i> grants one <simple-tooltip dname=\"'Your Cut'\">The item: 'Your Cut'</simple-tooltip> to both <b>Pyke</b> and the last assisting ally, instead of its natural <a class=\"effect link\" title=\"assist\">assist</a> <span class=\"gold\"> <img src=\"/images/Gold.png\">gold</span>. In addition, each enemy champion killed inside the <i>X</i> by an ally grants <b>Pyke</b> two stacks of <simple-tooltip dname=\"'Your Cut'\">The item: 'Your Cut'</simple-tooltip>.",
+      "leveling": [],
+      "notes": "* Applies {{tip|raw damage}} to executed targets and {{tip|area damage}} to targets above the threshold.\n* ''Death from Below'' cannot execute {{tip|clone|clones}}. They are always dealt 50% {{as|physical damage}}.\n* Only the target's current health will count as '''Pyke's''' damage in post-game statistics and {{sti|spell vamp}} healing if executed.\n** If the target's current health is less than 50% of the {{tt|post-mitigation|after damage modifiers}} non-executing damage, '''Pyke''' will heal less from spell vamp.\n* If the target is saved by {{tip|resurrection}} or is in a {{tip|zombie state}}, ''Death from Below'' does not grant {{ii|'Your Cut'}} nor the recast.\n* {{tip|Spell shield}} does not prevent '''Pyke''' from {{tip|blink|blinking}}.\n* If an enemy champion dies inside the ''X'' before ''Death from Below'' performs, '''Pyke''' will be shown as having received an assist in the kill feed, but this will not grant him {{tip|takedown}} effects.\n* ''Death from Below'' cannot be {{tip|interrupt|interrupted}}; '''Pyke''' will always appear at the target location if enemy champions are caught inside the ''X'' even if he is moved (e.g. by being {{tip|airborne|displaced}}) during the cast time.\n** The only exception is if he is being {{tip|suppression|suppressed}}, in which case he will not {{tip|blink}}.\n* The maximum execution threshold increase gained possible from all lethality sources is {{as|{{fd|208.5}} health}} at 139 lethality.\n** '''Relevant mathematics:'''\n*** {{ii|Prowler's Claw}}: '''+''' {{tt|'''{{fd|31.5}}'''|21 × 1.5}} health\n**** {{ii|Sandshrike's Claw}}: '''+''' {{tt|'''{{fd|43.5}}'''|29 × 1.5}} health\n**** {{tt|Maximum|Prowler's Claw + 5 other Legendary Items}} Mythic Passive Bonuses: '''+''' {{tt|'''{{fd|37.5}}'''|25 × 1.5}} health\n*** {{ii|Duskblade of Draktharr}}: '''+''' {{tt|'''27'''|18 × 1.5}} health\n**** {{ii|Draktharr's Shadowcarver}}: '''+''' {{tt|'''{{fd|39}}'''|26 × 1.5}} health\n*** {{ii|Eclipse}}: '''+''' {{tt|'''27'''|18 × 1.5}} health\n**** {{ii|Syzygy}}: '''+''' {{tt|'''{{fd|39}}'''|26 × 1.5}} health\n*** {{ii|Sanguine Blade}}: '''+''' {{tt|'''27'''|18 × 1.5}} health while {{sbc|Frenzy}} is active\n**** '''+''' {{tt|'''15'''|10 × 1.5}} health while {{sbc|Frenzy}} is inactive\n*** {{ii|Serpent's Fang}}: '''+''' {{tt|'''27'''|18 × 1.5}} health\n*** {{ii|Youmuu's Ghostblade}}: '''+''' {{tt|'''27'''|18 × 1.5}} health\n*** {{ii|The Collector}}: '''+''' {{tt|'''18'''|12 × 1.5}} health\n*** {{ii|Umbral Glaive}}: '''+''' {{tt|'''18'''|12 × 1.5}} health\n*** {{ii|Edge of Night}}: '''+''' {{tt|'''15'''|10 × 1.5}} health\n*** {{ii|Serrated Dirk}}: '''+''' {{tt|'''15'''|10 × 1.5}} health\n*** {{ri|Sudden Impact}}: '''+''' {{tt|'''{{fd|10.5}}'''|7 × 1.5}} health\n**** '''Total Increased Execution Threshold''': {{ii|Sandshrike's Claw|{{fd|43.5}}}} + {{tt|{{fd|37.5}}|Mythic passive}} + {{ii|Sanguine Blade|27}} + {{ii|Serpent's Fang|27}} + {{ii|Youmuu's Ghostblade|27}} + {{ii|The Collector|18}} + {{ii|Umbral Glaive|18}} + {{ri|Sudden Impact|{{fd|10.5}}}} = '''{{fd|208.5}}''' health\n***** '''Total Execution Threshold''': {{fd|208.5}} + {{pp|250;290;330;370;400;430;450;470;490;510;530;540;550|6 to 18}} {{as|(+ 80% '''bonus''' AD)}} = '''{{pp|458.5;498.5;538.5;578.5;608.5;638.5;658.5;678.5;698.5;718.5;738.5;748.5;758.5|6 to 18}}''' {{as|(+ 80% '''bonus''' AD)}}",
+      "skillkey": "R",
+      "skillid": "r1",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '{{tt|{{ap|120 to 80}}|Starts on cast}}' as '0/80/40/0' and riot's value '120,100,80' as '120/100/80'",
+      "effects": []
     }
   }
 }

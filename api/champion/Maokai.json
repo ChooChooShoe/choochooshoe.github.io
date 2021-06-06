@@ -49,6 +49,33 @@
     "attackspeed": 0.8
   },
   "skills": {
+    "i1": {
+      "riotId": "",
+      "name": "Sap Magic",
+      "maxrank": 0,
+      "targeting": "Passive",
+      "image": {
+        "full": "Maokai_Passive.png",
+        "sprite": "passive2.png",
+        "group": "passive",
+        "x": 96,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Innate:}} Periodically, '''Maokai's''' next [[basic attack]] has an {{tip|uncancelable windup}} and {{tip|heal|heals}} him for {{pp|5;15 to 65 for 6|1;6;9 to 17}} {{as|(+ {{pp|key=%|6;7.5;9 to 13 for 5|1;6;9 to 17}} '''maximum''' health)}} after a {{tt|{{fd|0.25}}|Reduced by attack speed.}}-second delay.",
+        "Each time '''Maokai''' casts an [[Champion ability|ability]] or is struck by an enemy's ability, ''Sap Magic's'' {{sti|cooldown|link=true}} is reduced by 4 seconds.",
+        "''Sap Magic'' will not activate if '''Maokai''' is {{as|above 95% '''maximum''' {{sti|health}}}}.",
+        "''Sap Magic'' {{tip|basic attack reset|resets}} '''Maokai's''' basic attack timer."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Innate:</span> Periodically, <b>Maokai's</b> next <a class=\"effect link\" title=\"basic attack\">basic attack</a> has an <HtmlTooltip class=\"blue link\">uncancelable windup<template #content><div><h4>uncancelable windup<hr></h4><p>Description for keyword uncancelable windup</p></div></template></HtmlTooltip> and <HtmlTooltip class=\"blue link\">heals<template #content><div><h4>Healing<hr></h4><p><b>Healing</b> restores some of the user or the target's <span class=\"health\">current health</span> directly.<br><br>Healing can be reduced by <b>Grievous Wounds</b>.</p></div></template></HtmlTooltip> him for <span class=\"title-tooltip\" title=\"\">1;6;9 to 17 ‒ undefined</span> <span class=\"health\">(+ <span class=\"title-tooltip\" title=\"\">1;6;9 to 17 ‒ undefined</span> <b>maximum</b> health)</span> after a <span class=\"title-tooltip\" title=\"Reduced by attack speed.\"><span style=\"font-variant-numeric: tabular-nums;\">0.25</span></span>-second delay.<br />Each time <b>Maokai</b> casts an <a class=\"effect link\" title=\"ability\">Champion ability</a> or is struck by an enemy's ability, <i>Sap Magic's</i> <span>cooldown</span> is reduced by 4 seconds.<br /><i>Sap Magic</i> will not activate if <b>Maokai</b> is <span class=\"health\">above 95% <b>maximum</b> <span>health</span></span>.<br /><i>Sap Magic</i> <HtmlTooltip class=\"blue link\">resets<template #content><div><h4>basic attack reset<hr></h4><p>Description for keyword basic attack reset</p></div></template></HtmlTooltip> <b>Maokai's</b> basic attack timer.",
+      "leveling": [],
+      "notes": "* ''Sap Magic'' does not occur if the attack is {{tip|dodge|dodged}} and/or missed if '''Maokai''' is {{tip|blind|blinded}}. It will occur if it is {{tip|block|blocked}}.\n* ''Sap Magic'' does not trigger versus [[structures]] or [[ward]]s.\n* The striking ability has to trigger [[ability effects|spell effects]] such as {{tip|spell damage}} or {{tip|area damage}} for the cooldown to be reduced.\n* If '''Maokai''' possesses a {{tip|spell shield}} and it consumes an enemy ability, he will still receive the cooldown reduction.",
+      "skillkey": "I",
+      "skillid": "i1",
+      "effects": []
+    },
     "q1": {
       "riotId": "MaokaiQ",
       "name": "Bramble Smash",

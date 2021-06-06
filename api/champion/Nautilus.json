@@ -160,7 +160,8 @@
       "name": "Titan's Wrath",
       "maxrank": 5,
       "cooldown": [
-        12
+        12,
+        0
       ],
       "cost": 80,
       "costtype": "Mana",
@@ -187,6 +188,7 @@
       "notes": "* '''Nautilus' ''' empowered attacks use different attack animations.\n** The damage over time will always apply when this animation plays (even if the shield fades during a basic attack).\n* The ''Pain of Wrath'' damage over time debuff replaces itself when reapplied to the target, restarting its tick timer.\n** Reapplying ''Pain of Wrath'' on a target before {{fd|1.25}} seconds prevents the second instance of damage from the previous debuff.\n* ''Pain of Wrath'' does not affect structures.\n* {{pending for test}}: Interaction with {{tip|dodge}}, {{tip|block}} and {{tip|blind}}.\n* {{tip|Spell shield}} will block the ability (but only a single application).",
       "skillkey": "W",
       "skillid": "w1",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '{{tt|12|Starts on cast}}' as '12/0' and riot's value '12,12,12,12,12' as '12'",
       "effects": [
         {
           "str": "<ul class=\"st\"><li><span class=\"blue\">Shield Strength</span>: <span><SpellSpan :list=\"[45,55,65,75,85]\"></SpellSpan> <span class=\"health\">(+ <SpellSpan :list=\"[9,10,11,12,13]\"></SpellSpan>% <b>maximum</b> health)</span></span></li></ul>",
@@ -447,6 +449,163 @@
                   87.5
                 ],
                 "player_total_ap": 0.6
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "r1": {
+      "riotId": "NautilusGrandLine",
+      "name": "Depth Charge",
+      "maxrank": 3,
+      "cooldown": [
+        120,
+        100,
+        80
+      ],
+      "cost": 100,
+      "costtype": "Mana",
+      "targeting": "Unit",
+      "target_range": "{{tip|cr|icononly = true}} 825",
+      "image": {
+        "full": "NautilusGrandLine.png",
+        "sprite": "spell8.png",
+        "group": "spell",
+        "x": 336,
+        "y": 48,
+        "w": 48,
+        "h": 48
+      },
+      "description": [
+        "{{sbc|Active:}} '''Nautilus''' sends out a ''{{ai|Depth Charge 2||Depth Charge}}'' that chases the target enemy {{tip|champion}}, creating eruptions from beneath along the way and upon reaching the target, granting {{tip|sight}} of the area in each one. Enemies within the eruptions are dealt {{as|magic damage}}, {{tip|airborne|knocked up}} for 1 second, and {{tip|stun|stunned}} for a duration.",
+        "The primary target takes increased damage, is {{tip|stun|stunned}} for the same duration, and {{tip|airborne|knocked up}} for a modified duration."
+      ],
+      "descriptionHtml": "<span class=\"sbc\">Active:</span> <b>Nautilus</b> sends out a <i><HtmlTooltip class=\"champion-ability blue link\" data-champkey=\"\">Depth Charge<template #content>Depth Charge 2</template></HtmlTooltip></i> that chases the target enemy <HtmlTooltip class=\"blue link\">champion<template #content><div><h4>champion<hr></h4><p>Description for keyword champion</p></div></template></HtmlTooltip>, creating eruptions from beneath along the way and upon reaching the target, granting <HtmlTooltip class=\"blue link\">sight<template #content><div><h4>sight<hr></h4><p>Description for keyword sight</p></div></template></HtmlTooltip> of the area in each one. Enemies within the eruptions are dealt <span class=\"magic-damage\">magic damage</span>, <HtmlTooltip class=\"blue link\">knocked up<template #content><div><h4>airborne<hr></h4><p>Description for keyword airborne</p></div></template></HtmlTooltip> for 1 second, and <HtmlTooltip class=\"blue link\">stunned<template #content><div><h4>Stun<hr></h4><p>Unit is unable to control its movement, declare attacks, cast abilities, activate items, or use the summoner <b>Flash</b> and <b>Teleport</b> for the duration.<br><br>\nInterrupts all channeled and charged abilities<br>\nDuration reduced by <b>Tenacity</b>.<br>\nResisted by Spell and Crowd Control Immunity.<br>\nRemoved by <b>Cleanse</b>, <b>Quicksilver</b>, <b>Mikael's Crucible</b><br></p></div></template></HtmlTooltip> for a duration.<br />The primary target takes increased damage, is <HtmlTooltip class=\"blue link\">stunned<template #content><div><h4>Stun<hr></h4><p>Unit is unable to control its movement, declare attacks, cast abilities, activate items, or use the summoner <b>Flash</b> and <b>Teleport</b> for the duration.<br><br>\nInterrupts all channeled and charged abilities<br>\nDuration reduced by <b>Tenacity</b>.<br>\nResisted by Spell and Crowd Control Immunity.<br>\nRemoved by <b>Cleanse</b>, <b>Quicksilver</b>, <b>Mikael's Crucible</b><br></p></div></template></HtmlTooltip> for the same duration, and <HtmlTooltip class=\"blue link\">knocked up<template #content><div><h4>airborne<hr></h4><p>Description for keyword airborne</p></div></template></HtmlTooltip> for a modified duration.",
+      "leveling": [
+        "{{st|Magic Damage|{{ap|125|175|225}} {{as|(+ 40% AP)}}}}\n{{st|Stun Duration|{{ap|1|1.5|2}}}}",
+        "{{st|Increased Magic Damage|{{ap|150 to 400}} {{as|(+ 80% AP)}}}}\n{{st|Knock Up Duration|{{ap|1|1.5|2}}}}"
+      ],
+      "notes": "* Enemies a certain distance away from the charge / eruption are instead {{tip|airborne|knocked back}}.\n* If the target dies, becomes {{tip|untargetable}}, or '''Nautilus''' loses {{tip|sight}} of them during the cast time, ''Depth Charge'' cancels but does not go on cooldown nor expend {{sti|{{as|mana}}}}.\n** ''Depth Charge'' will not stop chasing if the target dies or becomes untargetable.\n* {{ai|Dredge Line|Nautilus}} will not override ''Depth Charge's'' {{tip|airborne|knock up}}.\n* '''Nautilus''' will {{tip|sight|reveal}} himself during the cast time.\n* ''Depth Charge'' will still {{tip|stun}} enemies that are {{tip|displacement immune}}.\n* ''Depth Charge'' will accelerate over time to ensure it cannot be outran (only extreme movement speed could potentially make it so).\n** If the target {{tip|blink|blinks}} away at a great distance (e.g. {{si|Recall}}), the shockwave will stop its chase and erupt early. There is a range cap.",
+      "skillkey": "R",
+      "skillid": "r1",
+      "effects": [
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage</span>: <span><SpellSpan :list=\"[125,175,225]\"></SpellSpan> <span class=\"ap\">(+ 40% AP)</span></span></li></ul><br><ul class=\"st\"><li><span class=\"blue\">Stun Duration</span>: <span><SpellSpan :list=\"[1,1.5,2]\"></SpellSpan></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.4
+              }
+            ],
+            "st_slices": [
+              [
+                "Magic Damage",
+                "<SpellSpan :list=\"[125,175,225]\"></SpellSpan> <span class=\"ap\">(+ 40% AP)</span>"
+              ],
+              [
+                "Stun Duration",
+                "<SpellSpan :list=\"[1,1.5,2]\"></SpellSpan>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                125,
+                175,
+                225
+              ],
+              [
+                1,
+                1.5,
+                2
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  125,
+                  175,
+                  225
+                ],
+                "player_total_ap": 0.4
+              }
+            },
+            {
+              "index": 1,
+              "title": "Stun Duration",
+              "damage_type": "unknown",
+              "ratios": {
+                "base_damage": [
+                  1,
+                  1.5,
+                  2
+                ],
+                "player_total_ap": 0.4
+              }
+            }
+          ]
+        },
+        {
+          "str": "<ul class=\"st\"><li><span class=\"blue\">Increased Magic Damage</span>: <span><SpellSpan :list=\"[150,275,400]\"></SpellSpan> <span class=\"ap\">(+ 80% AP)</span></span></li></ul><br><ul class=\"st\"><li><span class=\"blue\">Knock Up Duration</span>: <span><SpellSpan :list=\"[1,1.5,2]\"></SpellSpan></span></li></ul>",
+          "vars": {
+            "as_ratios": [
+              {
+                "player_total_ap": 0.8
+              }
+            ],
+            "st_slices": [
+              [
+                "Increased Magic Damage",
+                "<SpellSpan :list=\"[150,275,400]\"></SpellSpan> <span class=\"ap\">(+ 80% AP)</span>"
+              ],
+              [
+                "Knock Up Duration",
+                "<SpellSpan :list=\"[1,1.5,2]\"></SpellSpan>"
+              ]
+            ],
+            "ap_progressions": [
+              [
+                150,
+                275,
+                400
+              ],
+              [
+                1,
+                1.5,
+                2
+              ]
+            ]
+          },
+          "subeffects": [
+            {
+              "index": 0,
+              "title": "Increased Magic Damage",
+              "damage_type": "magic",
+              "ratios": {
+                "base_damage": [
+                  150,
+                  275,
+                  400
+                ],
+                "player_total_ap": 0.8
+              }
+            },
+            {
+              "index": 1,
+              "title": "Knock Up Duration",
+              "damage_type": "unknown",
+              "ratios": {
+                "base_damage": [
+                  1,
+                  1.5,
+                  2
+                ],
+                "player_total_ap": 0.8
               }
             }
           ]

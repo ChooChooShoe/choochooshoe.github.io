@@ -249,11 +249,12 @@
       "name": "Trample",
       "maxrank": 5,
       "cooldown": [
-        12,
-        11.5,
-        11,
-        10.5,
-        10
+        0,
+        11.333,
+        10.667,
+        10,
+        9.333,
+        0
       ],
       "cost": [
         50,
@@ -284,6 +285,7 @@
       "notes": "* ''Trample'' deals {{tip|persistent area damage}} damage around '''Alistar''', while the bonus damage on the resulting attack is {{tip|proc damage}}.\n* The {{tip|stun}} and '''bonus''' damage are blocked by {{tip|spell shield|spell shields}} but the base attack damage is not.\n* The on-hit effect is consumed if the attack {{tip|blocked}}, but not if it is {{tip|dodged}} or missed while '''Alistar''' is {{tip|blind|blinded}}. In all cases, the attack's effects are negated as normal.\n* As it is an [[on-hit]] effect, the bonus damage and stun can be applied by {{iis|Guinsoo's Rageblade}} Phantom Hit.",
       "skillkey": "E",
       "skillid": "e1",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '{{tt|{{ap|12 to 10}}|Starts on cast}}' as '0/11.333/10.667/10/9.333/0' and riot's value '12,11.5,11,10.5,10' as '12/11.5/11/10.5/10'",
       "effects": [
         {
           "str": "<ul class=\"st\"><li><span class=\"blue\">Magic Damage Per Tick</span>: <span><SpellSpan :list=\"[8,11,14,17,20]\"></SpellSpan> <span class=\"ap\">(+ 4% AP)</span></span></li><li><span class=\"blue\">Total Magic Damage</span>: <span><SpellSpan :list=\"[80,110,140,170,200]\"></SpellSpan> <span class=\"ap\">(+ 40% AP)</span></span></li></ul>",
@@ -346,9 +348,11 @@
       "name": "Unbreakable Will",
       "maxrank": 3,
       "cooldown": [
+        0,
         120,
         100,
-        80
+        80,
+        0
       ],
       "cost": 100,
       "costtype": "mana",
@@ -372,6 +376,7 @@
       "notes": "* {{tip|True damage}} cannot be reduced by any means and will deal full damage to '''Alistar''' during ''Unbreakable Will''.\n* ''Unbreakable Will's'' modifier to incoming damage stacks additively with {{cai|Hemoplague|Vladimir}} for a total reduction of 45/55/65%.{{tt|*|this might be unintended}}",
       "skillkey": "R",
       "skillid": "r1",
+      "cooldown_warn": "Wiki's and Riot's cooldowns do not match: Wiki's value '{{tt|{{ap|120|100|80}}|Starts on cast}}' as '0/120/100/80/0' and riot's value '120,100,80' as '120/100/80'",
       "effects": [
         {
           "str": "<ul class=\"st\"><li><span class=\"blue\">Damage Reduction</span>: <span><SpellSpan :list=\"[55,65,75]\"></SpellSpan>%</span></li></ul>",
