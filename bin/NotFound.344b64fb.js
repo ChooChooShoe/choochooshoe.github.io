@@ -1,0 +1,1 @@
+import{_ as t,h as a,o as n,c as r,a as s,t as c,b as _,w as l,F as d,e as u}from"./index.20f1027e.js";const i={},m=u("Go to Home");function p(e,f){const o=a("router-link");return n(),r(d,null,[s("div",null,"404 Not Found: "+c(e.$route.path),1),_(o,{to:"/"},{default:l(()=>[m]),_:1})],64)}const N=t(i,[["render",p]]);export{N as default};
